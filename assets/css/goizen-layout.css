@@ -1081,14 +1081,14 @@ hr.gsap-hr{
 /* SVG #2: Pink 4-Leaf Clover BEHIND "TeaM" (z-index: 1 < char z-index: 2) */
 .gsap-flair-clover{
   position:absolute;
-  right:clamp(-28px,-2.8vw,-10px);
-  top:clamp(-22px,-2.2vw,-8px);
-  width:clamp(68px,10.5vw,104px);
-  height:clamp(68px,10.5vw,104px);
+  left:clamp(24px,5vw,56px);
+  top:clamp(-22px,-2.2vw,-10px);
+  width:clamp(74px,10.5vw,102px);
+  height:clamp(74px,10.5vw,102px);
   z-index:1;
   pointer-events:none;
   will-change:transform;
-  opacity:.96
+  opacity:1!important
 }
 .gsap-flair-clover svg{
   width:100%;

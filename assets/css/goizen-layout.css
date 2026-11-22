@@ -981,24 +981,7 @@ input#super-my-search-form::placeholder{
 #top-widget{border:0!important;background:transparent!important;max-width:760px!important;width:100%!important;margin:10px auto 4px!important;padding:0 15px!important;box-sizing:border-box!important;text-align:center!important}
 .top-widget{background:transparent!important;padding:0!important}
 .top-widget .widget .widget-content{padding:0!important}
-.top-widget.no-items,body.item #top-widget,body.item #gsap-mmo-hero,body.item #gz-hr-hero,body.static_page #top-widget{display:none!important;padding:0!important}
-
-/* GSAP Standard <hr> Divider (#42433d on #fffceb) */
-hr,
-.post-body hr,
-.entry-content hr,
-hr.gsap-hr{
-  display:block!important;
-  width:100%!important;
-  height:0!important;
-  border:0!important;
-  border-top:1px solid var(--gz-hr,#42433d)!important;
-  background:transparent!important;
-  margin:20px 0!important;
-  padding:0!important;
-  opacity:1!important;
-  clear:both!important
-}
+.top-widget.no-items,body.item #top-widget,body.item #gsap-mmo-hero,body.item #gz-hr-hero,body.static_page #top-widget,hr.gsap-hr,#gz-hr-hero,#gz-hr-nav,#gz-hr-post-header,#gz-hr-post-footer,#gz-hr-share,#gz-hr-author,#gz-hr-sidebar{display:none!important;padding:0!important;border:0!important;margin:0!important;height:0!important}
 
 /* GSAP Hero Banner ("MMO TeaM") — Very Top, Centered, No Black Background, Hover-Only */
 .gsap-mmo-hero{
@@ -1008,7 +991,7 @@ hr.gsap-hr{
   color:var(--gz-heading,#0e100f)!important;
   border:0!important;
   border-radius:0!important;
-  padding:28px 10px 18px!important;
+  padding:26px 10px 12px!important;
   margin:0 auto!important;
   overflow:visible!important;
   box-sizing:border-box;
@@ -1067,16 +1050,17 @@ hr.gsap-hr{
   will-change:transform;
   transform-origin:50% 80%
 }
-/* SVG #1: GSAP MMO Dollar Coin ON TOP of "MMO" (z-index: 3 > char z-index: 2) */
+/* SVG #1: 3D GSAP MMO Dollar Prism Coin ON TOP of "MMO" (z-index: 3 > char z-index: 2) */
 .gsap-flair-windmill{
   position:absolute;
-  top:clamp(-32px,-3.6vw,-20px);
+  top:clamp(-34px,-3.8vw,-22px);
   left:clamp(46px,8vw,82px);
-  width:clamp(48px,7vw,66px);
-  height:clamp(48px,7vw,66px);
+  width:clamp(52px,7.4vw,70px);
+  height:clamp(52px,7.4vw,70px);
   z-index:3;
   pointer-events:none;
-  will-change:transform
+  will-change:transform;
+  perspective:600px
 }
 .gsap-flair-windmill svg{
   width:100%;
@@ -1084,13 +1068,13 @@ hr.gsap-hr{
   display:block;
   overflow:visible
 }
-/* SVG #2: GSAP MMO Profit Chart & Breakout Arrow BEHIND "TeaM" (z-index: 1 < char z-index: 2) */
+/* SVG #2: 3D GSAP MMO Bullish Clover & Breakout Wave BEHIND "TeaM" (z-index: 1 < char z-index: 2) */
 .gsap-flair-clover{
   position:absolute;
-  left:clamp(44px,7.5vw,82px);
-  top:clamp(-28px,-3.2vw,-16px);
-  width:clamp(82px,11.5vw,112px);
-  height:clamp(82px,11.5vw,112px);
+  left:clamp(42px,7.2vw,78px);
+  top:clamp(-28px,-3.2vw,-14px);
+  width:clamp(88px,12.2vw,118px);
+  height:clamp(88px,12.2vw,118px);
   z-index:1;
   pointer-events:none;
   will-change:transform;

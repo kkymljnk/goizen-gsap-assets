@@ -175,10 +175,10 @@
     'html body #top-widget{border:0!important;background:transparent!important;max-width:760px!important;width:100%!important;margin:10px auto 4px!important;padding:0 15px!important;box-sizing:border-box!important;text-align:center!important;display:block!important}'+
     'html body .top-widget{background:transparent!important;padding:0!important;display:block!important}'+
     'html body .top-widget .widget .widget-content{padding:0!important}'+
-    'html body.item #top-widget,html body.item #gsap-mmo-hero,html body.item #gz-hr-hero,html body.static_page #top-widget{display:none!important}'+
+    'html body.item #top-widget,html body.item #gsap-mmo-hero,html body.item #gz-hr-hero,html body.static_page #top-widget,html body hr.gsap-hr,html body #gz-hr-hero,html body #gz-hr-nav,html body #gz-hr-post-header,html body #gz-hr-post-footer,html body #gz-hr-share,html body #gz-hr-author,html body #gz-hr-sidebar{display:none!important;border:0!important;margin:0!important;padding:0!important;height:0!important}'+
     'html body .gsap-mmo-hero{'+
       'position:relative!important;width:100%!important;background:transparent!important;color:var(--gz-heading,#0e100f)!important;'+
-      'border:0!important;border-radius:0!important;padding:28px 10px 18px!important;'+
+      'border:0!important;border-radius:0!important;padding:26px 10px 12px!important;'+
       'margin:0 auto!important;overflow:visible!important;box-sizing:border-box!important;text-align:center!important;cursor:pointer!important'+
     '}'+
     'html body .gsap-mmo-stage{position:relative!important;max-width:560px!important;margin:0 auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:4px!important}'+
@@ -187,9 +187,9 @@
     'html body .gsap-mmo-row--2{justify-content:center!important;padding-left:0!important;transform:translateX(42px)!important;margin-top:2px!important;z-index:2!important}'+
     'html body .gsap-mmo-word{position:relative!important;display:inline-flex!important;align-items:baseline!important;color:var(--gz-heading,#0e100f)!important}'+
     'html body .gsap-mmo-char{position:relative!important;display:inline-block!important;color:var(--gz-heading,#0e100f)!important;z-index:2!important;will-change:transform!important;transform-origin:50% 80%!important}'+
-    'html body .gsap-flair-windmill{position:absolute!important;top:clamp(-32px,-3.6vw,-20px)!important;left:clamp(46px,8vw,82px)!important;width:clamp(48px,7vw,66px)!important;height:clamp(48px,7vw,66px)!important;z-index:3!important;pointer-events:none!important}'+
+    'html body .gsap-flair-windmill{position:absolute!important;top:clamp(-34px,-3.8vw,-22px)!important;left:clamp(46px,8vw,82px)!important;width:clamp(52px,7.4vw,70px)!important;height:clamp(52px,7.4vw,70px)!important;z-index:3!important;pointer-events:none!important;perspective:600px!important}'+
     'html body .gsap-flair-windmill svg{width:100%!important;height:100%!important;display:block!important;overflow:visible!important}'+
-    'html body .gsap-flair-clover{position:absolute!important;left:clamp(44px,7.5vw,82px)!important;top:clamp(-28px,-3.2vw,-16px)!important;width:clamp(82px,11.5vw,112px)!important;height:clamp(82px,11.5vw,112px)!important;z-index:1!important;pointer-events:none!important;opacity:1!important}'+
+    'html body .gsap-flair-clover{position:absolute!important;left:clamp(42px,7.2vw,78px)!important;top:clamp(-28px,-3.2vw,-14px)!important;width:clamp(88px,12.2vw,118px)!important;height:clamp(88px,12.2vw,118px)!important;z-index:1!important;pointer-events:none!important;opacity:1!important}'+
     'html body .gsap-flair-clover svg{width:100%!important;height:100%!important;display:block!important;overflow:visible!important}'+
     'html body #top,#top{'+
       'box-shadow:none!important;margin:0!important;padding:0!important;'+
@@ -329,18 +329,10 @@
     el.parentNode.insertBefore(hr,el);
   }
   function ensureGsapHrDividers(){
-    var navTop=document.getElementById('nav-top');
-    if(navTop)insertHrAfter(navTop,'gz-hr-nav');
-    var itemHeader=document.querySelector('.item .post-header');
-    if(itemHeader)insertHrAfter(itemHeader,'gz-hr-post-header');
-    var postFooter=document.querySelector('.item .post-footer');
-    if(postFooter)insertHrBefore(postFooter,'gz-hr-post-footer');
-    var shareWrap=document.getElementById('share-wrapper');
-    if(shareWrap)insertHrAfter(shareWrap,'gz-hr-share');
-    var authorProf=document.querySelector('.item .author-profile');
-    if(authorProf)insertHrAfter(authorProf,'gz-hr-author');
-    var sidebarWrap=document.getElementById('col-sidebar-wrapper');
-    if(sidebarWrap&&!document.body.classList.contains('item'))insertHrBefore(sidebarWrap,'gz-hr-sidebar');
+    var hrs=document.querySelectorAll('hr.gsap-hr,#gz-hr-hero,#gz-hr-nav,#gz-hr-post-header,#gz-hr-post-footer,#gz-hr-share,#gz-hr-author,#gz-hr-sidebar');
+    for(var i=0;i<hrs.length;i++){
+      if(hrs[i]&&hrs[i].parentNode)hrs[i].parentNode.removeChild(hrs[i]);
+    }
   }
 
   function getHeroMarkup(){
@@ -350,21 +342,34 @@
           '<div class="gsap-mmo-row gsap-mmo-row--1">' +
             '<span class="gsap-mmo-word" aria-label="MMO">' +
               '<span class="gsap-flair-windmill" id="gsap-flair-windmill" aria-hidden="true">' +
-                '<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path d="M60 4L73 15L90 12L96 28L112 35L108 52L116 67L103 80L102 97L85 101L74 115L58 109L42 115L31 101L14 97L13 80L0 67L8 52L4 35L20 28L26 12L43 15L60 4Z" fill="url(#gz-mmo-coin-outer)" stroke="#0e100f" stroke-width="3.5" stroke-linejoin="round"/>' +
-                  '<circle cx="60" cy="60" r="36" fill="url(#gz-mmo-coin-inner)" stroke="#0e100f" stroke-width="3.5"/>' +
-                  '<path d="M60 32V88M71 45C71 39.5 66.2 36 59.5 36C52.8 36 48 39.8 48 45.2C48 56 72 53 72 65.5C72 71.5 66.8 75.5 59.5 75.5C52 75.5 47 71.2 47 65" stroke="#0e100f" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+                '<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">' +
                   '<defs>' +
-                    '<linearGradient id="gz-mmo-coin-outer" x1="8" y1="8" x2="112" y2="112" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#FFE866"/>' +
-                      '<stop offset="55%" stop-color="#FF8709"/>' +
-                      '<stop offset="100%" stop-color="#F7BDF8"/>' +
+                    '<filter id="gz-pro-drop1" x="-20%" y="-20%" width="140%" height="140%">' +
+                      '<feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#0e100f" flood-opacity="0.22"/>' +
+                    '</filter>' +
+                    '<linearGradient id="gz-pro-rim" x1="12" y1="8" x2="128" y2="132" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#FFE97D"/>' +
+                      '<stop offset="38%" stop-color="#FF8709"/>' +
+                      '<stop offset="72%" stop-color="#0AE448"/>' +
+                      '<stop offset="100%" stop-color="#00B862"/>' +
                     '</linearGradient>' +
-                    '<linearGradient id="gz-mmo-coin-inner" x1="24" y1="24" x2="96" y2="96" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#0AE448"/>' +
+                    '<linearGradient id="gz-pro-bevel" x1="26" y1="22" x2="114" y2="118" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#1E2220"/>' +
+                      '<stop offset="100%" stop-color="#0E100F"/>' +
+                    '</linearGradient>' +
+                    '<linearGradient id="gz-pro-dollar" x1="45" y1="34" x2="95" y2="106" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#FFFCE1"/>' +
+                      '<stop offset="45%" stop-color="#0AE448"/>' +
                       '<stop offset="100%" stop-color="#FFE866"/>' +
                     '</linearGradient>' +
                   '</defs>' +
+                  '<g filter="url(#gz-pro-drop1)">' +
+                    '<path d="M70 6C79 6 86 15 95 19C104 23 116 21 122 29C128 37 123 48 126 57C129 66 136 74 133 84C130 94 119 98 113 106C107 114 106 126 97 130C88 134 78 127 68 127C58 127 48 134 39 130C30 126 29 114 23 106C17 98 6 94 3 84C0 74 7 66 10 57C13 48 8 37 14 29C20 21 32 23 41 19C50 15 57 6 70 6Z" fill="url(#gz-pro-rim)"/>' +
+                    '<circle cx="70" cy="69" r="44" fill="url(#gz-pro-bevel)"/>' +
+                    '<circle cx="70" cy="69" r="40" stroke="url(#gz-pro-rim)" stroke-width="2" stroke-opacity="0.65" stroke-dasharray="6 4"/>' +
+                    '<path d="M70 39V99M82 53C82 46.8 76.8 43 69.5 43C62.2 43 57 46.8 57 52.8C57 64.2 83 60.8 83 73.8C83 80.2 77.5 84.5 69.5 84.5C61.2 84.5 55.8 80 55.8 73.2" stroke="url(#gz-pro-dollar)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+                    '<path d="M108 22L111 30L119 33L111 36L108 44L105 36L97 33L105 30L108 22Z" fill="#FFFCE1"/>' +
+                  '</g>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">M</span>' +
@@ -375,19 +380,27 @@
           '<div class="gsap-mmo-row gsap-mmo-row--2">' +
             '<span class="gsap-mmo-word" aria-label="TeaM">' +
               '<span class="gsap-flair-clover" id="gsap-flair-clover" aria-hidden="true">' +
-                '<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<rect x="14" y="14" width="132" height="132" rx="34" transform="rotate(-8 80 80)" fill="url(#gz-mmo-chart-bg)" stroke="#0e100f" stroke-width="4"/>' +
-                  '<rect x="38" y="86" width="16" height="34" rx="5" fill="#fffceb" stroke="#0e100f" stroke-width="3.2"/>' +
-                  '<rect x="64" y="68" width="16" height="52" rx="5" fill="#FFE866" stroke="#0e100f" stroke-width="3.2"/>' +
-                  '<rect x="90" y="46" width="16" height="74" rx="5" fill="#0AE448" stroke="#0e100f" stroke-width="3.2"/>' +
-                  '<path d="M36 72L66 44L84 58L120 24M120 24H96M120 24V48" stroke="#0e100f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>' +
+                '<svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">' +
                   '<defs>' +
-                    '<linearGradient id="gz-mmo-chart-bg" x1="14" y1="14" x2="146" y2="146" gradientUnits="userSpaceOnUse">' +
+                    '<filter id="gz-pro-drop2" x="-20%" y="-20%" width="140%" height="140%">' +
+                      '<feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#6b46c1" flood-opacity="0.22"/>' +
+                    '</filter>' +
+                    '<linearGradient id="gz-pro-clover-bg" x1="16" y1="12" x2="164" y2="168" gradientUnits="userSpaceOnUse">' +
                       '<stop offset="0%" stop-color="#9D95FF"/>' +
-                      '<stop offset="55%" stop-color="#F7BDF8"/>' +
+                      '<stop offset="52%" stop-color="#FF7BE5"/>' +
                       '<stop offset="100%" stop-color="#FF8709"/>' +
                     '</linearGradient>' +
+                    '<linearGradient id="gz-pro-arrow-grad" x1="28" y1="138" x2="154" y2="28" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#0AE448"/>' +
+                      '<stop offset="60%" stop-color="#52FF88"/>' +
+                      '<stop offset="100%" stop-color="#FFFCE1"/>' +
+                    '</linearGradient>' +
                   '</defs>' +
+                  '<g filter="url(#gz-pro-drop2)">' +
+                    '<path fill-rule="evenodd" clip-rule="evenodd" d="M58.5 87.2C55.6 87.8 52.6 88.1 49.5 88.1C25.2 88.1 5.5 68.2 5.5 43.6C5.5 19 25.2 -0.9 49.5 -0.9C73.8 -0.9 93.5 19 93.5 43.6C93.5 45.7 93.4 47.7 93.1 49.7H97.9C97.6 47.7 97.5 45.7 97.5 43.6C97.5 19 117.2 -0.9 141.5 -0.9C165.8 -0.9 185.5 19 185.5 43.6C185.5 68.2 165.8 88.1 141.5 88.1C138.8 88.1 136.1 87.8 133.5 87.4V90.9C136.1 90.4 138.8 90.1 141.5 90.1C165.8 90.1 185.5 110 185.5 134.6C185.5 159.2 165.8 179.1 141.5 179.1C117.2 179.1 97.5 159.2 97.5 134.6C97.5 131.5 97.8 128.4 98.4 125.5H92.8C93.3 128.1 93.5 130.8 93.5 133.6C93.5 158.2 73.8 178.1 49.5 178.1C25.2 178.1 5.5 158.2 5.5 133.6C5.5 109 25.2 89.1 49.5 89.1C52.6 89.1 55.6 89.4 58.5 90V87.2Z" transform="translate(4 5) scale(0.9)" fill="url(#gz-pro-clover-bg)"/>' +
+                    '<path class="gz-pro-arrow-line" d="M36 126C54 122 66 94 84 96C102 98 112 62 144 36M144 36H114M144 36V66" stroke="#0E100F" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.22"/>' +
+                    '<path class="gz-pro-arrow-line" d="M36 122C54 118 66 90 84 92C102 94 112 58 144 32M144 32H114M144 32V62" stroke="url(#gz-pro-arrow-grad)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+                  '</g>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">T</span>' +
@@ -409,15 +422,18 @@
     var chars=hero.querySelectorAll('.gsap-mmo-char');
     var windmill=document.getElementById('gsap-flair-windmill');
     var clover=document.getElementById('gsap-flair-clover');
-    /* Hover-only GSAP animation per Đại Ca Tú's request */
+    var arrowLines=hero.querySelectorAll('.gz-pro-arrow-line');
+    /* Hover-only 3D Pro GSAP animation */
     hero.addEventListener('mouseenter',function(){
-      g.to(windmill,{rotation:'+=360',scale:1.18,duration:0.75,ease:'back.out(1.8)',overwrite:'auto'});
-      g.to(clover,{y:-10,rotation:12,scale:1.14,duration:0.7,ease:'elastic.out(1,0.45)',overwrite:'auto'});
-      g.fromTo(chars,{y:0,rotationX:0},{y:-8,rotationX:18,duration:0.22,stagger:0.04,yoyo:true,repeat:1,ease:'power2.out',overwrite:'auto'});
+      g.to(windmill,{rotationY:'+=360',rotationZ:14,scale:1.18,duration:0.85,ease:'expo.out',overwrite:'auto'});
+      g.to(clover,{y:-8,rotation:-14,scale:1.12,duration:0.8,ease:'elastic.out(1,0.48)',overwrite:'auto'});
+      if(arrowLines.length)g.to(arrowLines,{x:4,y:-4,duration:0.55,ease:'back.out(2)',overwrite:'auto'});
+      g.fromTo(chars,{y:0,rotationX:0},{y:-8,rotationX:18,duration:0.22,stagger:0.038,yoyo:true,repeat:1,ease:'power2.out',overwrite:'auto'});
     });
     hero.addEventListener('mouseleave',function(){
-      g.to(windmill,{scale:1,duration:0.55,ease:'elastic.out(1,0.6)',overwrite:'auto'});
+      g.to(windmill,{rotationZ:0,scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
       g.to(clover,{y:0,rotation:0,scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
+      if(arrowLines.length)g.to(arrowLines,{x:0,y:0,duration:0.5,ease:'power2.out',overwrite:'auto'});
     });
   }
 
@@ -426,8 +442,6 @@
     var topWidget=document.getElementById('top-widget');
     if(isSingle){
       if(topWidget)topWidget.style.display='none';
-      var oldHr=document.getElementById('gz-hr-hero');
-      if(oldHr)oldHr.style.display='none';
       return;
     }
     var superMain=document.getElementById('super-main-wrapper');
@@ -450,13 +464,6 @@
       wrap.id='HTML99-runtime';
       wrap.innerHTML='<div class="widget-content">'+getHeroMarkup()+'</div>';
       sec.insertBefore(wrap,sec.firstChild);
-    }
-    var hrHero=document.getElementById('gz-hr-hero');
-    if(!hrHero){
-      hrHero=document.createElement('hr');
-      hrHero.id='gz-hr-hero';
-      hrHero.className='gsap-hr';
-      topWidget.appendChild(hrHero);
     }
     if(window.gsap){
       runGsapHeroAnimation();

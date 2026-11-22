@@ -11,6 +11,7 @@
   --gz-link-hover:#08c93e;
   --gz-border:#e0ded0;
   --gz-border-soft:#bbbaa6;
+  --gz-hr:#42433d;
   --gz-pre-bg:#161816;
   --gz-code-inline-bg:#ece9d8;
   --gz-blockquote:#3d3d34;
@@ -69,7 +70,21 @@ a.related-post-item-title:hover{
   text-decoration-thickness:2px!important;
   text-underline-offset:3px!important
 }
-hr{display:block;height:1px;border:0;border-top:1px solid var(--gz-border);margin:1em 0;padding:0}
+hr,
+.post-body hr,
+.entry-content hr,
+hr.gsap-hr{
+  display:block!important;
+  width:100%!important;
+  height:0!important;
+  border:0!important;
+  border-top:1px solid var(--gz-hr,#42433d)!important;
+  background:transparent!important;
+  margin:22px 0!important;
+  padding:0!important;
+  opacity:1!important;
+  clear:both!important
+}
 ins{background-color:transparent;color:var(--gz-text);text-decoration:none}
 
 /* Description & Body Typography — GSAP Lite (#3d3d34) */

@@ -365,7 +365,7 @@ dd.profile-textblock{margin:0;}
 .author-desc{color:var(--gz-text)!important;font-size:15px!important;line-height:1.6!important;display:block!important}
 
 /* Related Post — khớp CSS gốc Goizen (thiếu block này khiến related thành list bullet) */
-#related-wrapper{margin:0 auto 20px;padding:20px 0;display:block;border-top:1px solid var(--gz-border);border-bottom:1px solid var(--gz-border)}
+#related-wrapper{margin:0 auto 20px;padding:20px 0;display:block;border-top:1px solid var(--gz-hr,#42433d)!important;border-bottom:1px solid var(--gz-hr,#42433d)!important}
 .related-post{margin:0;text-align:left;padding:0}
 .related-post h3{font-size:20px;margin:0 auto 20px;padding:0;text-align:left;display:block;overflow:hidden;position:relative;width:100%}
 .related-post-style-2{margin:0;padding:0}
@@ -778,7 +778,7 @@ div.code-toolbar > .toolbar button:hover,
 .snippet-thumbnail{float:none;background-position:center;padding:0;width:100px;height:100px;margin:auto;position:relative;display:block;overflow:hidden;border-radius:5px}
 .snippet-thumbnail img{transition:all .3s ease;height:100px;display:flex;align-items:center;width:100px;border-radius:5px}
 .snippet-thumbnail-etc{display:none}
-.tit-home-tags{padding-bottom:10px;border-bottom:1px solid var(--gz-border);margin-bottom:15px}
+.tit-home-tags{padding-bottom:12px;border-bottom:1px solid var(--gz-hr,#42433d)!important;margin-bottom:15px}
 .title-homepage{text-align:left;display:block}
 h2.post-title.entry-title a{font-size:19px;font-weight:600;color:var(--gz-heading)!important;letter-spacing:-0.015em}
 h2.post-title.entry-title{overflow:hidden;display:block;word-wrap:break-word;font-size:19px;font-weight:600;color:var(--gz-heading)!important}
@@ -978,7 +978,144 @@ input#super-my-search-form::placeholder{
 #nav-top{width:100%;flex:1 0 100%;margin-top:4px}
 .scrollmenu{display:flex;align-items:center;justify-content:space-between;gap:14px;overflow-x:auto;padding-bottom:4px;margin-bottom:4px}
 .scrollmenu a{flex:0 0 auto;margin-left:0!important;padding-bottom:4px;font-size:13px;letter-spacing:.02em}
-#top-widget{border:0!important;background:transparent!important}
-.top-widget{background:var(--gz-bg)!important}
+#top-widget{border:0!important;background:transparent!important;max-width:760px!important;width:100%!important;margin:4px auto 14px!important;padding:0 15px!important;box-sizing:border-box!important}
+.top-widget{background:transparent!important;padding:0!important}
+.top-widget .widget .widget-content{padding:0!important}
 .top-widget.no-items{display:none!important;padding:0!important}
+
+/* GSAP Standard <hr> Divider (#42433d on #fffceb) */
+hr,
+.post-body hr,
+.entry-content hr,
+hr.gsap-hr{
+  display:block!important;
+  width:100%!important;
+  height:0!important;
+  border:0!important;
+  border-top:1px solid var(--gz-hr,#42433d)!important;
+  background:transparent!important;
+  margin:20px 0!important;
+  padding:0!important;
+  opacity:1!important;
+  clear:both!important
+}
+
+/* GSAP Hero Banner Clone ("MMO TeaM") — Centered in #top-widget */
+.gsap-mmo-hero{
+  position:relative;
+  width:100%;
+  background:#0e100f;
+  color:#fffce1;
+  border:2px solid #0e100f;
+  border-radius:14px;
+  padding:46px 38px 44px;
+  margin:4px 0 6px;
+  overflow:hidden;
+  box-sizing:border-box;
+  text-align:left;
+  user-select:none;
+  box-shadow:none
+}
+.gsap-mmo-stage{
+  position:relative;
+  max-width:640px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:6px
+}
+.gsap-mmo-row{
+  position:relative;
+  display:flex;
+  align-items:baseline;
+  line-height:.94;
+  font-family:var(--gz-font,"Plus Jakarta Sans",sans-serif);
+  font-weight:600;
+  font-size:clamp(54px,10.5vw,98px);
+  letter-spacing:-0.035em;
+  color:#fffce1;
+  perspective:700px
+}
+.gsap-mmo-row--1{
+  justify-content:flex-start;
+  padding-left:clamp(8px,3vw,26px);
+  z-index:2
+}
+.gsap-mmo-row--2{
+  justify-content:flex-start;
+  padding-left:clamp(88px,21vw,190px);
+  margin-top:2px;
+  z-index:2
+}
+.gsap-mmo-word{
+  position:relative;
+  display:inline-flex;
+  align-items:baseline;
+  color:#fffce1
+}
+.gsap-mmo-char{
+  position:relative;
+  display:inline-block;
+  color:#fffce1;
+  z-index:2;
+  will-change:transform,opacity;
+  transform-origin:50% 80%
+}
+/* SVG #1: Windmill ON TOP of "MMO" (z-index: 3 > char z-index: 2) */
+.gsap-flair-windmill{
+  position:absolute;
+  top:clamp(-34px,-3.8vw,-22px);
+  left:clamp(56px,9.2vw,96px);
+  width:clamp(42px,6.4vw,60px);
+  height:clamp(42px,6.4vw,60px);
+  z-index:3;
+  pointer-events:none;
+  will-change:transform
+}
+.gsap-flair-windmill svg{
+  width:100%;
+  height:100%;
+  display:block;
+  overflow:visible
+}
+/* SVG #2: Pink 4-Leaf Clover BEHIND "TeaM" (z-index: 1 < char z-index: 2) */
+.gsap-flair-clover{
+  position:absolute;
+  right:clamp(-28px,-2.8vw,-10px);
+  top:clamp(-22px,-2.2vw,-8px);
+  width:clamp(68px,10.5vw,104px);
+  height:clamp(68px,10.5vw,104px);
+  z-index:1;
+  pointer-events:none;
+  will-change:transform;
+  opacity:.96
+}
+.gsap-flair-clover svg{
+  width:100%;
+  height:100%;
+  display:block;
+  overflow:visible
+}
+/* 3D Squiggle / Worm hanging on "TeaM" */
+.gsap-flair-worm{
+  position:absolute;
+  left:clamp(140px,22vw,218px);
+  bottom:clamp(-38px,-4.5vw,-24px);
+  width:clamp(34px,5.2vw,50px);
+  height:auto;
+  z-index:3;
+  pointer-events:none;
+  will-change:transform
+}
+.gsap-flair-worm img,
+.gsap-flair-worm svg{
+  width:100%;
+  height:auto;
+  display:block
+}
+@media screen and (max-width:560px){
+  .gsap-mmo-hero{padding:34px 20px 34px}
+  .gsap-mmo-row--2{padding-left:clamp(54px,16vw,110px)}
+}
+
 

@@ -1,3 +1,35 @@
+/* GSAP Resource Card Border (2px solid + 14px radius) for homepage/archive/search & featured */
+(function(){
+  if(document.getElementById('gz-gsap-card-border'))return;
+  var st=document.createElement('style');
+  st.id='gz-gsap-card-border';
+  st.textContent=
+    'html body .index .post-outer,html body.index .post-outer,'+
+    'html body .archive .post-outer,html body.archive .post-outer,'+
+    'html body .search .post-outer,html body.search .post-outer{'+
+      'background:var(--gz-surface,#ffffff)!important;'+
+      'border:2px solid var(--gz-heading,#0e100f)!important;'+
+      'border-radius:14px!important;'+
+      'padding:20px!important;'+
+      'margin-bottom:20px!important;'+
+      'box-sizing:border-box!important;'+
+      'transition:background .2s ease,border-color .2s ease!important'+
+    '}'+
+    'html body .index .post-outer:hover,html body.index .post-outer:hover,'+
+    'html body .archive .post-outer:hover,html body.archive .post-outer:hover,'+
+    'html body .search .post-outer:hover,html body.search .post-outer:hover{'+
+      'background:var(--gz-surface-2,#f7f4e4)!important;'+
+      'border-color:var(--gz-heading,#0e100f)!important'+
+    '}'+
+    'html body .FeaturedPost .featured-snippet-thumbnail{'+
+      'border:2px solid var(--gz-heading,#0e100f)!important;'+
+      'border-radius:14px!important;'+
+      'overflow:hidden!important;'+
+      'box-sizing:border-box!important'+
+    '}';
+  (document.head||document.documentElement).appendChild(st);
+})();
+
 /* Item: gỡ Popular Posts khỏi DOM (tránh cache CSS cũ vẫn thấy) */
 (function(){
   if(!document.body.classList.contains('item'))return;

@@ -608,14 +608,28 @@ body#layout #ads-per-paragraf{visibility:visible!important;display:block!importa
 .comments .comments-content .datetime a{color:var(--gz-text-muted)!important}
 .custom-comment-title .title,.related-post h3,#related-wrapper h3,.sidebar h3.title,.footer-bottom h3.title{color:var(--gz-heading)!important}
 .featured-content,.featured-content h2 a{color:#fffce1!important}
+html body .index .post-outer,html body.index .post-outer,
+html body .archive .post-outer,html body.archive .post-outer,
+html body .search .post-outer,html body.search .post-outer,
 .index .post-outer,.archive .post-outer,.search .post-outer{
   background:var(--gz-surface)!important;
   border:2px solid var(--gz-heading)!important;
-  border-radius:14px!important
+  border-radius:14px!important;
+  box-sizing:border-box!important
 }
+html body .index .post-outer:hover,html body.index .post-outer:hover,
+html body .archive .post-outer:hover,html body.archive .post-outer:hover,
+html body .search .post-outer:hover,html body.search .post-outer:hover,
 .index .post-outer:hover,.archive .post-outer:hover,.search .post-outer:hover{
   background:var(--gz-surface-2)!important;
   border-color:var(--gz-heading)!important
+}
+html body .FeaturedPost .featured-snippet-thumbnail,
+.FeaturedPost .featured-snippet-thumbnail{
+  border:2px solid var(--gz-heading)!important;
+  border-radius:14px!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important
 }
 #blog-pager{background:var(--gz-surface-2)!important}
 #credit-wrapper{background:var(--gz-surface-2)!important}

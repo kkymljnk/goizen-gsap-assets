@@ -343,12 +343,12 @@
             '<span class="gsap-mmo-word" aria-label="MMO">' +
               '<span class="gsap-flair-windmill" id="gsap-flair-windmill" aria-hidden="true">' +
                 '<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M70 4C75.2 4 79.1 8.5 80.4 13.5C85.8 35.4 104.6 54.2 126.5 59.6C131.5 60.9 136 64.8 136 70C136 75.2 131.5 79.1 126.5 80.4C104.6 85.8 85.8 104.6 80.4 126.5C79.1 131.5 75.2 136 70 136C64.8 136 60.9 131.5 59.6 126.5C54.2 104.6 35.4 85.8 13.5 80.4C8.5 79.1 4 75.2 4 70C4 64.8 8.5 60.9 13.5 59.6C35.4 54.2 54.2 35.4 59.6 13.5C60.9 8.5 64.8 4 70 4ZM70 46C66.2 57.5 57.5 66.2 46 70C57.5 73.8 66.2 82.5 70 94C73.8 82.5 82.5 73.8 94 70C82.5 66.2 73.8 57.5 70 46Z" fill="url(#gz-new-style-grad1)"/>' +
+                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M92.0 70.0Q131.6 77.4 126.4 102.3Q112.1 120.9 81.0 89.1Q94.3 127.0 70.2 135.0Q47.0 131.9 59.0 89.1Q32.8 119.6 13.8 102.7Q4.9 81.0 48.0 70.0Q8.4 62.6 13.6 37.7Q27.9 19.1 59.0 50.9Q45.7 13.0 69.8 5.0Q93.0 8.1 81.0 50.9Q107.2 20.4 126.2 37.3Q135.1 59.0 92.0 70.0ZM83 70A13 13 0 1 0 57 70A13 13 0 1 0 83 70Z" fill="url(#gz-new-style-grad1)"/>' +
                   '<defs>' +
                     '<linearGradient id="gz-new-style-grad1" x1="10" y1="10" x2="130" y2="130" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#0AE448"/>' +
-                      '<stop offset="50%" stop-color="#FFE866"/>' +
-                      '<stop offset="100%" stop-color="#FF8709"/>' +
+                      '<stop offset="0%" stop-color="#FFE866"/>' +
+                      '<stop offset="50%" stop-color="#FF8709"/>' +
+                      '<stop offset="100%" stop-color="#FF7BE5"/>' +
                     '</linearGradient>' +
                   '</defs>' +
                 '</svg>' +
@@ -362,7 +362,7 @@
             '<span class="gsap-mmo-word" aria-label="TeaM">' +
               '<span class="gsap-flair-clover" id="gsap-flair-clover" aria-hidden="true">' +
                 '<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M111.4 67.0Q156.6 65.3 154.0 80.0Q156.6 94.7 111.4 93.0Q144.6 123.7 132.3 132.3Q123.7 144.6 93.0 111.4Q94.7 156.6 80.0 154.0Q65.3 156.6 67.0 111.4Q36.3 144.6 27.7 132.3Q15.4 123.7 48.6 93.0Q3.4 94.7 6.0 80.0Q3.4 65.3 48.6 67.0Q15.4 36.3 27.7 27.7Q36.3 15.4 67.0 48.6Q65.3 3.4 80.0 6.0Q94.7 3.4 93.0 48.6Q123.7 15.4 132.3 27.7Q144.6 36.3 111.4 67.0ZM96 80A16 16 0 1 0 64 80A16 16 0 1 0 96 80Z" fill="url(#gz-new-style-grad2)"/>' +
+                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M134.1 65.5Q156.5 71.5 155.0 80.0Q156.5 88.5 134.1 94.5Q150.5 110.9 145.0 117.5Q142.1 125.6 119.6 119.6Q125.6 142.1 117.5 145.0Q110.9 150.5 94.5 134.1Q88.5 156.5 80.0 155.0Q71.5 156.5 65.5 134.1Q49.1 150.5 42.5 145.0Q34.4 142.1 40.4 119.6Q17.9 125.6 15.0 117.5Q9.5 110.9 25.9 94.5Q3.5 88.5 5.0 80.0Q3.5 71.5 25.9 65.5Q9.5 49.1 15.0 42.5Q17.9 34.4 40.4 40.4Q34.4 17.9 42.5 15.0Q49.1 9.5 65.5 25.9Q71.5 3.5 80.0 5.0Q88.5 3.5 94.5 25.9Q110.9 9.5 117.5 15.0Q125.6 17.9 119.6 40.4Q142.1 34.4 145.0 42.5Q150.5 49.1 134.1 65.5ZM106 80A26 26 0 1 0 54 80A26 26 0 1 0 106 80Z" fill="url(#gz-new-style-grad2)"/>' +
                   '<defs>' +
                     '<linearGradient id="gz-new-style-grad2" x1="12" y1="12" x2="148" y2="148" gradientUnits="userSpaceOnUse">' +
                       '<stop offset="0%" stop-color="#9D95FF"/>' +

@@ -1,24 +1,25 @@
-/* Goizen × GSAP design tokens — measured from gsap.com/resources */
+/* Goizen × GSAP tokens — LIGHT cream (không dark). Ivory nền + chữ than + link xanh GSAP */
 :root{
-  --gz-bg:#0e100f;
-  --gz-surface:#161816;
-  --gz-surface-2:#1c1e1d;
-  --gz-text:#bbbaa6;
+  --gz-bg:#fffceb;
+  --gz-surface:#ffffff;
+  --gz-surface-2:#f7f4e4;
+  --gz-text:#3d3d34;
   --gz-text-muted:#7c7c6f;
-  --gz-heading:#fffce1;
-  --gz-cream:#fffce4;
+  --gz-heading:#0e100f;
+  --gz-cream:#fffce1;
   --gz-link:#0ae448;
-  --gz-link-hover:#5bbc54;
-  --gz-border:#36382f;
-  --gz-border-soft:#596058;
+  --gz-link-hover:#08c93e;
+  --gz-border:#e0ded0;
+  --gz-border-soft:#bbbaa6;
   --gz-pre-bg:#28292b;
-  --gz-code-inline-bg:#ffffff1a;
-  --gz-blockquote:#dadbc6;
+  --gz-code-inline-bg:#0e100f14;
+  --gz-blockquote:#3d3d34;
   --gz-radius:0.4rem;
   --gz-font:Arial,Helvetica,"Segoe UI",Roboto,"Open Sans",sans-serif;
   --gz-mono:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
   --gz-accent:#0ae448;
-  --gz-meta:#767d73;
+  --gz-meta:#5a5a4e;
+  --gz-on-accent:#0e100f;
 }
 
 *{box-sizing:border-box}
@@ -38,11 +39,17 @@ body{
 a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
 a:link,a:visited{color:var(--gz-link);text-decoration:none}
 a:hover{color:var(--gz-link-hover);transition:all .3s ease-in-out}
-h1,h2,h3,h4,h5,h6,.title-postpage .post-title,h1.post-title.entry-title{font-weight:500;margin:0;text-align:left;color:var(--gz-heading);font-family:var(--gz-font)}
+h1,h2,h3,h4,h5,h6,.title-postpage .post-title,h1.post-title.entry-title{
+  font-weight:600;
+  margin:0;
+  text-align:left;
+  color:var(--gz-heading);
+  font-family:var(--gz-font)
+}
 hr{display:block;height:1px;border:0;border-top:1px solid var(--gz-border);margin:1em 0;padding:0}
 ins{background-color:transparent;color:var(--gz-text);text-decoration:none}
 
-/* Content formats — GSAP docs style */
+/* Content formats — GSAP accent trên nền cream */
 .post-body a,.entry-content a{color:var(--gz-link);text-decoration:none}
 .post-body a:hover,.entry-content a:hover{color:var(--gz-link-hover)}
 .post-body pre,
@@ -79,7 +86,7 @@ pre code{
 .entry-content :not(pre)>code,
 :not(pre)>code{
   background:var(--gz-code-inline-bg)!important;
-  color:var(--gz-cream)!important;
+  color:var(--gz-heading)!important;
   font-family:var(--gz-mono)!important;
   font-size:90%!important;
   font-weight:700!important;
@@ -118,9 +125,9 @@ blockquote::before,blockquote::after{content:none!important;display:none!importa
   color:var(--gz-text)!important;
   padding:10px
 }
-.post-body table tr:nth-child(even)>td{background-color:var(--gz-surface)!important}
+.post-body table tr:nth-child(even)>td{background-color:var(--gz-surface-2)!important}
 
-/* Accent remap helpers (chrome UI) */
+/* Accent chrome */
 .num_comments,
 .js-loading,
 #error-page h1,
@@ -143,7 +150,8 @@ h2.post-title.entry-title a,
 input.contact-form-button,
 #top{
   background:var(--gz-link)!important;
-  background-color:var(--gz-link)!important
+  background-color:var(--gz-link)!important;
+  color:var(--gz-on-accent)!important
 }
 .scrollmenu a:first-child,
 .scrollmenu a:hover,

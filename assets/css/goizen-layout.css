@@ -568,18 +568,23 @@ body#layout .single-post-ads{display:block!important}
 #layout .single-post-ads .widget-content,#layout #paragraph-ad1 .widget-content{background:var(--gz-surface-2)}
 body#layout #ads-per-paragraf{visibility:visible!important;display:block!important;position:relative;z-index:9999}
 
-/* GSAP polish — surfaces & chrome */
+/* GSAP polish — LIGHT cream surfaces & chrome */
 #wrapper,#superheaderwrapper{background:var(--gz-surface)!important}
 .top-widget,.bot-widget,.footer-bottom,.sidebar{background:var(--gz-surface)!important}
 #superheaderwrapper,#wrapper{border-color:var(--gz-border)!important}
 .scrollmenu{background-color:var(--gz-surface)!important}
 .scrollmenu a{color:var(--gz-text)!important;border-bottom-color:transparent!important}
+.scrollmenu a:first-child,.scrollmenu a:hover{color:var(--gz-link)!important;border-bottom-color:var(--gz-link)!important}
 .snippet-text-box{color:var(--gz-text)!important}
 .comments .comments-content .user a,
 .comments .comment .comment-actions a{color:var(--gz-text)!important}
 .comments .comments-content .datetime a{color:var(--gz-text-muted)!important}
-.custom-comment-title .title{color:var(--gz-heading)!important}
-#related-wrapper h3,.related-post h3,.sidebar h3.title,.footer-bottom h3.title{color:var(--gz-heading)!important}
-#super-my-search-form{background:var(--gz-bg)!important;color:var(--gz-text)!important;border-color:var(--gz-border)!important}
+.custom-comment-title .title,.related-post h3,#related-wrapper h3,.sidebar h3.title,.footer-bottom h3.title{color:var(--gz-heading)!important}
+#super-my-search-form{background:var(--gz-surface)!important;color:var(--gz-text)!important;border-color:var(--gz-border)!important}
 input#super-my-search-form::placeholder{color:var(--gz-text-muted)!important}
+.featured-content,.featured-content h2 a{color:#fffce1!important}
+.index .post-outer,.archive .post-outer,.search .post-outer{background:var(--gz-surface)!important;border-color:var(--gz-border)!important}
+.index .post-outer:hover,.archive .post-outer:hover,.search .post-outer:hover{background:var(--gz-surface-2)!important}
+#blog-pager{background:var(--gz-surface-2)!important}
+#credit-wrapper{background:var(--gz-surface-2)!important}
 

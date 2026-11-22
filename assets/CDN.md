@@ -16,15 +16,15 @@ assets/
 ## Repo đã publish
 
 - GitHub: https://github.com/kkymljnk/goizen-gsap-assets
-- Tag: `v1.0.0`
+- Tag hiện tại: `v1.0.2` (Header { Logo } + Pill Search 999px + Light Cream)
 
 URL jsDelivr (đang dùng trong theme):
 
 ```
-https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/css/goizen-gsap-tokens.css
-https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/css/goizen-layout.css
-https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/js/goizen-ui.js
-https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/js/goizen-related.js
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.2/assets/css/goizen-gsap-tokens.css
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.2/assets/css/goizen-layout.css
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.2/assets/js/goizen-ui.js
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.2/assets/js/goizen-related.js
 ```
 
 ## Quy trình cập nhật sau này

@@ -343,14 +343,19 @@
             '<span class="gsap-mmo-word" aria-label="MMO">' +
               '<span class="gsap-flair-windmill" id="gsap-flair-windmill" aria-hidden="true">' +
                 '<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M92.0 70.0Q131.6 77.4 126.4 102.3Q112.1 120.9 81.0 89.1Q94.3 127.0 70.2 135.0Q47.0 131.9 59.0 89.1Q32.8 119.6 13.8 102.7Q4.9 81.0 48.0 70.0Q8.4 62.6 13.6 37.7Q27.9 19.1 59.0 50.9Q45.7 13.0 69.8 5.0Q93.0 8.1 81.0 50.9Q107.2 20.4 126.2 37.3Q135.1 59.0 92.0 70.0ZM83 70A13 13 0 1 0 57 70A13 13 0 1 0 83 70Z" fill="url(#gz-new-style-grad1)"/>' +
                   '<defs>' +
-                    '<linearGradient id="gz-new-style-grad1" x1="10" y1="10" x2="130" y2="130" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#FFE866"/>' +
-                      '<stop offset="50%" stop-color="#FF8709"/>' +
-                      '<stop offset="100%" stop-color="#FF7BE5"/>' +
+                    '<linearGradient id="gz-pro-dollar-grad" x1="20" y1="6" x2="120" y2="128" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#0AE448"/>' +
+                      '<stop offset="52%" stop-color="#FFE866"/>' +
+                      '<stop offset="100%" stop-color="#FF8709"/>' +
                     '</linearGradient>' +
                   '</defs>' +
+                  '<g transform="translate(5 6)" opacity="0.22">' +
+                    '<path d="M70 10V126" stroke="#0E100F" stroke-width="16" stroke-linecap="round"/>' +
+                    '<path d="M98 44C98 29 85 21 69 21C52 21 40 29 40 42C40 63 100 57 100 81C100 95 87 105 69 105C50 105 38 95 38 80" stroke="#0E100F" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>' +
+                  '</g>' +
+                  '<path d="M70 10V126" stroke="url(#gz-pro-dollar-grad)" stroke-width="16" stroke-linecap="round"/>' +
+                  '<path d="M98 44C98 29 85 21 69 21C52 21 40 29 40 42C40 63 100 57 100 81C100 95 87 105 69 105C50 105 38 95 38 80" stroke="url(#gz-pro-dollar-grad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">M</span>' +
@@ -362,14 +367,15 @@
             '<span class="gsap-mmo-word" aria-label="TeaM">' +
               '<span class="gsap-flair-clover" id="gsap-flair-clover" aria-hidden="true">' +
                 '<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M134.1 65.5Q156.5 71.5 155.0 80.0Q156.5 88.5 134.1 94.5Q150.5 110.9 145.0 117.5Q142.1 125.6 119.6 119.6Q125.6 142.1 117.5 145.0Q110.9 150.5 94.5 134.1Q88.5 156.5 80.0 155.0Q71.5 156.5 65.5 134.1Q49.1 150.5 42.5 145.0Q34.4 142.1 40.4 119.6Q17.9 125.6 15.0 117.5Q9.5 110.9 25.9 94.5Q3.5 88.5 5.0 80.0Q3.5 71.5 25.9 65.5Q9.5 49.1 15.0 42.5Q17.9 34.4 40.4 40.4Q34.4 17.9 42.5 15.0Q49.1 9.5 65.5 25.9Q71.5 3.5 80.0 5.0Q88.5 3.5 94.5 25.9Q110.9 9.5 117.5 15.0Q125.6 17.9 119.6 40.4Q142.1 34.4 145.0 42.5Q150.5 49.1 134.1 65.5ZM106 80A26 26 0 1 0 54 80A26 26 0 1 0 106 80Z" fill="url(#gz-new-style-grad2)"/>' +
                   '<defs>' +
-                    '<linearGradient id="gz-new-style-grad2" x1="12" y1="12" x2="148" y2="148" gradientUnits="userSpaceOnUse">' +
+                    '<linearGradient id="gz-pro-ghost-grad" x1="20" y1="10" x2="144" y2="150" gradientUnits="userSpaceOnUse">' +
                       '<stop offset="0%" stop-color="#9D95FF"/>' +
                       '<stop offset="52%" stop-color="#FF7BE5"/>' +
                       '<stop offset="100%" stop-color="#FF8709"/>' +
                     '</linearGradient>' +
                   '</defs>' +
+                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M82 10C46.5 10 20 36.8 20 72.5V132C20 140.5 29.8 145.2 36.5 139.8L46.2 132C51.2 128 58.3 128.2 63.1 132.4L71.8 140C77.6 145.1 86.4 145.1 92.2 140L100.9 132.4C105.7 128.2 112.8 128 117.8 132L127.5 139.8C134.2 145.2 144 140.5 144 132V72.5C144 36.8 117.5 10 82 10ZM65 54C70 54 74 58.8 74 65V79C74 85.2 70 90 65 90C60 90 56 85.2 56 79V65C56 58.8 60 54 65 54ZM105 54C110 54 114 58.8 114 65V79C114 85.2 110 90 105 90C100 90 96 85.2 96 79V65C96 58.8 100 54 105 54Z" transform="translate(5 6) rotate(6 82 78)" fill="#0E100F" fill-opacity="0.18"/>' +
+                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M82 10C46.5 10 20 36.8 20 72.5V132C20 140.5 29.8 145.2 36.5 139.8L46.2 132C51.2 128 58.3 128.2 63.1 132.4L71.8 140C77.6 145.1 86.4 145.1 92.2 140L100.9 132.4C105.7 128.2 112.8 128 117.8 132L127.5 139.8C134.2 145.2 144 140.5 144 132V72.5C144 36.8 117.5 10 82 10ZM65 54C70 54 74 58.8 74 65V79C74 85.2 70 90 65 90C60 90 56 85.2 56 79V65C56 58.8 60 54 65 54ZM105 54C110 54 114 58.8 114 65V79C114 85.2 110 90 105 90C100 90 96 85.2 96 79V65C96 58.8 100 54 105 54Z" transform="rotate(6 82 78)" fill="url(#gz-pro-ghost-grad)"/>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">T</span>' +
@@ -391,15 +397,15 @@
     var chars=hero.querySelectorAll('.gsap-mmo-char');
     var windmill=document.getElementById('gsap-flair-windmill');
     var clover=document.getElementById('gsap-flair-clover');
-    /* Hover-only Pure Single-Path GSAP animation */
+    /* Hover-only Pro Dollar ($) & Cyber Ghost animation */
     hero.addEventListener('mouseenter',function(){
-      g.to(windmill,{rotation:'+=180',scale:1.18,duration:0.75,ease:'elastic.out(1,0.5)',overwrite:'auto'});
-      g.to(clover,{rotation:'-=135',scale:1.14,duration:0.8,ease:'elastic.out(1,0.48)',overwrite:'auto'});
+      g.to(windmill,{rotationY:'+=360',rotationZ:-8,scale:1.18,duration:0.8,ease:'back.out(1.8)',overwrite:'auto'});
+      g.to(clover,{x:10,y:-10,rotation:10,scale:1.12,duration:0.75,ease:'elastic.out(1,0.45)',overwrite:'auto'});
       g.fromTo(chars,{y:0,rotationX:0},{y:-8,rotationX:18,duration:0.22,stagger:0.038,yoyo:true,repeat:1,ease:'power2.out',overwrite:'auto'});
     });
     hero.addEventListener('mouseleave',function(){
-      g.to(windmill,{scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
-      g.to(clover,{scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
+      g.to(windmill,{rotationZ:0,scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
+      g.to(clover,{x:0,y:0,rotation:0,scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
     });
   }
 

@@ -1027,7 +1027,7 @@ input#super-my-search-form::placeholder{
   justify-content:center!important;
   padding-left:0!important;
   transform:translateX(-38px);
-  z-index:2
+  z-index:3
 }
 .gsap-mmo-row--2{
   justify-content:center!important;
@@ -1068,11 +1068,12 @@ input#super-my-search-form::placeholder{
   display:block;
   overflow:visible
 }
-/* SVG #2: 3D GSAP MMO Bullish Clover & Breakout Wave BEHIND "TeaM" (z-index: 1 < char z-index: 2) */
+/* SVG #2: 3D GSAP MMO Bullish Clover & Breakout Wave BEHIND "M" in "TeaM" (~70% extending outward) */
 .gsap-flair-clover{
   position:absolute;
-  left:clamp(42px,7.2vw,78px);
-  top:clamp(-28px,-3.2vw,-14px);
+  left:auto!important;
+  right:clamp(-82px,-8.5vw,-60px)!important;
+  top:clamp(-18px,-2vw,-8px)!important;
   width:clamp(88px,12.2vw,118px);
   height:clamp(88px,12.2vw,118px);
   z-index:1;

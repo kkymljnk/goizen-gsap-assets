@@ -1,86 +1,137 @@
-/* Goizen × GSAP tokens — LIGHT cream (không dark). Ivory nền + chữ than + link xanh GSAP */
+/* Goizen × GSAP tokens — LIGHT cream (gsap.com Lite). Ivory nền + chữ than #0e100f + mô tả xám ô-liu #3d3d34 */
 :root{
   --gz-bg:#fffceb;
   --gz-surface:#ffffff;
   --gz-surface-2:#f7f4e4;
   --gz-text:#3d3d34;
-  --gz-text-muted:#7c7c6f;
+  --gz-text-muted:#6e6e62;
   --gz-heading:#0e100f;
   --gz-cream:#fffce1;
-  --gz-link:#0ae448;
-  --gz-link-hover:#08c93e;
+  --gz-link:#0f7a32;
+  --gz-link-hover:#095422;
   --gz-border:#e0ded0;
   --gz-border-soft:#bbbaa6;
-  --gz-pre-bg:#28292b;
-  --gz-code-inline-bg:#0e100f14;
+  --gz-pre-bg:#161816;
+  --gz-code-inline-bg:#ece9d8;
   --gz-blockquote:#3d3d34;
   --gz-radius:0.4rem;
-  --gz-font:Arial,Helvetica,"Segoe UI",Roboto,"Open Sans",sans-serif;
-  --gz-mono:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
-  --gz-accent:#0ae448;
+  --gz-font:"Plus Jakarta Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --gz-mono:"JetBrains Mono","Fira Code",SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  --gz-accent:#0f7a32;
   --gz-meta:#5a5a4e;
-  --gz-on-accent:#0e100f;
+  --gz-on-accent:#ffffff;
 }
 
 *{box-sizing:border-box}
 html{background:var(--gz-bg)}
 body{
   font-family:var(--gz-font);
-  font-size:15px;
+  font-size:15.5px;
   text-align:left;
   color:var(--gz-text);
   margin:0;
   padding:0;
   font-weight:400;
   background-color:var(--gz-bg);
-  line-height:1.7;
-  -webkit-font-smoothing:antialiased
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
 }
 a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
-a:link,a:visited{color:var(--gz-link);text-decoration:none}
-a:hover{color:var(--gz-link-hover);transition:all .3s ease-in-out}
-h1,h2,h3,h4,h5,h6,.title-postpage .post-title,h1.post-title.entry-title{
-  font-weight:600;
+a[href],a:link,a:visited{color:var(--gz-link);text-decoration:none}
+a[href]:hover,a:hover{color:var(--gz-link-hover);transition:all .2s ease-in-out}
+h1,h2,h3,h4,h5,h6,
+.title-postpage .post-title,
+h1.post-title.entry-title,
+h2.post-title.entry-title,
+h2.post-title.entry-title a,
+h2.post-title.entry-title a:link,
+h2.post-title.entry-title a:visited,
+.PopularPosts .post-title,
+.PopularPosts .post-title a,
+.PopularPosts .post-title a:link,
+.PopularPosts .post-title a:visited,
+a.related-post-item-title,
+a.related-post-item-title:link,
+a.related-post-item-title:visited{
+  font-weight:600!important;
   margin:0;
   text-align:left;
-  color:var(--gz-heading);
-  font-family:var(--gz-font)
+  color:var(--gz-heading)!important;
+  font-family:var(--gz-font)!important;
+  letter-spacing:-0.015em!important
+}
+h2.post-title.entry-title a:hover,
+.PopularPosts .post-title a:hover,
+a.related-post-item-title:hover{
+  color:var(--gz-link)!important;
+  text-decoration:underline!important;
+  text-decoration-color:var(--gz-link)!important;
+  text-decoration-thickness:2px!important;
+  text-underline-offset:3px!important
 }
 hr{display:block;height:1px;border:0;border-top:1px solid var(--gz-border);margin:1em 0;padding:0}
 ins{background-color:transparent;color:var(--gz-text);text-decoration:none}
 
-/* Content formats — GSAP accent trên nền cream */
-.post-body a,.entry-content a{color:var(--gz-link);text-decoration:none}
-.post-body a:hover,.entry-content a:hover{color:var(--gz-link-hover)}
+/* Description & Body Typography — GSAP Lite (#3d3d34) */
+.snippet-text-box,
+.popular-posts-snippet.snippet-container,
+.related-post-item-summary,
+.post-body,
+.entry-content{
+  color:var(--gz-text)!important;
+  font-family:var(--gz-font)!important;
+  font-size:15.5px!important;
+  line-height:1.65!important;
+  font-weight:400!important
+}
+
+/* Content formats — GSAP Code Block & Inline Code */
+.post-body a[href],.entry-content a[href],.post-body a,.entry-content a{
+  color:var(--gz-link)!important;
+  font-weight:500;
+  text-decoration:underline;
+  text-decoration-color:var(--gz-link);
+  text-underline-offset:2px
+}
+.post-body a[href]:hover,.entry-content a[href]:hover,.post-body a:hover,.entry-content a:hover{
+  color:var(--gz-link-hover)!important
+}
 .post-body pre,
 .entry-content pre,
-pre{
+pre,
+pre[class*="language-"]{
   background:var(--gz-pre-bg)!important;
   color:var(--gz-cream)!important;
   font-family:var(--gz-mono)!important;
-  font-size:14.4px!important;
+  font-size:14px!important;
   font-weight:400!important;
-  line-height:1.55!important;
-  border-radius:6.4px!important;
-  border:0!important;
+  line-height:1.6!important;
+  border-radius:12px!important;
+  border:2px solid var(--gz-heading)!important;
   padding:0!important;
-  margin:1.25em 0!important;
+  margin:1.4em 0!important;
   overflow-x:auto!important;
-  white-space:pre!important
+  white-space:pre!important;
+  position:relative!important;
+  box-shadow:none!important
 }
 .post-body pre code,
 .entry-content pre code,
-pre code{
+pre code,
+pre[class*="language-"]>code{
   background:transparent!important;
-  color:inherit!important;
-  font-family:inherit!important;
-  font-size:inherit!important;
+  color:var(--gz-cream)!important;
+  font-family:var(--gz-mono)!important;
+  font-size:14px!important;
   font-weight:400!important;
-  padding:16px!important;
+  line-height:1.6!important;
+  padding:20px 22px!important;
   display:block!important;
-  border-radius:4px!important;
+  border-radius:10px!important;
   border:0!important;
-  box-shadow:none!important
+  box-shadow:none!important;
+  text-shadow:none!important
 }
 .post-body :not(pre)>code,
 .entry-content :not(pre)>code,
@@ -88,11 +139,11 @@ pre code{
   background:var(--gz-code-inline-bg)!important;
   color:var(--gz-heading)!important;
   font-family:var(--gz-mono)!important;
-  font-size:90%!important;
-  font-weight:700!important;
-  border-radius:4px!important;
-  padding:3.2px 5.6px!important;
-  border:0!important
+  font-size:88%!important;
+  font-weight:600!important;
+  border-radius:5px!important;
+  padding:2px 6px!important;
+  border:1px solid #d8d5c5!important
 }
 .post-body blockquote,
 .entry-content blockquote,
@@ -103,17 +154,17 @@ blockquote{
   font-style:normal!important;
   color:var(--gz-blockquote)!important;
   padding:0.75em 0 0.75em 1.1em!important;
-  line-height:1.6!important;
+  line-height:1.65!important;
   position:relative!important;
   border:0!important;
-  border-left:2px solid var(--gz-link)!important;
+  border-left:3px solid var(--gz-heading)!important;
   background:transparent!important
 }
 blockquote::before,blockquote::after{content:none!important;display:none!important}
 .post-body table th,
 .entry-content table th{
   background:var(--gz-surface-2)!important;
-  font-weight:500;
+  font-weight:600;
   border:1px solid var(--gz-border)!important;
   color:var(--gz-heading)!important;
   padding:10px;
@@ -131,24 +182,17 @@ blockquote::before,blockquote::after{content:none!important;display:none!importa
 .num_comments,
 .js-loading,
 #error-page h1,
-a.related-post-item-title,
-h2.post-title.entry-title a,
-.PopularPosts .post-title,
-.PopularPosts .post-title a,
-.PopularPosts .post-title a:visited,
-.PopularPosts .post-title a:hover,
 .scrollmenu a:first-child,
 .scrollmenu a:hover,
 .labl a:hover{
-  color:var(--gz-link)!important
+  color:var(--gz-heading)!important
 }
 .my-search-button,.my-search-button:hover,
 #super-blocker button,#super-blocker button:hover,
 .widget-content.cloud-label-widget-content a:hover,
 .sc-default,
 .comments-blocks button,
-input.contact-form-button,
-#top{
+input.contact-form-button{
   background:var(--gz-link)!important;
   background-color:var(--gz-link)!important;
   color:var(--gz-on-accent)!important
@@ -165,9 +209,15 @@ textarea.contact-form-email-message:focus{
   color:var(--gz-link)!important;
   border-color:var(--gz-link)!important
 }
+.post-tags,.post-tags a,.post-tags a:link,.post-tags a:visited,.post-tags a:hover,
+.item .post-header-line-1,
+.item .post-author,.item .post-author a,.item .post-author a:link,.item .post-author a:visited,.item .post-author span,
+.item .post-timestamp,.item .post-timestamp a,.item .post-timestamp a:link,.item .post-timestamp a:visited,.item .post-timestamp time{
+  color:var(--gz-link)!important;
+  font-weight:500!important
+}
 .breadcrumbs,.breadcrumbs a,.breadcrumbs a:hover,
-.post-tags,.post-tags a,.post-tags a:hover,
 .PopularPosts .post-header a,
-.post-author a,.post-timestamp a{
+.index .post-author a,.index .post-timestamp a{
   color:var(--gz-meta)!important
 }

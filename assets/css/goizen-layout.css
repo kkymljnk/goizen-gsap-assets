@@ -569,10 +569,10 @@ body#layout .single-post-ads{display:block!important}
 body#layout #ads-per-paragraf{visibility:visible!important;display:block!important;position:relative;z-index:9999}
 
 /* GSAP polish — LIGHT cream surfaces & chrome */
-#wrapper,#superheaderwrapper{background:var(--gz-surface)!important}
+#wrapper,#superheaderwrapper{background:var(--gz-bg)!important}
 .top-widget,.bot-widget,.footer-bottom,.sidebar{background:var(--gz-surface)!important}
 #superheaderwrapper,#wrapper{border-color:var(--gz-border)!important}
-.scrollmenu{background-color:var(--gz-surface)!important}
+.scrollmenu{background-color:transparent!important}
 .scrollmenu a{color:var(--gz-text)!important;border-bottom-color:transparent!important}
 .scrollmenu a:first-child,.scrollmenu a:hover{color:var(--gz-link)!important;border-bottom-color:var(--gz-link)!important}
 .snippet-text-box{color:var(--gz-text)!important}
@@ -580,11 +580,98 @@ body#layout #ads-per-paragraf{visibility:visible!important;display:block!importa
 .comments .comment .comment-actions a{color:var(--gz-text)!important}
 .comments .comments-content .datetime a{color:var(--gz-text-muted)!important}
 .custom-comment-title .title,.related-post h3,#related-wrapper h3,.sidebar h3.title,.footer-bottom h3.title{color:var(--gz-heading)!important}
-#super-my-search-form{background:var(--gz-surface)!important;color:var(--gz-text)!important;border-color:var(--gz-border)!important}
-input#super-my-search-form::placeholder{color:var(--gz-text-muted)!important}
 .featured-content,.featured-content h2 a{color:#fffce1!important}
 .index .post-outer,.archive .post-outer,.search .post-outer{background:var(--gz-surface)!important;border-color:var(--gz-border)!important}
 .index .post-outer:hover,.archive .post-outer:hover,.search .post-outer:hover{background:var(--gz-surface-2)!important}
 #blog-pager{background:var(--gz-surface-2)!important}
 #credit-wrapper{background:var(--gz-surface-2)!important}
+
+/* GSAP Gallery header: { Logo } + pill Search */
+#main-header{margin-top:12px}
+#superheaderwrapper{
+  display:flex!important;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px 24px;
+  background:var(--gz-bg)!important;
+  border:0!important;
+  border-radius:0!important;
+  padding:18px 8px 8px!important;
+  max-width:760px;
+  box-sizing:border-box
+}
+#superheaderwrapper > .clear{display:none!important}
+#header-atas,.header-atas,#Header1{
+  float:none!important;
+  width:auto!important;
+  flex:0 1 auto;
+  margin:0!important
+}
+.header-widget{padding:0!important;overflow:visible!important}
+.header-widget h1,.header-widget h2{
+  font-size:22px!important;
+  font-weight:600!important;
+  line-height:1.2!important;
+  text-align:left!important;
+  margin:0!important
+}
+.header-brace-logo{
+  display:inline-flex!important;
+  align-items:center;
+  gap:8px;
+  color:var(--gz-heading)!important;
+  text-decoration:none!important;
+  white-space:nowrap
+}
+.header-brace-logo .brace-l,
+.header-brace-logo .brace-r{
+  font-size:1.35em;
+  font-weight:500;
+  color:var(--gz-heading);
+  line-height:1
+}
+.header-brace-logo .logo-text{
+  font-size:1em;
+  font-weight:600;
+  letter-spacing:-0.01em;
+  color:var(--gz-heading)
+}
+.header-img-hidden,#Header1_headerimg{display:none!important;width:0!important;height:0!important}
+#search-wrapper,.search-wrapper{
+  float:none!important;
+  width:min(420px,100%)!important;
+  flex:1 1 280px;
+  margin:0!important;
+  max-width:480px
+}
+#search-wrap,#search,#my-search-form{width:100%;margin:0;position:relative}
+#super-my-search-form{
+  background:transparent!important;
+  color:var(--gz-heading)!important;
+  border:1px solid var(--gz-border-soft)!important;
+  border-radius:999px!important;
+  height:44px!important;
+  line-height:44px!important;
+  padding:0 48px 0 18px!important;
+  font-size:15px!important;
+  box-shadow:none!important
+}
+input#super-my-search-form::placeholder{
+  color:var(--gz-text-muted)!important;
+  opacity:1
+}
+.my-search-button,.my-search-button:hover{
+  background:transparent!important;
+  color:var(--gz-heading)!important;
+  width:44px!important;
+  height:44px!important;
+  line-height:44px!important;
+  border-radius:0 999px 999px 0!important;
+  right:2px!important;
+  top:0!important;
+  box-shadow:none!important
+}
+.my-search-button i,.my-search-button .fas{color:var(--gz-heading)!important;font-size:15px}
+#nav-top{width:100%;flex:1 0 100%;margin-top:4px}
 

@@ -1,0 +1,165 @@
+/* Goizen × GSAP design tokens — measured from gsap.com/resources */
+:root{
+  --gz-bg:#0e100f;
+  --gz-surface:#161816;
+  --gz-surface-2:#1c1e1d;
+  --gz-text:#bbbaa6;
+  --gz-text-muted:#7c7c6f;
+  --gz-heading:#fffce1;
+  --gz-cream:#fffce4;
+  --gz-link:#0ae448;
+  --gz-link-hover:#5bbc54;
+  --gz-border:#36382f;
+  --gz-border-soft:#596058;
+  --gz-pre-bg:#28292b;
+  --gz-code-inline-bg:#ffffff1a;
+  --gz-blockquote:#dadbc6;
+  --gz-radius:0.4rem;
+  --gz-font:Arial,Helvetica,"Segoe UI",Roboto,"Open Sans",sans-serif;
+  --gz-mono:SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+  --gz-accent:#0ae448;
+  --gz-meta:#767d73;
+}
+
+*{box-sizing:border-box}
+html{background:var(--gz-bg)}
+body{
+  font-family:var(--gz-font);
+  font-size:15px;
+  text-align:left;
+  color:var(--gz-text);
+  margin:0;
+  padding:0;
+  font-weight:400;
+  background-color:var(--gz-bg);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased
+}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
+a:link,a:visited{color:var(--gz-link);text-decoration:none}
+a:hover{color:var(--gz-link-hover);transition:all .3s ease-in-out}
+h1,h2,h3,h4,h5,h6,.title-postpage .post-title,h1.post-title.entry-title{font-weight:500;margin:0;text-align:left;color:var(--gz-heading);font-family:var(--gz-font)}
+hr{display:block;height:1px;border:0;border-top:1px solid var(--gz-border);margin:1em 0;padding:0}
+ins{background-color:transparent;color:var(--gz-text);text-decoration:none}
+
+/* Content formats — GSAP docs style */
+.post-body a,.entry-content a{color:var(--gz-link);text-decoration:none}
+.post-body a:hover,.entry-content a:hover{color:var(--gz-link-hover)}
+.post-body pre,
+.entry-content pre,
+pre{
+  background:var(--gz-pre-bg)!important;
+  color:var(--gz-cream)!important;
+  font-family:var(--gz-mono)!important;
+  font-size:14.4px!important;
+  font-weight:400!important;
+  line-height:1.55!important;
+  border-radius:6.4px!important;
+  border:0!important;
+  padding:0!important;
+  margin:1.25em 0!important;
+  overflow-x:auto!important;
+  white-space:pre!important
+}
+.post-body pre code,
+.entry-content pre code,
+pre code{
+  background:transparent!important;
+  color:inherit!important;
+  font-family:inherit!important;
+  font-size:inherit!important;
+  font-weight:400!important;
+  padding:16px!important;
+  display:block!important;
+  border-radius:4px!important;
+  border:0!important;
+  box-shadow:none!important
+}
+.post-body :not(pre)>code,
+.entry-content :not(pre)>code,
+:not(pre)>code{
+  background:var(--gz-code-inline-bg)!important;
+  color:var(--gz-cream)!important;
+  font-family:var(--gz-mono)!important;
+  font-size:90%!important;
+  font-weight:700!important;
+  border-radius:4px!important;
+  padding:3.2px 5.6px!important;
+  border:0!important
+}
+.post-body blockquote,
+.entry-content blockquote,
+blockquote{
+  font-size:100%!important;
+  width:100%!important;
+  margin:20px auto!important;
+  font-style:normal!important;
+  color:var(--gz-blockquote)!important;
+  padding:0.75em 0 0.75em 1.1em!important;
+  line-height:1.6!important;
+  position:relative!important;
+  border:0!important;
+  border-left:2px solid var(--gz-link)!important;
+  background:transparent!important
+}
+blockquote::before,blockquote::after{content:none!important;display:none!important}
+.post-body table th,
+.entry-content table th{
+  background:var(--gz-surface-2)!important;
+  font-weight:500;
+  border:1px solid var(--gz-border)!important;
+  color:var(--gz-heading)!important;
+  padding:10px;
+  text-align:left
+}
+.post-body table td,
+.entry-content table td{
+  border:1px solid var(--gz-border)!important;
+  color:var(--gz-text)!important;
+  padding:10px
+}
+.post-body table tr:nth-child(even)>td{background-color:var(--gz-surface)!important}
+
+/* Accent remap helpers (chrome UI) */
+.num_comments,
+.js-loading,
+#error-page h1,
+a.related-post-item-title,
+h2.post-title.entry-title a,
+.PopularPosts .post-title,
+.PopularPosts .post-title a,
+.PopularPosts .post-title a:visited,
+.PopularPosts .post-title a:hover,
+.scrollmenu a:first-child,
+.scrollmenu a:hover,
+.labl a:hover{
+  color:var(--gz-link)!important
+}
+.my-search-button,.my-search-button:hover,
+#super-blocker button,#super-blocker button:hover,
+.widget-content.cloud-label-widget-content a:hover,
+.sc-default,
+.comments-blocks button,
+input.contact-form-button,
+#top{
+  background:var(--gz-link)!important;
+  background-color:var(--gz-link)!important
+}
+.scrollmenu a:first-child,
+.scrollmenu a:hover,
+.labl:hover,
+input.contact-form-name:focus,
+input.contact-form-email:focus,
+textarea.contact-form-email-message:focus{
+  border-bottom-color:var(--gz-link)!important
+}
+#hide span.tiny-button:hover{
+  color:var(--gz-link)!important;
+  border-color:var(--gz-link)!important
+}
+.breadcrumbs,.breadcrumbs a,.breadcrumbs a:hover,
+.post-tags,.post-tags a,.post-tags a:hover,
+.PopularPosts .post-header a,
+.post-author a,.post-timestamp a{
+  color:var(--gz-meta)!important
+}

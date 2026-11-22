@@ -187,9 +187,9 @@
     'html body .gsap-mmo-row--2{justify-content:center!important;padding-left:0!important;transform:translateX(42px)!important;margin-top:2px!important;z-index:2!important}'+
     'html body .gsap-mmo-word{position:relative!important;display:inline-flex!important;align-items:baseline!important;color:var(--gz-heading,#0e100f)!important}'+
     'html body .gsap-mmo-char{position:relative!important;display:inline-block!important;color:var(--gz-heading,#0e100f)!important;z-index:2!important;will-change:transform!important;transform-origin:50% 80%!important}'+
-    'html body .gsap-flair-windmill{position:absolute!important;top:clamp(-28px,-3.2vw,-18px)!important;left:clamp(48px,8.2vw,84px)!important;width:clamp(44px,6.5vw,60px)!important;height:clamp(44px,6.5vw,60px)!important;z-index:3!important;pointer-events:none!important}'+
+    'html body .gsap-flair-windmill{position:absolute!important;top:clamp(-32px,-3.6vw,-20px)!important;left:clamp(46px,8vw,82px)!important;width:clamp(48px,7vw,66px)!important;height:clamp(48px,7vw,66px)!important;z-index:3!important;pointer-events:none!important}'+
     'html body .gsap-flair-windmill svg{width:100%!important;height:100%!important;display:block!important;overflow:visible!important}'+
-    'html body .gsap-flair-clover{position:absolute!important;left:clamp(28px,5.5vw,58px)!important;top:clamp(-18px,-2vw,-8px)!important;width:clamp(76px,10.8vw,104px)!important;height:clamp(76px,10.8vw,104px)!important;z-index:1!important;pointer-events:none!important;opacity:1!important}'+
+    'html body .gsap-flair-clover{position:absolute!important;left:clamp(44px,7.5vw,82px)!important;top:clamp(-28px,-3.2vw,-16px)!important;width:clamp(82px,11.5vw,112px)!important;height:clamp(82px,11.5vw,112px)!important;z-index:1!important;pointer-events:none!important;opacity:1!important}'+
     'html body .gsap-flair-clover svg{width:100%!important;height:100%!important;display:block!important;overflow:visible!important}'+
     'html body #top,#top{'+
       'box-shadow:none!important;margin:0!important;padding:0!important;'+
@@ -351,15 +351,16 @@
             '<span class="gsap-mmo-word" aria-label="MMO">' +
               '<span class="gsap-flair-windmill" id="gsap-flair-windmill" aria-hidden="true">' +
                 '<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path d="M60 4C63.5 34.5 85.5 56.5 116 60C85.5 63.5 63.5 85.5 60 116C56.5 85.5 34.5 63.5 4 60C34.5 56.5 56.5 34.5 60 4Z" fill="url(#gz-gsap-spark-grad)" stroke="#0e100f" stroke-width="3" stroke-linejoin="round"/>' +
-                  '<path d="M22 22C43 40 77 40 98 22C80 43 80 77 98 98C77 80 43 80 22 98C40 77 40 43 22 22Z" fill="url(#gz-gsap-spark-grad2)" stroke="#0e100f" stroke-width="3" stroke-linejoin="round"/>' +
-                  '<circle cx="60" cy="60" r="10" fill="#0ae448" stroke="#0e100f" stroke-width="3"/>' +
+                  '<path d="M60 4L73 15L90 12L96 28L112 35L108 52L116 67L103 80L102 97L85 101L74 115L58 109L42 115L31 101L14 97L13 80L0 67L8 52L4 35L20 28L26 12L43 15L60 4Z" fill="url(#gz-mmo-coin-outer)" stroke="#0e100f" stroke-width="3.5" stroke-linejoin="round"/>' +
+                  '<circle cx="60" cy="60" r="36" fill="url(#gz-mmo-coin-inner)" stroke="#0e100f" stroke-width="3.5"/>' +
+                  '<path d="M60 32V88M71 45C71 39.5 66.2 36 59.5 36C52.8 36 48 39.8 48 45.2C48 56 72 53 72 65.5C72 71.5 66.8 75.5 59.5 75.5C52 75.5 47 71.2 47 65" stroke="#0e100f" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>' +
                   '<defs>' +
-                    '<linearGradient id="gz-gsap-spark-grad" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#FF8709"/>' +
+                    '<linearGradient id="gz-mmo-coin-outer" x1="8" y1="8" x2="112" y2="112" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#FFE866"/>' +
+                      '<stop offset="55%" stop-color="#FF8709"/>' +
                       '<stop offset="100%" stop-color="#F7BDF8"/>' +
                     '</linearGradient>' +
-                    '<linearGradient id="gz-gsap-spark-grad2" x1="20" y1="98" x2="98" y2="20" gradientUnits="userSpaceOnUse">' +
+                    '<linearGradient id="gz-mmo-coin-inner" x1="24" y1="24" x2="96" y2="96" gradientUnits="userSpaceOnUse">' +
                       '<stop offset="0%" stop-color="#0AE448"/>' +
                       '<stop offset="100%" stop-color="#FFE866"/>' +
                     '</linearGradient>' +
@@ -375,10 +376,13 @@
             '<span class="gsap-mmo-word" aria-label="TeaM">' +
               '<span class="gsap-flair-clover" id="gsap-flair-clover" aria-hidden="true">' +
                 '<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path d="M80 6C94 6 103 22 115 29C127 36 145 33 152 45C159 57 147 72 147 86C147 100 159 115 152 127C145 139 127 136 115 143C103 150 94 166 80 166C66 166 57 150 45 143C33 136 15 139 8 127C1 115 13 100 13 86C13 72 1 57 8 45C15 33 33 36 45 29C57 22 66 6 80 6Z" transform="translate(0 -6)" fill="url(#gz-gsap-wave-grad)" stroke="#0e100f" stroke-width="3" stroke-linejoin="round"/>' +
-                  '<circle cx="80" cy="80" r="24" fill="#fffceb" stroke="#0e100f" stroke-width="3"/>' +
+                  '<rect x="14" y="14" width="132" height="132" rx="34" transform="rotate(-8 80 80)" fill="url(#gz-mmo-chart-bg)" stroke="#0e100f" stroke-width="4"/>' +
+                  '<rect x="38" y="86" width="16" height="34" rx="5" fill="#fffceb" stroke="#0e100f" stroke-width="3.2"/>' +
+                  '<rect x="64" y="68" width="16" height="52" rx="5" fill="#FFE866" stroke="#0e100f" stroke-width="3.2"/>' +
+                  '<rect x="90" y="46" width="16" height="74" rx="5" fill="#0AE448" stroke="#0e100f" stroke-width="3.2"/>' +
+                  '<path d="M36 72L66 44L84 58L120 24M120 24H96M120 24V48" stroke="#0e100f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>' +
                   '<defs>' +
-                    '<linearGradient id="gz-gsap-wave-grad" x1="12" y1="12" x2="148" y2="148" gradientUnits="userSpaceOnUse">' +
+                    '<linearGradient id="gz-mmo-chart-bg" x1="14" y1="14" x2="146" y2="146" gradientUnits="userSpaceOnUse">' +
                       '<stop offset="0%" stop-color="#9D95FF"/>' +
                       '<stop offset="55%" stop-color="#F7BDF8"/>' +
                       '<stop offset="100%" stop-color="#FF8709"/>' +
@@ -407,12 +411,13 @@
     var clover=document.getElementById('gsap-flair-clover');
     /* Hover-only GSAP animation per Đại Ca Tú's request */
     hero.addEventListener('mouseenter',function(){
-      g.to(windmill,{rotation:'+=180',scale:1.18,duration:0.7,ease:'elastic.out(1,0.45)',overwrite:'auto'});
-      g.to(clover,{rotation:'-=120',scale:1.14,duration:0.75,ease:'elastic.out(1,0.5)',overwrite:'auto'});
+      g.to(windmill,{rotation:'+=360',scale:1.18,duration:0.75,ease:'back.out(1.8)',overwrite:'auto'});
+      g.to(clover,{y:-10,rotation:12,scale:1.14,duration:0.7,ease:'elastic.out(1,0.45)',overwrite:'auto'});
       g.fromTo(chars,{y:0,rotationX:0},{y:-8,rotationX:18,duration:0.22,stagger:0.04,yoyo:true,repeat:1,ease:'power2.out',overwrite:'auto'});
     });
     hero.addEventListener('mouseleave',function(){
-      g.to([windmill,clover],{scale:1,duration:0.55,ease:'elastic.out(1,0.6)',overwrite:'auto'});
+      g.to(windmill,{scale:1,duration:0.55,ease:'elastic.out(1,0.6)',overwrite:'auto'});
+      g.to(clover,{y:0,rotation:0,scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
     });
   }
 

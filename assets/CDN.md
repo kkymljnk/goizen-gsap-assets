@@ -13,19 +13,26 @@ assets/
   CDN.md                       # file này
 ```
 
-## Quy trình đúng khi Đại Ca Tú có repo
+## Repo đã publish
 
-1. Tạo repo GitHub (public), ví dụ `dai-ca-tu/goizen-gsap-assets`.
-2. Push thư mục `assets/` (và có thể cả theme) lên `main`.
-3. Tạo **git tag** phiên bản, ví dụ `v1.0.0` (pin version — tránh cache `@main`).
-4. URL jsDelivr:
+- GitHub: https://github.com/kkymljnk/goizen-gsap-assets
+- Tag: `v1.0.0`
+
+URL jsDelivr (đang dùng trong theme):
 
 ```
-https://cdn.jsdelivr.net/gh/USER/REPO@v1.0.0/assets/css/goizen-gsap-tokens.css
-https://cdn.jsdelivr.net/gh/USER/REPO@v1.0.0/assets/css/goizen-layout.css
-https://cdn.jsdelivr.net/gh/USER/REPO@v1.0.0/assets/js/goizen-ui.js
-https://cdn.jsdelivr.net/gh/USER/REPO@v1.0.0/assets/js/goizen-related.js
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/css/goizen-gsap-tokens.css
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/css/goizen-layout.css
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/js/goizen-ui.js
+https://cdn.jsdelivr.net/gh/kkymljnk/goizen-gsap-assets@v1.0.0/assets/js/goizen-related.js
 ```
+
+## Quy trình cập nhật sau này
+
+1. Sửa file trong `assets/`.
+2. Push lên `kkymljnk/goizen-gsap-assets` + tag mới (`v1.0.1`).
+3. Đổi `@v1.0.0` → `@v1.0.1` trong `goizen_theme_clean.xml`.
+4. `_prep_xml.py` + restore theme.
 
 5. Trong `goizen_theme_clean.xml`, thay marker CSS bằng:
 

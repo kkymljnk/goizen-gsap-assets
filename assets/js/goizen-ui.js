@@ -343,29 +343,14 @@
             '<span class="gsap-mmo-word" aria-label="MMO">' +
               '<span class="gsap-flair-windmill" id="gsap-flair-windmill" aria-hidden="true">' +
                 '<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M70 4C75.2 4 79.1 8.5 80.4 13.5C85.8 35.4 104.6 54.2 126.5 59.6C131.5 60.9 136 64.8 136 70C136 75.2 131.5 79.1 126.5 80.4C104.6 85.8 85.8 104.6 80.4 126.5C79.1 131.5 75.2 136 70 136C64.8 136 60.9 131.5 59.6 126.5C54.2 104.6 35.4 85.8 13.5 80.4C8.5 79.1 4 75.2 4 70C4 64.8 8.5 60.9 13.5 59.6C35.4 54.2 54.2 35.4 59.6 13.5C60.9 8.5 64.8 4 70 4ZM70 46C66.2 57.5 57.5 66.2 46 70C57.5 73.8 66.2 82.5 70 94C73.8 82.5 82.5 73.8 94 70C82.5 66.2 73.8 57.5 70 46Z" fill="url(#gz-new-style-grad1)"/>' +
                   '<defs>' +
-                    '<filter id="gz-ai-glow1" x="-20%" y="-20%" width="140%" height="140%">' +
-                      '<feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0e100f" flood-opacity="0.18"/>' +
-                    '</filter>' +
-                    '<linearGradient id="gz-ai-windmill" x1="-20" y1="-10" x2="145" y2="115" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#FF8709"/>' +
-                      '<stop offset="58%" stop-color="#F7BDF8"/>' +
-                      '<stop offset="100%" stop-color="#9D95FF"/>' +
-                    '</linearGradient>' +
-                    '<linearGradient id="gz-ai-star1" x1="36" y1="36" x2="104" y2="104" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#FFFCE1"/>' +
-                      '<stop offset="45%" stop-color="#0AE448"/>' +
-                      '<stop offset="100%" stop-color="#FFE866"/>' +
+                    '<linearGradient id="gz-new-style-grad1" x1="10" y1="10" x2="130" y2="130" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#0AE448"/>' +
+                      '<stop offset="50%" stop-color="#FFE866"/>' +
+                      '<stop offset="100%" stop-color="#FF8709"/>' +
                     '</linearGradient>' +
                   '</defs>' +
-                  '<g filter="url(#gz-ai-glow1)">' +
-                    '<path d="M84.1148 67.3453H136.194C136.637 67.3453 137 67.7028 137 68.1397V134.043C137 134.484 136.633 134.845 136.186 134.841C99.0222 134.416 68.9737 104.827 68.502 68.2191V134.206C68.502 134.643 68.1392 135 67.6958 135H0.814284C0.366822 135 -2.06673e-05 134.639 0.00401052 134.198C0.439379 97.2879 30.9354 67.5042 68.498 67.5002H0.806238C0.362807 67.5002 0 67.1427 0 66.7057V0.802561C0 0.361644 0.366822 0.000171863 0.814284 0.00414409C37.9778 0.429172 68.0263 30.0183 68.498 66.6263V0.794617C68.498 0.357672 68.8608 0.000171819 69.3042 0.000171819H136.186C136.633 0.000171819 137 0.361644 136.996 0.802561C136.621 32.4969 114.079 58.94 83.9334 65.7802C83.0022 65.9907 83.1594 67.3453 84.1189 67.3453H84.1148Z" transform="translate(1.5 2.5)" fill="url(#gz-ai-windmill)"/>' +
-                    '<circle cx="70" cy="70" r="28" fill="#0E100F" fill-opacity="0.9"/>' +
-                    '<circle cx="70" cy="70" r="24" stroke="url(#gz-ai-star1)" stroke-width="1.6" stroke-opacity="0.75" stroke-dasharray="4 3"/>' +
-                    '<path class="gz-ai-core-star" style="transform-origin:70px 70px" d="M70 44C71.8 58.5 81.5 68.2 96 70C81.5 71.8 71.8 81.5 70 96C68.2 81.5 58.5 71.8 44 70C58.5 68.2 68.2 58.5 70 44Z" fill="url(#gz-ai-star1)"/>' +
-                    '<circle cx="70" cy="70" r="4.5" fill="#FFFCE1"/>' +
-                    '<path d="M108 22C109.2 27.5 113.5 31.8 119 33C113.5 34.2 109.2 38.5 108 44C106.8 38.5 102.5 34.2 97 33C102.5 31.8 106.8 27.5 108 22Z" fill="#0AE448"/>' +
-                  '</g>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">M</span>' +
@@ -376,32 +361,15 @@
           '<div class="gsap-mmo-row gsap-mmo-row--2">' +
             '<span class="gsap-mmo-word" aria-label="TeaM">' +
               '<span class="gsap-flair-clover" id="gsap-flair-clover" aria-hidden="true">' +
-                '<svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                '<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M111.4 67.0Q156.6 65.3 154.0 80.0Q156.6 94.7 111.4 93.0Q144.6 123.7 132.3 132.3Q123.7 144.6 93.0 111.4Q94.7 156.6 80.0 154.0Q65.3 156.6 67.0 111.4Q36.3 144.6 27.7 132.3Q15.4 123.7 48.6 93.0Q3.4 94.7 6.0 80.0Q3.4 65.3 48.6 67.0Q15.4 36.3 27.7 27.7Q36.3 15.4 67.0 48.6Q65.3 3.4 80.0 6.0Q94.7 3.4 93.0 48.6Q123.7 15.4 132.3 27.7Q144.6 36.3 111.4 67.0ZM96 80A16 16 0 1 0 64 80A16 16 0 1 0 96 80Z" fill="url(#gz-new-style-grad2)"/>' +
                   '<defs>' +
-                    '<filter id="gz-ai-glow2" x="-20%" y="-20%" width="140%" height="140%">' +
-                      '<feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#6b46c1" flood-opacity="0.20"/>' +
-                    '</filter>' +
-                    '<linearGradient id="gz-ai-clover" x1="16" y1="12" x2="164" y2="168" gradientUnits="userSpaceOnUse">' +
+                    '<linearGradient id="gz-new-style-grad2" x1="12" y1="12" x2="148" y2="148" gradientUnits="userSpaceOnUse">' +
                       '<stop offset="0%" stop-color="#9D95FF"/>' +
                       '<stop offset="52%" stop-color="#FF7BE5"/>' +
                       '<stop offset="100%" stop-color="#FF8709"/>' +
                     '</linearGradient>' +
-                    '<linearGradient id="gz-ai-circuit" x1="40" y1="140" x2="155" y2="25" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#0AE448"/>' +
-                      '<stop offset="55%" stop-color="#52FF88"/>' +
-                      '<stop offset="100%" stop-color="#FFFCE1"/>' +
-                    '</linearGradient>' +
                   '</defs>' +
-                  '<g filter="url(#gz-ai-glow2)">' +
-                    '<path fill-rule="evenodd" clip-rule="evenodd" d="M58.5 87.2C55.6 87.8 52.6 88.1 49.5 88.1C25.2 88.1 5.5 68.2 5.5 43.6C5.5 19 25.2 -0.9 49.5 -0.9C73.8 -0.9 93.5 19 93.5 43.6C93.5 45.7 93.4 47.7 93.1 49.7H97.9C97.6 47.7 97.5 45.7 97.5 43.6C97.5 19 117.2 -0.9 141.5 -0.9C165.8 -0.9 185.5 19 185.5 43.6C185.5 68.2 165.8 88.1 141.5 88.1C138.8 88.1 136.1 87.8 133.5 87.4V90.9C136.1 90.4 138.8 90.1 141.5 90.1C165.8 90.1 185.5 110 185.5 134.6C185.5 159.2 165.8 179.1 141.5 179.1C117.2 179.1 97.5 159.2 97.5 134.6C97.5 131.5 97.8 128.4 98.4 125.5H92.8C93.3 128.1 93.5 130.8 93.5 133.6C93.5 158.2 73.8 178.1 49.5 178.1C25.2 178.1 5.5 158.2 5.5 133.6C5.5 109 25.2 89.1 49.5 89.1C52.6 89.1 55.6 89.4 58.5 90V87.2Z" transform="translate(4 5) scale(0.9)" fill="url(#gz-ai-clover)"/>' +
-                    '<ellipse cx="112" cy="88" rx="48" ry="22" transform="rotate(-32 112 88)" stroke="url(#gz-ai-circuit)" stroke-width="3" stroke-dasharray="7 5" opacity="0.92"/>' +
-                    '<path class="gz-pro-arrow-line" d="M68 126L98 92L126 102L138 49" stroke="#0E100F" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.22"/>' +
-                    '<path class="gz-pro-arrow-line" d="M68 124L98 90L126 100L138 47" stroke="url(#gz-ai-circuit)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-                    '<circle cx="98" cy="90" r="6" fill="#0E100F" stroke="#0AE448" stroke-width="3"/>' +
-                    '<circle cx="126" cy="100" r="6" fill="#0E100F" stroke="#FFE866" stroke-width="3"/>' +
-                    '<path class="gz-ai-node-star" style="transform-origin:138px 47px" d="M138 22C140.2 35.5 149.5 44.8 163 47C149.5 49.2 140.2 58.5 138 72C135.8 58.5 126.5 49.2 113 47C126.5 44.8 135.8 35.5 138 22Z" fill="url(#gz-ai-circuit)"/>' +
-                    '<circle cx="138" cy="47" r="4" fill="#0E100F"/>' +
-                  '</g>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">T</span>' +
@@ -423,24 +391,15 @@
     var chars=hero.querySelectorAll('.gsap-mmo-char');
     var windmill=document.getElementById('gsap-flair-windmill');
     var clover=document.getElementById('gsap-flair-clover');
-    var coreStar=hero.querySelector('.gz-ai-core-star');
-    var nodeStar=hero.querySelector('.gz-ai-node-star');
-    var arrowLines=hero.querySelectorAll('.gz-pro-arrow-line');
-    /* Hover-only AI x GSAP Pro animation */
+    /* Hover-only Pure Single-Path GSAP animation */
     hero.addEventListener('mouseenter',function(){
-      g.to(windmill,{rotation:'+=180',scale:1.16,duration:0.8,ease:'elastic.out(1,0.5)',overwrite:'auto'});
-      if(coreStar)g.to(coreStar,{rotation:'-=270',scale:1.25,duration:0.85,ease:'back.out(2)',overwrite:'auto'});
-      g.to(clover,{y:-8,rotation:-12,scale:1.12,duration:0.8,ease:'elastic.out(1,0.48)',overwrite:'auto'});
-      if(nodeStar)g.to(nodeStar,{rotation:'+=180',scale:1.24,duration:0.75,ease:'back.out(2)',overwrite:'auto'});
-      if(arrowLines.length)g.to(arrowLines,{x:3,y:-3,duration:0.55,ease:'back.out(2)',overwrite:'auto'});
+      g.to(windmill,{rotation:'+=180',scale:1.18,duration:0.75,ease:'elastic.out(1,0.5)',overwrite:'auto'});
+      g.to(clover,{rotation:'-=135',scale:1.14,duration:0.8,ease:'elastic.out(1,0.48)',overwrite:'auto'});
       g.fromTo(chars,{y:0,rotationX:0},{y:-8,rotationX:18,duration:0.22,stagger:0.038,yoyo:true,repeat:1,ease:'power2.out',overwrite:'auto'});
     });
     hero.addEventListener('mouseleave',function(){
       g.to(windmill,{scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
-      if(coreStar)g.to(coreStar,{scale:1,duration:0.6,ease:'power2.out',overwrite:'auto'});
-      g.to(clover,{y:0,rotation:0,scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
-      if(nodeStar)g.to(nodeStar,{scale:1,duration:0.6,ease:'power2.out',overwrite:'auto'});
-      if(arrowLines.length)g.to(arrowLines,{x:0,y:0,duration:0.5,ease:'power2.out',overwrite:'auto'});
+      g.to(clover,{scale:1,duration:0.65,ease:'elastic.out(1,0.6)',overwrite:'auto'});
     });
   }
 

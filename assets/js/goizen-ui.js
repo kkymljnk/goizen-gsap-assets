@@ -344,18 +344,15 @@
               '<span class="gsap-flair-windmill" id="gsap-flair-windmill" aria-hidden="true">' +
                 '<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">' +
                   '<defs>' +
-                    '<linearGradient id="gz-pro-dollar-grad" x1="20" y1="6" x2="120" y2="128" gradientUnits="userSpaceOnUse">' +
+                    '<linearGradient id="gz-pro-dollar-grad" x1="28" y1="4" x2="112" y2="130" gradientUnits="userSpaceOnUse">' +
                       '<stop offset="0%" stop-color="#0AE448"/>' +
-                      '<stop offset="52%" stop-color="#FFE866"/>' +
+                      '<stop offset="48%" stop-color="#008B38"/>' +
                       '<stop offset="100%" stop-color="#FF8709"/>' +
                     '</linearGradient>' +
                   '</defs>' +
-                  '<g transform="translate(5 6)" opacity="0.22">' +
-                    '<path d="M70 10V126" stroke="#0E100F" stroke-width="16" stroke-linecap="round"/>' +
-                    '<path d="M98 44C98 29 85 21 69 21C52 21 40 29 40 42C40 63 100 57 100 81C100 95 87 105 69 105C50 105 38 95 38 80" stroke="#0E100F" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>' +
-                  '</g>' +
-                  '<path d="M70 10V126" stroke="url(#gz-pro-dollar-grad)" stroke-width="16" stroke-linecap="round"/>' +
-                  '<path d="M98 44C98 29 85 21 69 21C52 21 40 29 40 42C40 63 100 57 100 81C100 95 87 105 69 105C50 105 38 95 38 80" stroke="url(#gz-pro-dollar-grad)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>' +
+                  '<path d="M63 10C63 5.6 66.6 2 71 2C75.4 2 79 5.6 79 10V18.8C94.2 21.4 105 31.8 105 45.5C105 51.3 100.3 56 94.5 56C88.7 56 84 51.3 84 45.5C84 39.5 78.2 35.8 70 35.8C61.8 35.8 56 39.2 56 44.5C56 50.2 61.8 52.8 73.5 55.6C91.2 59.8 107 66.4 107 84.5C107 99.4 95.8 110.2 79 112.8V122C79 126.4 75.4 130 71 130C66.6 130 63 126.4 63 122V112.8C46.2 109.8 34.5 98.4 34.5 83.5C34.5 77.7 39.2 73 45 73C50.8 73 55.5 77.7 55.5 83.5C55.5 90.2 62.2 94.5 72 94.5C81.5 94.5 88 90.8 88 85C88 79 81.8 76.2 69.2 73.2C52.2 69.2 37 62.6 37 45C37 31 47.8 21.5 63 18.8V10Z" transform="translate(5 6)" fill="#0E100F" fill-opacity="0.28"/>' +
+                  '<path d="M63 10C63 5.6 66.6 2 71 2C75.4 2 79 5.6 79 10V18.8C94.2 21.4 105 31.8 105 45.5C105 51.3 100.3 56 94.5 56C88.7 56 84 51.3 84 45.5C84 39.5 78.2 35.8 70 35.8C61.8 35.8 56 39.2 56 44.5C56 50.2 61.8 52.8 73.5 55.6C91.2 59.8 107 66.4 107 84.5C107 99.4 95.8 110.2 79 112.8V122C79 126.4 75.4 130 71 130C66.6 130 63 126.4 63 122V112.8C46.2 109.8 34.5 98.4 34.5 83.5C34.5 77.7 39.2 73 45 73C50.8 73 55.5 77.7 55.5 83.5C55.5 90.2 62.2 94.5 72 94.5C81.5 94.5 88 90.8 88 85C88 79 81.8 76.2 69.2 73.2C52.2 69.2 37 62.6 37 45C37 31 47.8 21.5 63 18.8V10Z" fill="url(#gz-pro-dollar-grad)"/>' +
+                  '<path d="M46 39C48 29 58 24 70 24" stroke="#FFFFFF" stroke-opacity="0.48" stroke-width="3.2" stroke-linecap="round"/>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">M</span>' +
@@ -368,14 +365,15 @@
               '<span class="gsap-flair-clover" id="gsap-flair-clover" aria-hidden="true">' +
                 '<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">' +
                   '<defs>' +
-                    '<linearGradient id="gz-pro-ghost-grad" x1="20" y1="10" x2="144" y2="150" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#9D95FF"/>' +
-                      '<stop offset="52%" stop-color="#FF7BE5"/>' +
-                      '<stop offset="100%" stop-color="#FF8709"/>' +
+                    '<linearGradient id="gz-pro-ghost-grad" x1="24" y1="8" x2="142" y2="152" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#FF2A85"/>' +
+                      '<stop offset="50%" stop-color="#C9184A"/>' +
+                      '<stop offset="100%" stop-color="#590D22"/>' +
                     '</linearGradient>' +
                   '</defs>' +
-                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M82 10C46.5 10 20 36.8 20 72.5V132C20 140.5 29.8 145.2 36.5 139.8L46.2 132C51.2 128 58.3 128.2 63.1 132.4L71.8 140C77.6 145.1 86.4 145.1 92.2 140L100.9 132.4C105.7 128.2 112.8 128 117.8 132L127.5 139.8C134.2 145.2 144 140.5 144 132V72.5C144 36.8 117.5 10 82 10ZM65 54C70 54 74 58.8 74 65V79C74 85.2 70 90 65 90C60 90 56 85.2 56 79V65C56 58.8 60 54 65 54ZM105 54C110 54 114 58.8 114 65V79C114 85.2 110 90 105 90C100 90 96 85.2 96 79V65C96 58.8 100 54 105 54Z" transform="translate(5 6) rotate(6 82 78)" fill="#0E100F" fill-opacity="0.18"/>' +
+                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M82 10C46.5 10 20 36.8 20 72.5V132C20 140.5 29.8 145.2 36.5 139.8L46.2 132C51.2 128 58.3 128.2 63.1 132.4L71.8 140C77.6 145.1 86.4 145.1 92.2 140L100.9 132.4C105.7 128.2 112.8 128 117.8 132L127.5 139.8C134.2 145.2 144 140.5 144 132V72.5C144 36.8 117.5 10 82 10ZM65 54C70 54 74 58.8 74 65V79C74 85.2 70 90 65 90C60 90 56 85.2 56 79V65C56 58.8 60 54 65 54ZM105 54C110 54 114 58.8 114 65V79C114 85.2 110 90 105 90C100 90 96 85.2 96 79V65C96 58.8 100 54 105 54Z" transform="translate(5 6) rotate(6 82 78)" fill="#2B0510" fill-opacity="0.24"/>' +
                   '<path fill-rule="evenodd" clip-rule="evenodd" d="M82 10C46.5 10 20 36.8 20 72.5V132C20 140.5 29.8 145.2 36.5 139.8L46.2 132C51.2 128 58.3 128.2 63.1 132.4L71.8 140C77.6 145.1 86.4 145.1 92.2 140L100.9 132.4C105.7 128.2 112.8 128 117.8 132L127.5 139.8C134.2 145.2 144 140.5 144 132V72.5C144 36.8 117.5 10 82 10ZM65 54C70 54 74 58.8 74 65V79C74 85.2 70 90 65 90C60 90 56 85.2 56 79V65C56 58.8 60 54 65 54ZM105 54C110 54 114 58.8 114 65V79C114 85.2 110 90 105 90C100 90 96 85.2 96 79V65C96 58.8 100 54 105 54Z" transform="rotate(6 82 78)" fill="url(#gz-pro-ghost-grad)"/>' +
+                  '<path d="M90 22C110 25 124 39 128 58" stroke="#FFFFFF" stroke-opacity="0.42" stroke-width="4.5" stroke-linecap="round" transform="rotate(6 82 78)"/>' +
                 '</svg>' +
               '</span>' +
               '<span class="gsap-mmo-char">T</span>' +

@@ -7,8 +7,8 @@
   --gz-text-muted:#6e6e62;
   --gz-heading:#0e100f;
   --gz-cream:#fffce1;
-  --gz-link:#0f7a32;
-  --gz-link-hover:#095422;
+  --gz-link:#0ae448;
+  --gz-link-hover:#08c93e;
   --gz-border:#e0ded0;
   --gz-border-soft:#bbbaa6;
   --gz-pre-bg:#161816;
@@ -17,9 +17,9 @@
   --gz-radius:0.4rem;
   --gz-font:"Plus Jakarta Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   --gz-mono:"JetBrains Mono","Fira Code",SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
-  --gz-accent:#0f7a32;
+  --gz-accent:#0ae448;
   --gz-meta:#5a5a4e;
-  --gz-on-accent:#ffffff;
+  --gz-on-accent:#0e100f;
 }
 
 *{box-sizing:border-box}
@@ -64,9 +64,8 @@ a.related-post-item-title:visited{
 h2.post-title.entry-title a:hover,
 .PopularPosts .post-title a:hover,
 a.related-post-item-title:hover{
-  color:var(--gz-link)!important;
+  color:var(--gz-heading)!important;
   text-decoration:underline!important;
-  text-decoration-color:var(--gz-link)!important;
   text-decoration-thickness:2px!important;
   text-underline-offset:3px!important
 }

@@ -522,23 +522,30 @@ span.show-more.pill-button{display:none;}
 a.report_abuse:after{content:'!';}
 .ReportAbuse h3.title:after{display:none}
 
-/* Label */
+/* Label — GSAP Dark Rounded Badge ([ text ]) */
 span.byline-label{display:inline-block;color:var(--gz-heading);font-size:13px;font-weight:600;margin-right:6px}
-.post-labels a,.post-labels a:link,.post-labels a:visited{
+.post-labels a,.post-labels a:link,.post-labels a:visited,
+.widget-content.cloud-label-widget-content a{
   display:inline-flex!important;
   align-items:center!important;
-  font-size:12.5px!important;
-  font-weight:600!important;
-  letter-spacing:.02em!important;
-  padding:4px 14px!important;
-  background:var(--gz-bg)!important;
-  color:var(--gz-heading)!important;
-  border:2px solid var(--gz-heading)!important;
-  border-radius:999px!important;
-  text-transform:none!important;
-  text-decoration:none!important
+  font-family:var(--gz-mono)!important;
+  font-size:13px!important;
+  font-weight:700!important;
+  letter-spacing:.01em!important;
+  padding:3px 10px!important;
+  background:#42433d!important;
+  color:var(--gz-cream,#fffce1)!important;
+  border:0!important;
+  border-radius:6px!important;
+  text-transform:lowercase!important;
+  text-decoration:none!important;
+  line-height:1.4!important
 }
-.post-labels a:hover{border-color:var(--gz-link)!important;color:var(--gz-heading)!important}
+.post-labels a:hover,
+.widget-content.cloud-label-widget-content a:hover{
+  background:var(--gz-heading,#0e100f)!important;
+  color:var(--gz-link,#0ae448)!important
+}
 .post-footer-line.post-footer-line-1,.post-footer-line.post-footer-line-2{margin-bottom:16px}
 
 /* Single post title + hero image (chuẩn gốc Goizen) */

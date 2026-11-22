@@ -172,26 +172,25 @@
     '}'+
     'html body .tit-home-tags{padding-bottom:12px!important;border-bottom:1px solid var(--gz-hr,#42433d)!important;margin-bottom:15px!important}'+
     'html body #related-wrapper{border-top:1px solid var(--gz-hr,#42433d)!important;border-bottom:1px solid var(--gz-hr,#42433d)!important}'+
-    'html body #top-widget{border:0!important;background:transparent!important;max-width:760px!important;width:100%!important;margin:4px auto 14px!important;padding:0 15px!important;box-sizing:border-box!important;display:block!important}'+
+    'html body #top-widget{border:0!important;background:transparent!important;max-width:760px!important;width:100%!important;margin:10px auto 4px!important;padding:0 15px!important;box-sizing:border-box!important;text-align:center!important;display:block!important}'+
     'html body .top-widget{background:transparent!important;padding:0!important;display:block!important}'+
     'html body .top-widget .widget .widget-content{padding:0!important}'+
+    'html body.item #top-widget,html body.item #gsap-mmo-hero,html body.item #gz-hr-hero,html body.static_page #top-widget{display:none!important}'+
     'html body .gsap-mmo-hero{'+
-      'position:relative!important;width:100%!important;background:#0e100f!important;color:#fffce1!important;'+
-      'border:2px solid #0e100f!important;border-radius:14px!important;padding:46px 38px 44px!important;'+
-      'margin:4px 0 6px!important;overflow:hidden!important;box-sizing:border-box!important;text-align:left!important'+
+      'position:relative!important;width:100%!important;background:transparent!important;color:var(--gz-heading,#0e100f)!important;'+
+      'border:0!important;border-radius:0!important;padding:28px 10px 18px!important;'+
+      'margin:0 auto!important;overflow:visible!important;box-sizing:border-box!important;text-align:center!important;cursor:pointer!important'+
     '}'+
-    'html body .gsap-mmo-stage{position:relative!important;max-width:640px!important;margin:0 auto!important;display:flex!important;flex-direction:column!important;gap:6px!important}'+
-    'html body .gsap-mmo-row{position:relative!important;display:flex!important;align-items:baseline!important;line-height:.94!important;font-family:var(--gz-font)!important;font-weight:600!important;font-size:clamp(54px,10.5vw,98px)!important;letter-spacing:-0.035em!important;color:#fffce1!important;perspective:700px!important}'+
-    'html body .gsap-mmo-row--1{justify-content:flex-start!important;padding-left:clamp(8px,3vw,26px)!important;z-index:2!important}'+
-    'html body .gsap-mmo-row--2{justify-content:flex-start!important;padding-left:clamp(88px,21vw,190px)!important;margin-top:2px!important;z-index:2!important}'+
-    'html body .gsap-mmo-word{position:relative!important;display:inline-flex!important;align-items:baseline!important;color:#fffce1!important}'+
-    'html body .gsap-mmo-char{position:relative!important;display:inline-block!important;color:#fffce1!important;z-index:2!important;will-change:transform,opacity!important;transform-origin:50% 80%!important}'+
-    'html body .gsap-flair-windmill{position:absolute!important;top:clamp(-34px,-3.8vw,-22px)!important;left:clamp(56px,9.2vw,96px)!important;width:clamp(42px,6.4vw,60px)!important;height:clamp(42px,6.4vw,60px)!important;z-index:3!important;pointer-events:none!important}'+
+    'html body .gsap-mmo-stage{position:relative!important;max-width:560px!important;margin:0 auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:4px!important}'+
+    'html body .gsap-mmo-row{position:relative!important;display:flex!important;align-items:baseline!important;justify-content:center!important;line-height:.94!important;font-family:var(--gz-font)!important;font-weight:700!important;font-size:clamp(54px,10.2vw,94px)!important;letter-spacing:-0.035em!important;color:var(--gz-heading,#0e100f)!important;perspective:700px!important}'+
+    'html body .gsap-mmo-row--1{justify-content:center!important;padding-left:0!important;transform:translateX(-38px)!important;z-index:2!important}'+
+    'html body .gsap-mmo-row--2{justify-content:center!important;padding-left:0!important;transform:translateX(42px)!important;margin-top:2px!important;z-index:2!important}'+
+    'html body .gsap-mmo-word{position:relative!important;display:inline-flex!important;align-items:baseline!important;color:var(--gz-heading,#0e100f)!important}'+
+    'html body .gsap-mmo-char{position:relative!important;display:inline-block!important;color:var(--gz-heading,#0e100f)!important;z-index:2!important;will-change:transform!important;transform-origin:50% 80%!important}'+
+    'html body .gsap-flair-windmill{position:absolute!important;top:clamp(-28px,-3.2vw,-18px)!important;left:clamp(48px,8.2vw,84px)!important;width:clamp(44px,6.5vw,60px)!important;height:clamp(44px,6.5vw,60px)!important;z-index:3!important;pointer-events:none!important}'+
     'html body .gsap-flair-windmill svg{width:100%!important;height:100%!important;display:block!important;overflow:visible!important}'+
-    'html body .gsap-flair-clover{position:absolute!important;left:clamp(24px,5vw,56px)!important;top:clamp(-22px,-2.2vw,-10px)!important;width:clamp(74px,10.5vw,102px)!important;height:clamp(74px,10.5vw,102px)!important;z-index:1!important;pointer-events:none!important;opacity:1!important}'+
+    'html body .gsap-flair-clover{position:absolute!important;left:clamp(28px,5.5vw,58px)!important;top:clamp(-18px,-2vw,-8px)!important;width:clamp(76px,10.8vw,104px)!important;height:clamp(76px,10.8vw,104px)!important;z-index:1!important;pointer-events:none!important;opacity:1!important}'+
     'html body .gsap-flair-clover svg{width:100%!important;height:100%!important;display:block!important;overflow:visible!important}'+
-    'html body .gsap-flair-worm{position:absolute!important;left:clamp(140px,22vw,218px)!important;bottom:clamp(-38px,-4.5vw,-24px)!important;width:clamp(34px,5.2vw,50px)!important;height:auto!important;z-index:3!important;pointer-events:none!important}'+
-    'html body .gsap-flair-worm img,html body .gsap-flair-worm svg{width:100%!important;height:auto!important;display:block!important}'+
     'html body #top,#top{'+
       'box-shadow:none!important;margin:0!important;padding:0!important;'+
       'width:46px!important;height:46px!important;line-height:42px!important;text-align:center!important;'+
@@ -351,12 +350,18 @@
           '<div class="gsap-mmo-row gsap-mmo-row--1">' +
             '<span class="gsap-mmo-word" aria-label="MMO">' +
               '<span class="gsap-flair-windmill" id="gsap-flair-windmill" aria-hidden="true">' +
-                '<svg viewBox="0 0 137 135" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path d="M84.1148 67.3453H136.194C136.637 67.3453 137 67.7028 137 68.1397V134.043C137 134.484 136.633 134.845 136.186 134.841C99.0222 134.416 68.9737 104.827 68.502 68.2191V134.206C68.502 134.643 68.1392 135 67.6958 135H0.814284C0.366822 135 -2.06673e-05 134.639 0.00401052 134.198C0.439379 97.2879 30.9354 67.5042 68.498 67.5002H0.806238C0.362807 67.5002 0 67.1427 0 66.7057V0.802561C0 0.361644 0.366822 0.000171863 0.814284 0.00414409C37.9778 0.429172 68.0263 30.0183 68.498 66.6263V0.794617C68.498 0.357672 68.8608 0.000171819 69.3042 0.000171819H136.186C136.633 0.000171819 137 0.361644 136.996 0.802561C136.621 32.4969 114.079 58.94 83.9334 65.7802C83.0022 65.9907 83.1594 67.3453 84.1189 67.3453H84.1148Z" fill="url(#gz-hero-windmill-grad)"/>' +
+                '<svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                  '<path d="M60 4C63.5 34.5 85.5 56.5 116 60C85.5 63.5 63.5 85.5 60 116C56.5 85.5 34.5 63.5 4 60C34.5 56.5 56.5 34.5 60 4Z" fill="url(#gz-gsap-spark-grad)" stroke="#0e100f" stroke-width="3" stroke-linejoin="round"/>' +
+                  '<path d="M22 22C43 40 77 40 98 22C80 43 80 77 98 98C77 80 43 80 22 98C40 77 40 43 22 22Z" fill="url(#gz-gsap-spark-grad2)" stroke="#0e100f" stroke-width="3" stroke-linejoin="round"/>' +
+                  '<circle cx="60" cy="60" r="10" fill="#0ae448" stroke="#0e100f" stroke-width="3"/>' +
                   '<defs>' +
-                    '<linearGradient id="gz-hero-windmill-grad" x1="-76.6791" y1="-15.6157" x2="165.682" y2="81.0082" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0.427083" stop-color="#FF8709"/>' +
-                      '<stop offset="0.791667" stop-color="#F7BDF8"/>' +
+                    '<linearGradient id="gz-gsap-spark-grad" x1="10" y1="10" x2="110" y2="110" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#FF8709"/>' +
+                      '<stop offset="100%" stop-color="#F7BDF8"/>' +
+                    '</linearGradient>' +
+                    '<linearGradient id="gz-gsap-spark-grad2" x1="20" y1="98" x2="98" y2="20" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#0AE448"/>' +
+                      '<stop offset="100%" stop-color="#FFE866"/>' +
                     '</linearGradient>' +
                   '</defs>' +
                 '</svg>' +
@@ -369,13 +374,14 @@
           '<div class="gsap-mmo-row gsap-mmo-row--2">' +
             '<span class="gsap-mmo-word" aria-label="TeaM">' +
               '<span class="gsap-flair-clover" id="gsap-flair-clover" aria-hidden="true">' +
-                '<svg viewBox="0 0 156 156" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-                  '<path fill-rule="evenodd" clip-rule="evenodd" d="M45.9341 76.316C43.4159 76.8454 40.8068 77.1236 38.1333 77.1236C17.0729 77.1236 0 59.8589 0 38.5618C0 17.2647 17.0729 0 38.1333 0C59.1938 0 76.2666 17.2647 76.2666 38.5618C76.2666 40.3457 76.1469 42.1013 75.915 43.8209H80.0849C79.853 42.1013 79.7332 40.3457 79.7332 38.5618C79.7332 17.2647 96.8061 0 117.867 0C138.927 0 156 17.2647 156 38.5618C156 59.8589 138.927 77.1236 117.867 77.1236C115.499 77.1236 113.182 76.9054 110.934 76.4879V79.5128C113.182 79.0953 115.499 78.8771 117.867 78.8771C138.927 78.8771 156 96.1418 156 117.439C156 138.736 138.927 156.001 117.867 156.001C96.8064 156.001 79.7335 138.736 79.7335 117.439C79.7335 114.736 80.0086 112.097 80.5319 109.551H75.6376C76.0508 111.825 76.2667 114.169 76.2667 116.564C76.2667 137.861 59.1938 155.126 38.1334 155.126C17.0729 155.126 6.30037e-05 137.861 6.30037e-05 116.564C6.30037e-05 95.2671 17.0729 78.0024 38.1334 78.0024C40.8068 78.0024 43.416 78.2806 45.9341 78.8099V76.316Z" fill="url(#gz-hero-clover-grad)"/>' +
+                '<svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+                  '<path d="M80 6C94 6 103 22 115 29C127 36 145 33 152 45C159 57 147 72 147 86C147 100 159 115 152 127C145 139 127 136 115 143C103 150 94 166 80 166C66 166 57 150 45 143C33 136 15 139 8 127C1 115 13 100 13 86C13 72 1 57 8 45C15 33 33 36 45 29C57 22 66 6 80 6Z" transform="translate(0 -6)" fill="url(#gz-gsap-wave-grad)" stroke="#0e100f" stroke-width="3" stroke-linejoin="round"/>' +
+                  '<circle cx="80" cy="80" r="24" fill="#fffceb" stroke="#0e100f" stroke-width="3"/>' +
                   '<defs>' +
-                    '<linearGradient id="gz-hero-clover-grad" x1="10" y1="10" x2="146" y2="146" gradientUnits="userSpaceOnUse">' +
-                      '<stop offset="0%" stop-color="#FF7BE5"/>' +
+                    '<linearGradient id="gz-gsap-wave-grad" x1="12" y1="12" x2="148" y2="148" gradientUnits="userSpaceOnUse">' +
+                      '<stop offset="0%" stop-color="#9D95FF"/>' +
                       '<stop offset="55%" stop-color="#F7BDF8"/>' +
-                      '<stop offset="100%" stop-color="#FFE8FC"/>' +
+                      '<stop offset="100%" stop-color="#FF8709"/>' +
                     '</linearGradient>' +
                   '</defs>' +
                 '</svg>' +
@@ -384,9 +390,6 @@
               '<span class="gsap-mmo-char">e</span>' +
               '<span class="gsap-mmo-char">a</span>' +
               '<span class="gsap-mmo-char">M</span>' +
-              '<span class="gsap-flair-worm" id="gsap-flair-worm" aria-hidden="true">' +
-                '<img src="https://gsap.com/tf-assets/worm-e8f0c8f6.png" alt=""/>' +
-              '</span>' +
             '</span>' +
           '</div>' +
         '</div>' +
@@ -402,40 +405,54 @@
     var chars=hero.querySelectorAll('.gsap-mmo-char');
     var windmill=document.getElementById('gsap-flair-windmill');
     var clover=document.getElementById('gsap-flair-clover');
-    var worm=document.getElementById('gsap-flair-worm');
-    var tl=g.timeline({
-      defaults:{ease:'expo.out'},
-      onComplete:function(){
-        g.to(windmill,{rotation:'+=360',duration:9,ease:'none',repeat:-1});
-        g.to(clover,{rotation:'-=360',duration:14,ease:'none',repeat:-1});
-        g.to(clover,{scale:1.08,duration:2.2,yoyo:true,repeat:-1,ease:'sine.inOut'});
-        g.to(worm,{y:6,rotation:-5,duration:1.8,yoyo:true,repeat:-1,ease:'sine.inOut'});
-      }
-    });
-    tl.fromTo(chars,{rotationX:-75,yPercent:55},{rotationX:0,yPercent:0,duration:0.9,stagger:0.06},0)
-      .fromTo(windmill,{scale:0.6,rotation:-140},{scale:1,rotation:0,duration:1.0,ease:'elastic.out(1,0.5)'},0.1)
-      .fromTo(clover,{scale:0.65,rotation:110},{scale:1,rotation:0,duration:1.05,ease:'elastic.out(1,0.55)'},0.15)
-      .fromTo(worm,{y:18,scale:0.75},{y:0,scale:1,duration:0.85,ease:'back.out(1.7)'},0.2);
+    /* Hover-only GSAP animation per Đại Ca Tú's request */
     hero.addEventListener('mouseenter',function(){
-      g.fromTo(windmill,{scale:0.9},{scale:1,rotation:'+=180',duration:0.75,ease:'back.out(2)',overwrite:'auto'});
-      g.fromTo(clover,{scale:0.9},{scale:1.12,rotation:'-=120',duration:0.8,ease:'elastic.out(1,0.5)',overwrite:'auto'});
-      g.fromTo(chars,{y:0},{y:-6,duration:0.22,stagger:0.04,yoyo:true,repeat:1,ease:'power2.out'});
+      g.to(windmill,{rotation:'+=180',scale:1.18,duration:0.7,ease:'elastic.out(1,0.45)',overwrite:'auto'});
+      g.to(clover,{rotation:'-=120',scale:1.14,duration:0.75,ease:'elastic.out(1,0.5)',overwrite:'auto'});
+      g.fromTo(chars,{y:0,rotationX:0},{y:-8,rotationX:18,duration:0.22,stagger:0.04,yoyo:true,repeat:1,ease:'power2.out',overwrite:'auto'});
+    });
+    hero.addEventListener('mouseleave',function(){
+      g.to([windmill,clover],{scale:1,duration:0.55,ease:'elastic.out(1,0.6)',overwrite:'auto'});
     });
   }
 
   function initGsapMmoHero(){
+    var isSingle=document.body.classList.contains('item')||document.body.classList.contains('static_page')||document.body.classList.contains('error_page');
     var topWidget=document.getElementById('top-widget');
+    if(isSingle){
+      if(topWidget)topWidget.style.display='none';
+      var oldHr=document.getElementById('gz-hr-hero');
+      if(oldHr)oldHr.style.display='none';
+      return;
+    }
+    var superMain=document.getElementById('super-main-wrapper');
+    if(!topWidget&&superMain){
+      topWidget=document.createElement('div');
+      topWidget.id='top-widget';
+      superMain.insertBefore(topWidget,superMain.firstChild);
+    }else if(topWidget&&superMain&&superMain.firstElementChild!==topWidget){
+      superMain.insertBefore(topWidget,superMain.firstChild);
+    }
     if(!topWidget)return;
     var sec=document.getElementById('widget-top')||topWidget;
     sec.classList.remove('no-items');
-    if(!document.getElementById('gsap-mmo-hero')){
+    var existingHero=document.getElementById('gsap-mmo-hero');
+    if(existingHero){
+      existingHero.outerHTML=getHeroMarkup();
+    }else{
       var wrap=document.createElement('div');
       wrap.className='widget HTML';
       wrap.id='HTML99-runtime';
       wrap.innerHTML='<div class="widget-content">'+getHeroMarkup()+'</div>';
-      sec.appendChild(wrap);
+      sec.insertBefore(wrap,sec.firstChild);
     }
-    insertHrAfter(topWidget,'gz-hr-hero');
+    var hrHero=document.getElementById('gz-hr-hero');
+    if(!hrHero){
+      hrHero=document.createElement('hr');
+      hrHero.id='gz-hr-hero';
+      hrHero.className='gsap-hr';
+      topWidget.appendChild(hrHero);
+    }
     if(window.gsap){
       runGsapHeroAnimation();
     }else if(!document.getElementById('gz-gsap-core-js')){

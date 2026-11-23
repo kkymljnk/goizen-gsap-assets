@@ -1043,14 +1043,37 @@
 
   /* 6. Normalize Post Paragraphs, Lock Post Content & Render Ultra-Compact 1-Line GSAP Gate */
   function normalizePostBodyBlocks(postBody){
-    /* Support [lock]...[/lock] shortcode if present */
+    /* 1. Support [lock]...[/lock] shortcode if present */
     if(postBody.innerHTML.indexOf('[lock]') !== -1 && postBody.innerHTML.indexOf('[/lock]') !== -1){
       postBody.innerHTML = postBody.innerHTML
         .replace(/\[lock\]/i, '<a name="more" id="more"></a>')
         .replace(/\[\/lock\]/ig, '');
     }
 
-    /* Group raw text nodes & <br> sequences into proper <p class="gz-norm-p"> paragraphs */
+    /* 2. Unwrap single-child wrapper containers (e.g. Blogger <div dir="ltr"> or wrapper <p>/<div>) */
+    for(var pass=0; pass<5; pass++){
+      var visEls = [];
+      for(var c=0; c<postBody.childNodes.length; c++){
+        var nd = postBody.childNodes[c];
+        if(nd.nodeType === 1 && nd.classList && (nd.classList.contains('clear') || nd.classList.contains('hidden-image'))) continue;
+        if(nd.nodeType === 1 && nd.style && nd.style.display === 'none') continue;
+        if(nd.nodeType === 3 && !(nd.nodeValue || '').replace(/\s+/g,'').length) continue;
+        visEls.push(nd);
+      }
+      if(visEls.length === 1 && visEls[0].nodeType === 1 && /^(DIV|P|SPAN|SECTION|ARTICLE)$/i.test(visEls[0].tagName)){
+        var innerWrapper = visEls[0];
+        if(innerWrapper.childNodes.length > 1){
+          while(innerWrapper.firstChild){
+            postBody.insertBefore(innerWrapper.firstChild, innerWrapper);
+          }
+          postBody.removeChild(innerWrapper);
+          continue;
+        }
+      }
+      break;
+    }
+
+    /* 3. Group raw text nodes & <br> sequences into proper <p class="gz-norm-p"> paragraphs */
     var rawNodes = [];
     for(var i=0;i<postBody.childNodes.length;i++){
       rawNodes.push(postBody.childNodes[i]);
@@ -1068,12 +1091,11 @@
     function splitLongTextIntoParagraphs(textStr, targetParent, beforeNode){
       var clean = String(textStr || '').replace(/\s+/g,' ').trim();
       if(!clean) return;
-      /* Split every ~240 chars at sentence boundary */
       var sentences = clean.match(/[^.!?]+[.!?]+(?:\s+|$)|[^.!?]+$/g) || [clean];
       var bucket = '';
       for(var s=0;s<sentences.length;s++){
         bucket += sentences[s];
-        if(bucket.length >= 210 || s === sentences.length - 1){
+        if(bucket.length >= 180 || s === sentences.length - 1){
           var p = document.createElement('p');
           p.className = 'gz-norm-p';
           p.textContent = bucket.trim();
@@ -1088,14 +1110,14 @@
       var frag = document.createDocumentFragment();
       var currentP = null;
       for(var j=0;j<rawNodes.length;j++){
-        var nd = rawNodes[j];
-        if(nd.nodeType === 1 && nd.tagName === 'BR'){
+        var nd2 = rawNodes[j];
+        if(nd2.nodeType === 1 && nd2.tagName === 'BR'){
           if(currentP && currentP.textContent.replace(/\s+/g,'').length > 0){
             frag.appendChild(currentP);
             currentP = null;
           }
-        }else if(nd.nodeType === 3){
-          var txt = nd.nodeValue || '';
+        }else if(nd2.nodeType === 3){
+          var txt = nd2.nodeValue || '';
           if(txt.replace(/\s+/g,'').length > 0){
             if(!currentP){
               currentP = document.createElement('p');
@@ -1103,12 +1125,12 @@
             }
             currentP.appendChild(document.createTextNode(txt));
           }
-        }else if(nd.nodeType === 1){
+        }else if(nd2.nodeType === 1){
           if(currentP && currentP.textContent.replace(/\s+/g,'').length > 0){
             frag.appendChild(currentP);
             currentP = null;
           }
-          frag.appendChild(nd);
+          frag.appendChild(nd2);
         }
       }
       if(currentP && currentP.textContent.replace(/\s+/g,'').length > 0){
@@ -1118,16 +1140,23 @@
       postBody.appendChild(frag);
     }
 
-    /* If visible text paragraphs are fewer than 3 (e.g. 1 long <p> or 2 long <p>s), split long <p>s so there are at least 3 paragraphs */
-    var pList = postBody.querySelectorAll('p');
-    if(pList.length > 0 && pList.length < 3){
-      for(var pk=0;pk<pList.length;pk++){
-        var pEl = pList[pk];
-        if(pEl.querySelector('img, pre, iframe, table')) continue;
+    /* 4. Also split any child <p> or <div> that contains internal <br> tags or is the only paragraph */
+    var blockCandidates = postBody.querySelectorAll('p, div:not(.separator):not(.clear)');
+    var visibleCount = 0;
+    for(var bc=0;bc<blockCandidates.length;bc++){
+      if(blockCandidates[bc].parentNode === postBody && blockCandidates[bc].style.display !== 'none' && (blockCandidates[bc].textContent || '').replace(/\s+/g,'').length > 25){
+        visibleCount++;
+      }
+    }
+    if(visibleCount > 0 && visibleCount < 3){
+      for(var pk=0;pk<blockCandidates.length;pk++){
+        var pEl = blockCandidates[pk];
+        if(pEl.parentNode !== postBody) continue;
+        if(pEl.querySelector('img:not(.hidden-image), pre, iframe, table')) continue;
         var pTxt = (pEl.textContent || '').trim();
-        if(pTxt.length > 260){
-          splitLongTextIntoParagraphs(pTxt, pEl.parentNode, pEl);
-          pEl.parentNode.removeChild(pEl);
+        if(pTxt.length > 200){
+          splitLongTextIntoParagraphs(pTxt, postBody, pEl);
+          postBody.removeChild(pEl);
         }
       }
     }

@@ -204,7 +204,18 @@
     '#top svg{display:inline-block!important;vertical-align:middle!important;width:22px!important;height:22px!important;stroke:var(--gz-heading,#0e100f)!important}'+
     '#top i,#top .fa,#top .fas{display:none!important}'+
     '.gz-hidden-label{display:none!important}'+
-    '.gz-card-badge{display:inline-flex!important;align-items:center!important;gap:5px!important;font-family:var(--gz-mono)!important;font-size:11.5px!important;font-weight:700!important;padding:2px 9px!important;border-radius:6px!important;line-height:1.4!important;text-decoration:none!important;white-space:nowrap!important;margin-left:8px!important;vertical-align:middle!important;background:#42433d!important;color:#0ae448!important}'+
+    '.index .post-outer,.archive .post-outer,.search .post-outer{position:relative!important}'+
+    '.gz-has-vip-dock .title-homepage{padding-right:104px!important}'+
+    '.gz-vip04-dock{position:absolute!important;top:-1px!important;right:-1px!important;z-index:6!important;background:#0e100f!important;color:#fffce1!important;padding:7px 14px 8px 15px!important;border-radius:0 12px 0 13px!important;border-left:2px solid #0e100f!important;border-bottom:2px solid #0e100f!important;display:inline-flex!important;align-items:center!important;text-decoration:none!important;box-sizing:border-box!important}'+
+    '.gz-vip04-pill{display:inline-flex!important;align-items:center!important;background:#0e100f!important;color:#fffce1!important;padding:5px 12px!important;border-radius:999px!important;border:2px solid #0e100f!important;text-decoration:none!important;vertical-align:middle!important;margin-left:8px!important;box-sizing:border-box!important}'+
+    '.gz-vip04-inner{display:inline-flex!important;align-items:center!important;gap:5px!important;font-family:var(--gz-mono)!important;font-size:12px!important;font-weight:800!important;letter-spacing:.07em!important;color:#fffce1!important;line-height:1!important;white-space:nowrap!important}'+
+    '.gz-vip04-inner .br{color:#0ae448!important;font-size:14px!important;font-weight:700!important;line-height:1!important;transition:transform .22s cubic-bezier(.22,1,.36,1)!important}'+
+    '.gz-vip04-inner svg.gz-lk-svg{width:13.5px!important;height:13.5px!important;display:inline-block!important;flex-shrink:0!important;transition:transform .26s cubic-bezier(.22,1,.36,1)!important}'+
+    '.gz-has-vip-dock:hover .gz-vip04-dock .br-l,.gz-vip04-dock:hover .br-l,.gz-vip04-pill:hover .br-l{transform:translateX(-2px)!important}'+
+    '.gz-has-vip-dock:hover .gz-vip04-dock .br-r,.gz-vip04-dock:hover .br-r,.gz-vip04-pill:hover .br-r{transform:translateX(2px)!important}'+
+    '.gz-has-vip-dock:hover .gz-vip04-dock svg.gz-lk-svg,.gz-vip04-dock:hover svg.gz-lk-svg,.gz-vip04-pill:hover svg.gz-lk-svg{transform:scale(1.13) rotate(-7deg)!important}'+
+    '.gz-inline-lock-svg{width:15px!important;height:15px!important;display:inline-block!important;vertical-align:-2.5px!important;margin-right:4px!important;flex-shrink:0!important}'+
+    '.gz-card-badge{display:inline-flex!important;align-items:center!important;gap:5px!important;font-family:var(--gz-mono)!important;font-size:11.5px!important;font-weight:700!important;padding:2px 9px!important;border-radius:6px!important;line-height:1.4!important;text-decoration:none!important;white-space:nowrap!important;margin-left:8px!important;vertical-align:middle!important;background:#0e100f!important;color:#0ae448!important}'+
     '.gz-norm-p{margin:0 0 14px 0!important;color:var(--gz-text,#3d3d34)!important;font-family:var(--gz-font)!important;font-size:15.5px!important;line-height:1.68!important}'+
     '.gz-lock-curtain{position:relative!important;min-height:82px!important;max-height:108px!important;overflow:hidden!important;user-select:none!important;pointer-events:none!important;filter:blur(3.2px)!important;opacity:.88!important;-webkit-mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.92) 55%,rgba(0,0,0,.1) 100%)!important;mask-image:linear-gradient(180deg,#000 0%,rgba(0,0,0,.92) 55%,rgba(0,0,0,.1) 100%)!important;margin:6px 0 -4px 0!important;padding-top:2px!important}'+
     '.gz-pro-gate{position:relative;z-index:5;border:2px solid #0e100f!important;border-radius:14px!important;background:var(--gz-bg,#fffceb)!important;padding:11px 14px!important;margin:8px 0 22px!important;box-sizing:border-box!important}'+
@@ -830,6 +841,29 @@
     return price;
   }
 
+  var _lkCounter = 0;
+  function getGsapLockSvg(cls){
+    _lkCounter++;
+    var gid = 'gz-lk-mint-' + _lkCounter;
+    return '<svg class="' + (cls || 'gz-lk-svg') + '" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">' +
+      '<defs><linearGradient id="' + gid + '" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">' +
+        '<stop offset="0%" stop-color="#0AE448"/>' +
+        '<stop offset="100%" stop-color="#00F5D4"/>' +
+      '</linearGradient></defs>' +
+      '<path d="M7.5 10V7.5C7.5 5 9.5 3 12 3C14.5 3 16.5 5 16.5 7.5V10" stroke="url(#' + gid + ')" stroke-width="2.6" stroke-linecap="round"/>' +
+      '<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 9.5H17.5C19.15 9.5 20.5 10.85 20.5 12.5V18.5C20.5 20.15 19.15 21.5 17.5 21.5H6.5C4.85 21.5 3.5 20.15 3.5 18.5V12.5C3.5 10.85 4.85 9.5 6.5 9.5ZM12 13.2C11.06 13.2 10.3 13.96 10.3 14.9C10.3 15.54 10.65 16.09 11.17 16.38V17.9C11.17 18.36 11.54 18.73 12 18.73C12.46 18.73 12.83 18.36 12.83 17.9V16.38C13.35 16.09 13.7 15.54 13.7 14.9C13.7 13.96 12.94 13.2 12 13.2Z" fill="url(#' + gid + ')"/>' +
+    '</svg>';
+  }
+
+  function buildVip04Inner(labelText){
+    return '<span class="gz-vip04-inner">' +
+      '<span class="br br-l">{</span>' +
+      getGsapLockSvg('gz-lk-svg') +
+      '<span>' + labelText + '</span>' +
+      '<span class="br br-r">}</span>' +
+    '</span>';
+  }
+
   function decorateHomepageCards(){
     var cards = document.querySelectorAll('.index .post-outer, .archive .post-outer, .search .post-outer, #FeaturedPost1 article.post');
     for(var i=0;i<cards.length;i++){
@@ -837,12 +871,16 @@
       var titleA = card.querySelector('h2.post-title a, h3.post-title a');
       var url = titleA ? titleA.getAttribute('href') : '';
       var price = filterLabelsAndDetectPrice(card, url);
-      var tagBox = card.querySelector('.post-tags, .featured-content h2.post-title');
-      if(price > 0 && tagBox && !card.querySelector('.gz-card-badge')){
-        var b = document.createElement('span');
-        b.className = 'gz-card-badge gz-card-badge--paid';
-        b.textContent = '\uD83D\uDD12 ' + formatVnd(price);
-        tagBox.appendChild(b);
+      if(price > 0 && !card.querySelector('.gz-vip04-dock')){
+        var isFeatured = !!(card.closest && card.closest('#FeaturedPost1'));
+        var dockHost = isFeatured ? (card.querySelector('.featured-snippet-thumbnail') || card) : card;
+        dockHost.classList.add('gz-has-vip-dock');
+        var dock = document.createElement('a');
+        dock.className = 'gz-vip04-dock';
+        dock.href = url || 'javascript:;';
+        dock.title = 'Bài viết VIP — Nhấn vào để xem giá & mở khóa';
+        dock.innerHTML = buildVip04Inner('VIP');
+        dockHost.appendChild(dock);
       }
     }
   }
@@ -1188,13 +1226,13 @@
     var uid = getClientUid();
     var userCommentToken = cfg.commentPrefix + ' #' + uid;
 
-    /* Add price badge to post header if paid post */
+    /* Add VIP 04 price badge to post header if paid post (Price shown INSIDE the post!) */
     if(isPaidPost){
       var hLine = document.querySelector('.item .post-header-line-1');
-      if(hLine && !hLine.querySelector('.gz-card-badge')){
+      if(hLine && !hLine.querySelector('.gz-vip04-pill')){
         var pb = document.createElement('span');
-        pb.className = 'gz-card-badge gz-card-badge--paid';
-        pb.textContent = '\uD83D\uDD12 ' + formatVnd(postPrice);
+        pb.className = 'gz-vip04-pill';
+        pb.innerHTML = buildVip04Inner(formatVnd(postPrice));
         hLine.appendChild(pb);
       }
     }
@@ -1325,7 +1363,7 @@
       gate.innerHTML =
         '<div class="gz-gate-bar">' +
           '<div class="gz-gate-left">' +
-            '<span class="gz-gate-prompt">\uD83D\uDD12 Nội dung khóa · Bình luận mã ở dưới để tự mở</span>' +
+            '<span class="gz-gate-prompt">' + getGsapLockSvg('gz-inline-lock-svg') + 'Nội dung khóa · Bình luận mã ở dưới để tự mở</span>' +
           '</div>' +
           '<div class="gz-gate-btns">' +
             '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-check-cmt">\u2193 Bình luận mở khóa</button>' +
@@ -1339,7 +1377,7 @@
           '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-do-recover">Khôi phục</button>' +
         '</div>';
 
-      /* Place "🔒 Bình luận mã: [ MMO #XXXX  ❐ Copy ]" directly below "X Comments" (.custom-comment-title) */
+      /* Place "Bình luận mã: [ MMO #XXXX  ❐ Copy ]" directly below "X Comments" (.custom-comment-title) */
       var cmtTitleEl = document.querySelector('#comments .custom-comment-title');
       var cmtSectionEl = document.getElementById('comments');
       var oldCmtBar = document.getElementById('gz-cmt-code-bar');
@@ -1350,7 +1388,7 @@
         cmtBarEl.className = 'gz-cmt-code-bar';
         cmtBarEl.innerHTML =
           '<div class="gz-gate-left">' +
-            '<span class="gz-gate-prompt">\uD83D\uDD12 Bình luận mã:</span>' +
+            '<span class="gz-gate-prompt">' + getGsapLockSvg('gz-inline-lock-svg') + 'Bình luận mã:</span>' +
             '<div class="gz-kw-chip" id="gz-kw-chip" title="Chạm để Copy mã và dán vào khung bình luận">' +
               '<span class="gz-kw-code">' + userCommentToken + '</span>' +
               '<span class="gz-kw-copy-tag" id="gz-kw-copy-tag">\u2750 Copy</span>' +
@@ -1368,10 +1406,8 @@
       gate.innerHTML =
         '<div class="gz-gate-bar">' +
           '<div class="gz-gate-left">' +
-            '<span class="gz-gate-prompt">\uD83D\uDD12 Mở khóa bài viết:</span>' +
-            '<div class="gz-paid-tag">' +
-              '<span class="gz-price-pill">' + formatVnd(postPrice) + '</span>' +
-            '</div>' +
+            '<span class="gz-gate-prompt">Mở khóa bài viết VIP:</span>' +
+            '<span class="gz-vip04-pill" style="margin-left:0!important">' + buildVip04Inner(formatVnd(postPrice)) + '</span>' +
           '</div>' +
           '<div class="gz-gate-btns">' +
             '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-pay-post">Mở khóa \u2197</button>' +

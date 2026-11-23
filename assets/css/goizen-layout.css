@@ -1094,9 +1094,84 @@ input#super-my-search-form::placeholder{
 }
 
 /* ==========================================================================
-   GSAP SMART CONTENT LOCKER, PAYOS REALTIME & ADMIN ORDERS UI (PC & Mobile)
+   GSAP SMART CONTENT LOCKER, VIP 04 POS 01 CORNER DOCK & ADMIN ORDERS UI
    ========================================================================== */
 .gz-hidden-label{display:none!important}
+.index .post-outer,.archive .post-outer,.search .post-outer{position:relative!important}
+.gz-has-vip-dock .title-homepage{padding-right:104px!important}
+.gz-vip04-dock{
+  position:absolute!important;
+  top:-1px!important;
+  right:-1px!important;
+  z-index:6!important;
+  background:#0e100f!important;
+  color:#fffce1!important;
+  padding:7px 14px 8px 15px!important;
+  border-radius:0 12px 0 13px!important;
+  border-left:2px solid #0e100f!important;
+  border-bottom:2px solid #0e100f!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  text-decoration:none!important;
+  box-sizing:border-box!important;
+  transition:background .2s ease!important
+}
+.gz-vip04-pill{
+  display:inline-flex!important;
+  align-items:center!important;
+  background:#0e100f!important;
+  color:#fffce1!important;
+  padding:5px 12px!important;
+  border-radius:999px!important;
+  border:2px solid #0e100f!important;
+  text-decoration:none!important;
+  vertical-align:middle!important;
+  margin-left:8px!important;
+  box-sizing:border-box!important
+}
+.gz-vip04-inner{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:5px!important;
+  font-family:var(--gz-mono)!important;
+  font-size:12px!important;
+  font-weight:800!important;
+  letter-spacing:.07em!important;
+  color:#fffce1!important;
+  line-height:1!important;
+  white-space:nowrap!important
+}
+.gz-vip04-inner .br{
+  color:#0ae448!important;
+  font-size:14px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  transition:transform .22s cubic-bezier(.22,1,.36,1)!important
+}
+.gz-vip04-inner svg.gz-lk-svg{
+  width:13.5px!important;
+  height:13.5px!important;
+  display:inline-block!important;
+  flex-shrink:0!important;
+  transition:transform .26s cubic-bezier(.22,1,.36,1)!important
+}
+.gz-has-vip-dock:hover .gz-vip04-dock .br-l,
+.gz-vip04-dock:hover .br-l,
+.gz-vip04-pill:hover .br-l{transform:translateX(-2px)!important}
+.gz-has-vip-dock:hover .gz-vip04-dock .br-r,
+.gz-vip04-dock:hover .br-r,
+.gz-vip04-pill:hover .br-r{transform:translateX(2px)!important}
+.gz-has-vip-dock:hover .gz-vip04-dock svg.gz-lk-svg,
+.gz-vip04-dock:hover svg.gz-lk-svg,
+.gz-vip04-pill:hover svg.gz-lk-svg{transform:scale(1.13) rotate(-7deg)!important}
+.gz-inline-lock-svg{
+  width:15px!important;
+  height:15px!important;
+  display:inline-block!important;
+  vertical-align:-2.5px!important;
+  margin-right:4px!important;
+  flex-shrink:0!important
+}
 .gz-card-badge{
   display:inline-flex!important;
   align-items:center!important;
@@ -1111,14 +1186,6 @@ input#super-my-search-form::placeholder{
   white-space:nowrap!important;
   margin-left:8px!important;
   vertical-align:middle!important;
-  background:#42433d!important;
-  color:#0ae448!important
-}
-.gz-card-badge--paid{
-  background:#42433d!important;
-  color:#0ae448!important
-}
-.gz-card-badge--vip{
   background:#0e100f!important;
   color:#0ae448!important
 }

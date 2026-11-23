@@ -1279,20 +1279,15 @@
       lockContainer.style.setProperty('mask-image','none','important');
       lockContainer.style.setProperty('margin-bottom','0','important');
 
-      if(!document.getElementById('gz-unlocked-pill-badge')){
-        var pill = document.createElement('div');
-        pill.id = 'gz-unlocked-pill-badge';
-        pill.className = 'gz-unlocked-pill';
-        pill.textContent = badgeText || '\u2713 Đã mở khóa nội dung';
-        if(lockContainer.parentNode) lockContainer.parentNode.insertBefore(pill, lockContainer);
-        if(autoScroll && pill.scrollIntoView){
-          pill.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
+      var oldPill = document.getElementById('gz-unlocked-pill-badge');
+      if(oldPill && oldPill.parentNode) oldPill.parentNode.removeChild(oldPill);
       if(gate.parentNode) gate.parentNode.removeChild(gate);
 
       if(window.gsap){
         window.gsap.fromTo(lockContainer, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'expo.out' });
+      }
+      if(autoScroll && lockContainer.scrollIntoView){
+        lockContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
       enhanceCodeBlocks();
     }

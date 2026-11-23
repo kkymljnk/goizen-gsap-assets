@@ -620,7 +620,7 @@
   var DEFAULT_CFG = {
     clientId: '0a1cc230-4c1a-4735-b71d-9ac82d34156d',
     apiKey: 'b7a2a48a-ef0b-4397-a994-b6746f74467f',
-    checksumKey: '6275fa071a1dd3d1070c0f965c8c55fb2aeeaf057091b20',
+    checksumKey: '6275fa071a1dd3d1070c0f965c8c55fb2aeeaf057091b20eb5d2d01ffbcb6e7a',
     bankId: 'OCB',
     accountNo: '0356189725',
     accountName: 'NGUYEN DUY KHANH',
@@ -693,11 +693,15 @@
   }
   function upsertOrder(ord){
     var list = getOrders();
+    var target = ord;
     var found = false;
     for(var i=0;i<list.length;i++){
       if(String(list[i].orderCode) === String(ord.orderCode)){
-        for(var k in ord) list[i][k] = ord[k];
+        for(var k in ord){
+          if(ord[k] !== undefined) list[i][k] = ord[k];
+        }
         list[i].updatedAt = new Date().toISOString();
+        target = list[i];
         found = true;
         break;
       }
@@ -706,9 +710,10 @@
       ord.createdAt = ord.createdAt || new Date().toISOString();
       ord.updatedAt = ord.createdAt;
       list.unshift(ord);
+      target = ord;
     }
     saveOrders(list);
-    return ord;
+    return target;
   }
 
   /* 2. VIP 30-Day Pass Management (Auto-expires after 30 days) */

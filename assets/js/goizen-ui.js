@@ -1,13 +1,5 @@
 /* GSAP Lite Typography + Resource Card Border (2px solid + 14px radius) + <pre><code> Enhancer & PrismJS */
 (function(){
-  if(!document.getElementById('gz-gsap-fonts')){
-    var fl=document.createElement('link');
-    fl.id='gz-gsap-fonts';
-    fl.rel='stylesheet';
-    fl.href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap';
-    (document.head||document.documentElement).appendChild(fl);
-  }
-
   var oldSt=document.getElementById('gz-gsap-card-border');
   if(oldSt&&oldSt.parentNode)oldSt.parentNode.removeChild(oldSt);
   var st=document.createElement('style');
@@ -16,13 +8,10 @@
     ':root{'+
       '--gz-bg:#fffceb;--gz-surface:#ffffff;--gz-surface-2:#f7f4e4;'+
       '--gz-text:#3d3d34;--gz-text-muted:#6e6e62;--gz-heading:#0e100f;--gz-cream:#fffce1;--gz-hr:#42433d;'+
-      '--gz-link:#0ae448;--gz-link-hover:#08c93e;--gz-pre-bg:#161816;--gz-code-inline-bg:#ece9d8;'+
+      '--gz-link:#0ae448;--gz-link-text:#007a29;--gz-link-hover:#006120;--gz-pre-bg:#161816;--gz-code-inline-bg:#ece9d8;'+
       '--gz-font:"Plus Jakarta Sans","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;'+
       '--gz-mono:"JetBrains Mono","Fira Code",SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace'+
     '}'+
-    '@font-face{font-family:"Font Awesome 5 Brands";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/webfonts/fa-brands-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-brands-400.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.9.0/webfonts/fa-brands-400.woff2) format("woff2")}'+
-    '@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:400;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/webfonts/fa-regular-400.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-regular-400.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.9.0/webfonts/fa-regular-400.woff2) format("woff2")}'+
-    '@font-face{font-family:"Font Awesome 5 Free";font-style:normal;font-weight:900;font-display:swap;src:url(https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/webfonts/fa-solid-900.woff2) format("woff2"),url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/webfonts/fa-solid-900.woff2) format("woff2"),url(https://use.fontawesome.com/releases/v5.9.0/webfonts/fa-solid-900.woff2) format("woff2")}'+
     'html body{font-family:var(--gz-font)!important;color:var(--gz-text)!important}'+
     'html body h1,html body h2,html body h3,html body h4,html body h5,html body h6,'+
     'html body .title-postpage .post-title,html body h1.post-title.entry-title,'+
@@ -40,7 +29,7 @@
     'html body .item .post-author,html body .item .post-author a,html body .item .post-author span,'+
     'html body.item .post-timestamp,html body.item .post-timestamp a,html body.item .post-timestamp time,'+
     'html body .item .post-timestamp,html body .item .post-timestamp a,html body .item .post-timestamp time{'+
-      'color:var(--gz-link,#0ae448)!important;font-weight:500!important'+
+      'color:var(--gz-link-text,#007a29)!important;font-weight:500!important'+
     '}'+
     'html body .snippet-text-box,html body .popular-posts-snippet.snippet-container,html body .related-post-item-summary,html body .post-body{'+
       'color:var(--gz-text,#3d3d34)!important;font-family:var(--gz-font)!important;line-height:1.65!important;font-size:15.5px!important'+
@@ -163,7 +152,7 @@
     'html body .author-box-image{flex:0 0 64px!important}'+
     'html body .author-box-image img{float:none!important;margin:0!important;width:64px!important;height:64px!important;border-radius:50%!important;border:2px solid var(--gz-heading,#0e100f)!important;object-fit:cover!important;display:block!important}'+
     'html body .author-name a{font-weight:600!important;color:var(--gz-heading,#0e100f)!important;font-size:18px!important}'+
-    'html body .author-role-tag{color:var(--gz-link,#0ae448)!important;font-size:12.5px!important;font-weight:600!important;margin-left:8px!important}'+
+    'html body .author-role-tag{color:var(--gz-link-text,#007a29)!important;font-size:12.5px!important;font-weight:600!important;margin-left:8px!important}'+
     'html body .author-desc{color:var(--gz-text,#3d3d34)!important;font-size:15px!important;line-height:1.6!important;margin-top:4px!important;display:block!important}'+
     'html body hr,html body .post-body hr,html body .entry-content hr,html body hr.gsap-hr{'+
       'display:block!important;width:100%!important;height:0!important;border:0!important;'+
@@ -274,7 +263,7 @@
     '.gz-st-badge--pending{background:#42433d;color:#ffe866}'+
     '.gz-st-badge--failed{background:#ff4d6d;color:#fffce1}'+
     '@media screen and (max-width:580px){.gz-pro-gate{padding:10px 12px!important}.gz-gate-bar{flex-direction:column!important;align-items:stretch!important;gap:8px!important}.gz-gate-left{width:100%!important;justify-content:space-between!important}.gz-gate-btns{width:100%!important;display:grid!important;grid-template-columns:1fr auto!important;gap:8px!important;margin-left:0!important}.gz-qr-grid-wrap{flex-direction:column!important;align-items:center!important;text-align:center!important}.gz-qr-meta{text-align:center!important;width:100%!important}.gz-qr-amount-row,.gz-qr-copy-row{justify-content:center!important}.gz-admin-kpis{grid-template-columns:1fr 1fr!important}}';
-  (document.head||document.documentElement).appendChild(st);
+  if(!document.getElementById('gz-layout-inlined')){(document.head||document.documentElement).appendChild(st);}
 
   function detectLang(raw){
     var s=(raw||'').trim();
@@ -498,7 +487,9 @@
     sec.classList.remove('no-items');
     var existingHero=document.getElementById('gsap-mmo-hero');
     if(existingHero){
-      existingHero.outerHTML=getHeroMarkup();
+      if(!existingHero.querySelector('#gz-pro-dollar-grad')){
+        existingHero.outerHTML=getHeroMarkup();
+      }
     }else{
       var wrap=document.createElement('div');
       wrap.className='widget HTML';
@@ -878,7 +869,8 @@
         var dock = document.createElement('a');
         dock.className = 'gz-vip04-dock';
         dock.href = url || 'javascript:;';
-        dock.title = 'Bài viết VIP — Nhấn vào để xem giá & mở khóa';
+        dock.title = titleA ? titleA.textContent.trim() : 'Bài viết VIP';
+        dock.setAttribute('aria-label', titleA ? titleA.textContent.trim() : 'VIP');
         dock.innerHTML = buildVip04Inner('VIP');
         dockHost.appendChild(dock);
       }

@@ -8,7 +8,8 @@
   --gz-heading:#0e100f;
   --gz-cream:#fffce1;
   --gz-link:#0ae448;
-  --gz-link-hover:#08c93e;
+  --gz-link-text:#007a29;
+  --gz-link-hover:#006120;
   --gz-border:#e0ded0;
   --gz-border-soft:#bbbaa6;
   --gz-hr:#42433d;
@@ -39,8 +40,8 @@ body{
   -moz-osx-font-smoothing:grayscale
 }
 a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
-a[href],a:link,a:visited{color:var(--gz-link);text-decoration:none}
-a[href]:hover,a:hover{color:var(--gz-link-hover);transition:all .2s ease-in-out}
+a[href],a:link,a:visited{color:var(--gz-link-text,#007a29);text-decoration:none}
+a[href]:hover,a:hover{color:var(--gz-link-hover,#006120);transition:all .2s ease-in-out}
 h1,h2,h3,h4,h5,h6,
 .title-postpage .post-title,
 h1.post-title.entry-title,
@@ -102,14 +103,14 @@ ins{background-color:transparent;color:var(--gz-text);text-decoration:none}
 
 /* Content formats — GSAP Code Block & Inline Code */
 .post-body a[href],.entry-content a[href],.post-body a,.entry-content a{
-  color:var(--gz-link)!important;
+  color:var(--gz-link-text,#007a29)!important;
   font-weight:500;
   text-decoration:underline;
   text-decoration-color:var(--gz-link);
   text-underline-offset:2px
 }
 .post-body a[href]:hover,.entry-content a[href]:hover,.post-body a:hover,.entry-content a:hover{
-  color:var(--gz-link-hover)!important
+  color:var(--gz-link-hover,#006120)!important
 }
 .post-body pre,
 .entry-content pre,
@@ -229,7 +230,7 @@ textarea.contact-form-email-message:focus{
 .item .post-header-line-1,
 .item .post-author,.item .post-author a,.item .post-author a:link,.item .post-author a:visited,.item .post-author span,
 .item .post-timestamp,.item .post-timestamp a,.item .post-timestamp a:link,.item .post-timestamp a:visited,.item .post-timestamp time{
-  color:var(--gz-link)!important;
+  color:var(--gz-link-text,#007a29)!important;
   font-weight:500!important
 }
 .breadcrumbs,.breadcrumbs a,.breadcrumbs a:hover,

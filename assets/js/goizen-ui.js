@@ -2250,8 +2250,125 @@
     };
   }
 
+  /* =========================================================================
+     4. SMART ANTI-INSPECT SHIELD & DEBUGGER TRAP (Mask Blogger & Protect Source)
+     - Blocks F12, Ctrl+U, Ctrl+Shift+I/J/C, Ctrl+S
+     - Leaves text selection, copy & normal right-click intact for best UX
+     - Infinite Debugger Trap freezes DevTools if opened via browser menu
+     - Secret Admin Bypass: typing '8563' or authenticated in /p/admin-orders.html
+     ========================================================================= */
+  function initSmartAntiInspect(){
+    var secretSeq = '';
+    var secretTimer = null;
+    var bypassKey = 'gz_anti_inspect_bypass';
+
+    function isBypassActive(){
+      try{
+        if(sessionStorage.getItem('gz_adm_session') === '8563') return true;
+        if(localStorage.getItem(bypassKey) === '1') return true;
+      }catch(e){}
+      return false;
+    }
+
+    function showToast(msg){
+      var t = document.createElement('div');
+      t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0e100f;color:#0ae448;padding:8px 18px;border-radius:999px;font-family:var(--gz-mono,monospace);font-size:12.5px;font-weight:700;z-index:999999;box-shadow:0 4px 16px rgba(0,0,0,.35);pointer-events:none;transition:opacity .3s';
+      t.textContent = msg;
+      document.body.appendChild(t);
+      setTimeout(function(){
+        t.style.opacity = '0';
+        setTimeout(function(){ if(t.parentNode) t.parentNode.removeChild(t); }, 350);
+      }, 2200);
+    }
+
+    // 1. Keyboard shortcuts blocking (F12, Ctrl+U, Ctrl+Shift+I, etc.) + Secret '8563' code
+    window.addEventListener('keydown', function(e){
+      var key = e.key;
+
+      // Secret sequence tracking: typing '8563' sequentially
+      if(key && /^[0-9]$/.test(key)){
+        secretSeq += key;
+        clearTimeout(secretTimer);
+        secretTimer = setTimeout(function(){ secretSeq = ''; }, 3000);
+        if(secretSeq.indexOf('8563') !== -1){
+          secretSeq = '';
+          var curr = isBypassActive();
+          try{
+            localStorage.setItem(bypassKey, curr ? '0' : '1');
+          }catch(err){}
+          showToast(curr ? '\uD83D\uDD12 Ch\u1EBF \u0111\u1ED9 B\u1EA3o v\u1EC7 M\u00E3 ngu\u1ED3n: \u0110\u00C3 B\u1EACT' : '\uD83D\uDD13 DevTools Admin: \u0110\u00C3 M\u1EDE KH\u00D3A');
+          return;
+        }
+      }
+
+      if(isBypassActive()) return;
+
+      var isCtrlOrMeta = e.ctrlKey || e.metaKey;
+      var isShift = e.shiftKey;
+      var isAlt = e.altKey;
+      var k = e.keyCode || e.which;
+
+      // F12 (123)
+      if(k === 123 || key === 'F12'){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Ctrl + U (85) - View Source
+      if(isCtrlOrMeta && (k === 85 || key === 'u' || key === 'U')){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Ctrl + S (83) - Save Page
+      if(isCtrlOrMeta && (k === 83 || key === 's' || key === 'S')){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+
+      // Ctrl + Shift + I / J / C (73, 74, 67) OR Mac Cmd + Opt + I / J / C
+      if((isCtrlOrMeta && isShift && (k === 73 || k === 74 || k === 67)) ||
+         (isCtrlOrMeta && isAlt && (k === 73 || k === 74 || k === 67))){
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    }, true);
+
+    // 2. Continuous DevTools Detection & Debugger Trap
+    function runDebuggerTrap(){
+      if(isBypassActive()) return;
+      try{
+        var startTime = performance.now();
+        (function(){}).constructor('debugger')();
+        var endTime = performance.now();
+        if(endTime - startTime > 100){
+          try{ console.clear(); }catch(e){}
+        }
+      }catch(e){}
+    }
+
+    // 3. Mute Console methods for non-admin to prevent data inspection
+    if(!isBypassActive()){
+      try{
+        var noop = function(){};
+        console.log = noop;
+        console.warn = noop;
+        console.info = noop;
+        console.dir = noop;
+        console.table = noop;
+      }catch(e){}
+    }
+
+    // Run trap periodically every 800ms
+    setInterval(runDebuggerTrap, 800);
+  }
 
   function bootSmartLocker(){
+    initSmartAntiInspect();
     decorateHomepageCards();
     initSinglePostLocker();
     initAdminDashboard();

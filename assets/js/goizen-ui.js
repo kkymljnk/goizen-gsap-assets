@@ -259,7 +259,23 @@
     '.gz-st-badge--paid{background:#0ae448;color:#0e100f}'+
     '.gz-st-badge--pending{background:#42433d;color:#ffe866}'+
     '.gz-st-badge--failed{background:#ff4d6d;color:#fffce1}'+
-    '@media screen and (max-width:580px){.gz-pro-gate{padding:10px 12px!important}.gz-gate-bar{flex-direction:column!important;align-items:stretch!important;gap:8px!important}.gz-gate-left{width:100%!important;justify-content:space-between!important}.gz-gate-btns{width:100%!important;display:grid!important;grid-template-columns:1fr auto!important;gap:8px!important;margin-left:0!important}.gz-qr-grid-wrap{flex-direction:column!important;align-items:center!important;text-align:center!important}.gz-qr-meta{text-align:center!important;width:100%!important}.gz-qr-amount-row,.gz-qr-copy-row{justify-content:center!important}.gz-admin-kpis{grid-template-columns:1fr 1fr!important}}';
+    'body.gz-is-admin-page .post-header,body.gz-is-admin-page .post-footer,body.gz-is-admin-page #share-wrapper,body.gz-is-admin-page .author-profile,body.gz-is-admin-page #related-wrapper,body.gz-is-admin-page #comments,body.gz-is-admin-page #PopularPosts1,body.gz-is-admin-page #col-sidebar-wrapper,body.gz-is-admin-page .breadcrumbs,body.gz-is-admin-page .title-postpage,body.gz-is-admin-page hr.gsap-hr{display:none!important}'+
+    '.gz-admin-inline-host{width:100%;margin:10px 0 24px;box-sizing:border-box}'+
+    '.gz-admin-inline-host .gz-admin-panel{max-width:100%;margin:0 auto}'+
+    '.gz-admin-auth-card{max-width:440px;margin:22px auto;background:var(--gz-bg,#fffceb);border:2px solid #0e100f;border-radius:14px;padding:24px 20px;text-align:center;box-sizing:border-box;color:#0e100f}'+
+    '.gz-admin-auth-badge{display:inline-flex;align-items:center;gap:6px;background:#0e100f;color:#0ae448;font-family:var(--gz-mono);font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;margin-bottom:12px}'+
+    '.gz-admin-auth-title{font-size:20px;font-weight:700;color:#0e100f;margin:0 0 6px}'+
+    '.gz-admin-auth-sub{font-size:13px;color:#3d3d34;margin:0 0 16px;line-height:1.5}'+
+    '.gz-admin-pin-row{display:flex;gap:8px;justify-content:center;align-items:center;margin-bottom:10px}'+
+    '.gz-admin-pin-inp{flex:1 1 auto;max-width:220px;height:42px;border:2px solid #0e100f;border-radius:10px;background:#fff;color:#0e100f;font-family:var(--gz-mono);font-size:18px;font-weight:700;letter-spacing:.22em;text-align:center;padding:0 12px;box-sizing:border-box}'+
+    '.gz-admin-auth-msg{font-family:var(--gz-mono);font-size:12px;font-weight:700;color:#d90429;min-height:18px;margin-top:6px}'+
+    '.gz-admin-filter-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;flex-wrap:wrap}'+
+    '.gz-admin-filter-pills{display:inline-flex;gap:6px;flex-wrap:wrap}'+
+    '.gz-adm-filter-btn{appearance:none;border:1.5px solid #0e100f;background:var(--gz-bg,#fffceb);color:#0e100f;font-family:var(--gz-mono);font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:999px;cursor:pointer}'+
+    '.gz-adm-filter-btn.is-active{background:#0e100f;color:#0ae448}'+
+    '.gz-admin-settings-drawer{display:none;padding:12px;border:1.5px dashed #42433d;border-radius:12px;margin-bottom:14px;background:rgba(14,16,15,.03)}'+
+    '.gz-admin-settings-drawer.is-open{display:block}'+
+    '@media screen and (max-width:580px){.gz-pro-gate{padding:10px 12px!important}.gz-gate-bar{flex-direction:column!important;align-items:stretch!important;gap:8px!important}.gz-gate-left{width:100%!important;justify-content:space-between!important}.gz-gate-btns{width:100%!important;display:grid!important;grid-template-columns:1fr auto!important;gap:8px!important;margin-left:0!important}.gz-qr-grid-wrap{flex-direction:column!important;align-items:center!important;text-align:center!important}.gz-qr-meta{text-align:center!important;width:100%!important}.gz-qr-amount-row,.gz-qr-copy-row{justify-content:center!important}.gz-admin-panel{padding:14px 12px!important}.gz-admin-head{flex-direction:column!important;align-items:flex-start!important}.gz-admin-kpis{grid-template-columns:1fr 1fr!important;gap:8px!important}.gz-kpi-card{padding:8px 10px!important}.gz-kpi-card .k-num{font-size:15px!important}.gz-admin-Check-bar{flex-direction:column!important;align-items:stretch!important}.gz-admin-Check-bar .gz-recover-input,.gz-admin-Check-bar .gz-gate-btn{width:100%!important;max-width:none!important;margin:0!important}.gz-admin-pin-row{flex-direction:column!important}.gz-admin-pin-inp{max-width:100%!important;width:100%!important}.gz-admin-table thead{display:none!important}.gz-admin-table,.gz-admin-table tbody,.gz-admin-table tr,.gz-admin-table td{display:block!important;width:100%!important;box-sizing:border-box!important}.gz-admin-table tr{border:1.5px solid #0e100f!important;border-radius:12px!important;padding:10px 12px!important;margin-bottom:10px!important;background:var(--gz-bg,#fffceb)!important}.gz-admin-table td{border:0!important;padding:4px 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;text-align:right!important}.gz-admin-table td::before{content:attr(data-label);font-family:var(--gz-mono);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#6e6e62;text-align:left;flex:0 0 auto}.gz-admin-table td.gz-td-actions{display:block!important;padding-top:8px!important;margin-top:6px!important;border-top:1px dashed #c8c5b3!important}.gz-admin-table td.gz-td-actions::before{display:none!important}.gz-adm-act-group{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:6px!important;width:100%!important}.gz-adm-act-group .gz-mini-chip{justify-content:center!important;padding:7px 4px!important;font-size:11px!important;width:100%!important}}';
   if(!document.getElementById('gz-layout-inlined')){(document.head||document.documentElement).appendChild(st);}
 
   function detectLang(raw){
@@ -1682,33 +1698,152 @@
     }
   }
 
-  /* 7. GSAP Pro Admin Order Management & Diagnostic Dashboard (?admin=orders) */
+  /* 7. GSAP Pro Admin Order Management & Diagnostic Dashboard (/p/admin-orders.html + SHA-256 PIN Gate) */
+  function sha256SaltedHex(pinStr){
+    var input = 'gz_adm_v1:' + String(pinStr || '').trim();
+    if(window.crypto && window.crypto.subtle && window.TextEncoder){
+      var enc = new TextEncoder();
+      return window.crypto.subtle.digest('SHA-256', enc.encode(input)).then(function(buf){
+        var bytes = new Uint8Array(buf);
+        var hex = '';
+        for(var i=0;i<bytes.length;i++){
+          hex += ('0' + bytes[i].toString(16)).slice(-2);
+        }
+        return hex;
+      }).catch(function(){ return ''; });
+    }
+    return Promise.resolve('');
+  }
+
   function initAdminDashboard(){
-    var overlay = document.getElementById('gz-admin-overlay');
-    if(!overlay){
-      overlay = document.createElement('div');
-      overlay.id = 'gz-admin-overlay';
-      overlay.className = 'gz-admin-overlay';
-      document.body.appendChild(overlay);
+    /* Remove any legacy footer admin button so public visitors never see it */
+    var oldFooterBtn = document.getElementById('gz-open-admin-btn');
+    if(oldFooterBtn && oldFooterBtn.parentNode) oldFooterBtn.parentNode.removeChild(oldFooterBtn);
+
+    var isDedicatedAdminPage = /\/p\/admin[-_]?orders/i.test(location.pathname) || !!document.getElementById('gz-admin-page-mount');
+    var isQueryAdmin = location.search.indexOf('admin=orders') !== -1 || location.hash === '#admin-orders';
+
+    var hostContainer = null;
+    var overlay = null;
+
+    if(isDedicatedAdminPage){
+      document.body.classList.add('gz-is-admin-page');
+      var mountEl = document.getElementById('gz-admin-page-mount') || document.getElementById('tgtPost') || document.querySelector('.post-body') || document.querySelector('.blog-posts') || document.getElementById('col-posting-wrapper');
+      if(mountEl){
+        mountEl.innerHTML = '<div id="gz-admin-inline-host" class="gz-admin-inline-host"></div>';
+        hostContainer = document.getElementById('gz-admin-inline-host');
+      }
+    }
+    if(!hostContainer){
+      overlay = document.getElementById('gz-admin-overlay');
+      if(!overlay){
+        overlay = document.createElement('div');
+        overlay.id = 'gz-admin-overlay';
+        overlay.className = 'gz-admin-overlay';
+        document.body.appendChild(overlay);
+      }
+      hostContainer = overlay;
     }
 
-    /* Add discreet Admin button in footer credit */
-    var creditRight = document.querySelector('.credit-right');
-    if(creditRight && !document.getElementById('gz-open-admin-btn')){
-      var admLink = document.createElement('a');
-      admLink.id = 'gz-open-admin-btn';
-      admLink.href = 'javascript:;';
-      admLink.style.cssText = 'margin-left:12px;font-family:var(--gz-mono);font-size:11.5px;font-weight:700;background:#42433d;color:#0ae448;padding:3px 9px;border-radius:6px;text-decoration:none;display:inline-block';
-      admLink.textContent = '[ \u2699 Admin Orders ]';
-      admLink.addEventListener('click', function(e){
-        e.preventDefault();
-        renderAdminModal();
-        overlay.classList.add('is-open');
-      });
-      creditRight.appendChild(admLink);
+    var DEFAULT_PIN_HASH = '12fef9e4807a9151b1f816e09833d7c275c0b3d5f863c62f8daa03e84b00ff2f';
+    var currentFilter = 'ALL';
+    var settingsOpen = false;
+
+    function getExpectedPinHash(){
+      try {
+        return localStorage.getItem('gz_adm_pin_hash') || DEFAULT_PIN_HASH;
+      } catch(e){ return DEFAULT_PIN_HASH; }
+    }
+
+    function isAdminAuthenticated(){
+      try {
+        var raw = JSON.parse(sessionStorage.getItem('gz_adm_session') || 'null');
+        if(raw && raw.ok && Number(raw.exp) > Date.now()){
+          return true;
+        }
+      } catch(e){}
+      return false;
+    }
+
+    function setAdminAuthenticated(val){
+      try {
+        if(val){
+          sessionStorage.setItem('gz_adm_session', JSON.stringify({ ok: true, exp: Date.now() + 7200000 }));
+          localStorage.removeItem('gz_adm_fail_count');
+          localStorage.removeItem('gz_adm_lock_until');
+        }else{
+          sessionStorage.removeItem('gz_adm_session');
+        }
+      } catch(e){}
+    }
+
+    function renderPinGate(errMsg){
+      var lockUntil = 0;
+      try { lockUntil = Number(localStorage.getItem('gz_adm_lock_until') || 0); } catch(e){}
+      var remainLockSec = Math.max(0, Math.ceil((lockUntil - Date.now()) / 1000));
+      var lockMsg = remainLockSec > 0
+        ? ('\u26D4 Tạm khóa chống dò mật khẩu · Thử lại sau ' + remainLockSec + 's')
+        : (errMsg || '');
+
+      hostContainer.innerHTML =
+        '<div class="gz-admin-auth-card" id="gz-admin-auth-card">' +
+          '<div class="gz-admin-auth-badge">' + getGsapLockSvg('gz-lk-svg') + '<span>BẢO MẬT QUẢN TRỊ VIÊN · SHA-256</span></div>' +
+          '<h2 class="gz-admin-auth-title">{ Admin Orders Gate }</h2>' +
+          '<p class="gz-admin-auth-sub">Trang quản trị đơn hàng PayOS được bảo vệ bằng mã PIN mã hóa SHA-256. Vui lòng nhập mã PIN để mở khóa dữ liệu.</p>' +
+          '<form class="gz-admin-pin-row" id="gz-adm-pin-form" onsubmit="return false">' +
+            '<input type="password" inputmode="numeric" autocomplete="current-password" class="gz-admin-pin-inp" id="gz-adm-pin-inp" placeholder="\u2022\u2022\u2022\u2022" maxlength="16" ' + (remainLockSec > 0 ? 'disabled' : '') + '/>' +
+            '<button type="submit" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-pin-btn" style="height:42px!important;padding:0 18px!important" ' + (remainLockSec > 0 ? 'disabled' : '') + '>Mở Khóa \u2197</button>' +
+          '</form>' +
+          '<div class="gz-admin-auth-msg" id="gz-adm-auth-msg">' + lockMsg + '</div>' +
+          (!isDedicatedAdminPage ? '<div style="margin-top:12px"><button type="button" class="gz-mini-chip" id="gz-adm-auth-cancel">Đóng cửa sổ</button></div>' : '') +
+        '</div>';
+
+      var cancelBtn = document.getElementById('gz-adm-auth-cancel');
+      if(cancelBtn && overlay){
+        cancelBtn.addEventListener('click', function(){ overlay.classList.remove('is-open'); });
+      }
+      var pinInp = document.getElementById('gz-adm-pin-inp');
+      if(pinInp && !remainLockSec){
+        setTimeout(function(){ pinInp.focus(); }, 50);
+      }
+      var pinForm = document.getElementById('gz-adm-pin-form');
+      if(pinForm){
+        pinForm.addEventListener('submit', function(e){
+          e.preventDefault();
+          if(remainLockSec > 0) return;
+          var entered = (document.getElementById('gz-adm-pin-inp').value || '').trim();
+          if(!entered){
+            renderPinGate('\u26A0 Vui lòng nhập mã PIN Quản trị!');
+            return;
+          }
+          sha256SaltedHex(entered).then(function(hash){
+            if(hash === getExpectedPinHash()){
+              setAdminAuthenticated(true);
+              renderAdminModal();
+            }else{
+              var fails = 0;
+              try { fails = Number(localStorage.getItem('gz_adm_fail_count') || 0) + 1; } catch(err){}
+              if(fails >= 5){
+                try {
+                  localStorage.setItem('gz_adm_fail_count', '0');
+                  localStorage.setItem('gz_adm_lock_until', String(Date.now() + 300000));
+                } catch(err2){}
+                renderPinGate('\u26D4 Nhập sai 5 lần! Hệ thống tự khóa bảo vệ trong 5 phút.');
+              }else{
+                try { localStorage.setItem('gz_adm_fail_count', String(fails)); } catch(err3){}
+                renderPinGate('\u2715 Mã PIN không chính xác (Còn ' + (5 - fails) + ' lần thử)');
+              }
+            }
+          });
+        });
+      }
     }
 
     function renderAdminModal(diagText){
+      if(!isAdminAuthenticated()){
+        renderPinGate();
+        return;
+      }
       var cfg = getCfg();
       var orders = getOrders();
       var paidCount = 0, pendingCount = 0, failedCount = 0, totalRev = 0;
@@ -1724,21 +1859,32 @@
       }
       var vipPass = getActiveVipPass();
 
+      var filtered = [];
+      for(var f=0;f<orders.length;f++){
+        var stf = orders[f].status || 'PENDING';
+        if(currentFilter === 'ALL' ||
+           (currentFilter === 'PAID' && stf === 'PAID') ||
+           (currentFilter === 'PENDING' && stf === 'PENDING') ||
+           (currentFilter === 'FAILED' && (stf === 'FAILED' || stf === 'CANCELLED' || stf === 'EXPIRED'))){
+          filtered.push(orders[f]);
+        }
+      }
+
       var rowsHtml = '';
-      if(!orders.length){
-        rowsHtml = '<tr><td colspan="6" style="text-align:center;padding:16px;color:#6e6e62">Chưa có đơn hàng nào. Hãy bấm "Tạo Đơn Test" bên dưới để kiểm tra!</td></tr>';
+      if(!filtered.length){
+        rowsHtml = '<tr><td colspan="5" style="text-align:center;padding:16px;color:#6e6e62">Không có đơn hàng nào trong mục này.</td></tr>';
       }else{
-        for(var j=0;j<orders.length;j++){
-          var o = orders[j];
+        for(var j=0;j<filtered.length;j++){
+          var o = filtered[j];
           var stClass = o.status === 'PAID' ? 'gz-st-badge--paid' : (o.status === 'FAILED' ? 'gz-st-badge--failed' : 'gz-st-badge--pending');
           rowsHtml +=
             '<tr>' +
-              '<td><strong style="font-family:var(--gz-mono)">#' + o.orderCode + '</strong><br/><span style="font-size:10.5px;color:#6e6e62">' + (o.type === 'VIP_MONTH' ? 'VIP Tháng' : 'Bài lẻ: ' + o.postId) + '</span></td>' +
-              '<td style="font-family:var(--gz-mono);font-weight:700">' + formatVnd(o.amount) + '</td>' +
-              '<td><span class="gz-st-badge ' + stClass + '">' + o.status + '</span></td>' +
-              '<td style="font-size:11.5px;max-width:210px">' + (o.diagnostic || '-') + '</td>' +
-              '<td>' +
-                '<div style="display:flex;gap:4px;flex-wrap:wrap">' +
+              '<td data-label="Mã Đơn / Loại"><div><strong style="font-family:var(--gz-mono)">#' + o.orderCode + '</strong><div style="font-size:10.5px;color:#6e6e62">' + (o.type === 'VIP_MONTH' ? 'VIP Tháng (30 Ngày)' : 'Bài lẻ: ' + o.postId) + '</div></div></td>' +
+              '<td data-label="Số Tiền" style="font-family:var(--gz-mono);font-weight:700">' + formatVnd(o.amount) + '</td>' +
+              '<td data-label="Trạng Thái"><span class="gz-st-badge ' + stClass + '">' + o.status + '</span></td>' +
+              '<td data-label="Chẩn Đoán" style="font-size:11.5px;max-width:230px">' + (o.diagnostic || '-') + '</td>' +
+              '<td class="gz-td-actions">' +
+                '<div class="gz-adm-act-group" style="display:flex;gap:4px;flex-wrap:wrap">' +
                   '<button type="button" class="gz-mini-chip gz-adm-act" data-act="check" data-code="' + o.orderCode + '">\uD83D\uDD04 Check PayOS</button>' +
                   '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#0ae448;color:#0e100f" data-act="approve" data-code="' + o.orderCode + '">\u2713 Duyệt PAID</button>' +
                   '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#ff4d6d;color:#fffce1" data-act="fail" data-code="' + o.orderCode + '">\u2715 Báo Lỗi</button>' +
@@ -1748,15 +1894,17 @@
         }
       }
 
-      overlay.innerHTML =
+      hostContainer.innerHTML =
         '<div class="gz-admin-panel">' +
           '<div class="gz-admin-head">' +
-            '<div class="gz-gate-title"><span class="gz-b">{</span> Quản Lý Đơn Hàng PayOS &amp; Chẩn Đoán Lỗi <span class="gz-b">}</span></div>' +
-            '<div style="display:flex;gap:8px;align-items:center">' +
-              '<span style="font-family:var(--gz-mono);font-size:11.5px;background:#42433d;color:#0ae448;padding:3px 9px;border-radius:6px">' +
+            '<div class="gz-gate-title"><span class="gz-b">{</span> Quản Lý Đơn Hàng PayOS &amp; Bảo Mật <span class="gz-b">}</span></div>' +
+            '<div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">' +
+              '<span style="font-family:var(--gz-mono);font-size:11px;background:#42433d;color:#0ae448;padding:4px 9px;border-radius:6px">' +
                 (vipPass ? ('VIP: Còn ' + vipPass.daysLeft + ' ngày') : 'VIP: Chưa kích hoạt') +
               '</span>' +
-              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-close" style="height:30px!important;padding:0 12px!important">Đóng \u2715</button>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-toggle-settings" style="height:30px!important;padding:0 11px!important;font-size:11.5px!important">\u2699 Cấu hình &amp; PIN</button>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-lock-btn" style="height:30px!important;padding:0 11px!important;font-size:11.5px!important">\uD83D\uDD12 Khóa</button>' +
+              (!isDedicatedAdminPage ? '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-close" style="height:30px!important;padding:0 11px!important;font-size:11.5px!important">Đóng \u2715</button>' : '') +
             '</div>' +
           '</div>' +
           '<div class="gz-admin-kpis">' +
@@ -1768,14 +1916,30 @@
           '<div class="gz-admin-Check-bar">' +
             '<input type="text" class="gz-recover-input" id="gz-adm-check-inp" placeholder="Nhập mã orderCode cần kiểm tra trên PayOS..."/>' +
             '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-btn-check">Kiểm Tra PayOS Realtime</button>' +
-            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-vip">+ Tạo Đơn VIP 500.000đ</button>' +
-            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-post">+ Tạo Đơn Bài Lẻ 50.000đ</button>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-vip">+ Đơn VIP 500k</button>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-post">+ Đơn Bài Lẻ 50k</button>' +
           '</div>' +
-          '<div class="gz-admin-Check-bar" style="padding:10px;border:1px dashed #42433d;border-radius:10px;margin-bottom:12px">' +
-            '<span style="font-size:12px;font-weight:700;width:100%">Cấu hình PayOS Checksum Key (64 ký tự) &amp; Giá Gói Tháng VIP:</span>' +
-            '<input type="text" class="gz-recover-input" id="gz-adm-checksum-inp" value="' + cfg.checksumKey + '" placeholder="Checksum Key (64 hex chars)..."/>' +
-            '<input type="number" class="gz-recover-input" id="gz-adm-vipprice-inp" style="max-width:130px" value="' + cfg.vipMonthlyPrice + '"/>' +
-            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-cfg">Lưu Cấu Hình</button>' +
+          '<div class="gz-admin-settings-drawer ' + (settingsOpen ? 'is-open' : '') + '" id="gz-admin-settings-drawer">' +
+            '<div style="font-size:12px;font-weight:700;margin-bottom:8px">\uD83D\uDD10 Bảo mật PayOS Checksum Key (64 ký tự) &amp; Giá Gói Tháng VIP:</div>' +
+            '<div class="gz-admin-Check-bar" style="margin-bottom:10px">' +
+              '<input type="password" class="gz-recover-input" id="gz-adm-checksum-inp" value="' + cfg.checksumKey + '" placeholder="Checksum Key (64 hex chars)..."/>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-toggle-ck" style="height:34px!important;padding:0 12px!important">Hiện Key</button>' +
+              '<input type="number" class="gz-recover-input" id="gz-adm-vipprice-inp" style="max-width:130px" value="' + cfg.vipMonthlyPrice + '"/>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-cfg">Lưu Cấu Hình</button>' +
+            '</div>' +
+            '<div style="font-size:12px;font-weight:700;margin-bottom:6px">\uD83D\uDD11 Đổi Mã PIN Quản Trị Viên (mã hóa SHA-256):</div>' +
+            '<div class="gz-admin-Check-bar" style="margin-bottom:0">' +
+              '<input type="password" inputmode="numeric" class="gz-recover-input" id="gz-adm-new-pin-inp" placeholder="Nhập mã PIN mới (tối thiểu 4 ký tự)..."/>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-pin">Cập Nhật Mã PIN</button>' +
+            '</div>' +
+          '</div>' +
+          '<div class="gz-admin-filter-row">' +
+            '<div class="gz-admin-filter-pills">' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'ALL' ? 'is-active' : '') + '" data-filter="ALL">Tất cả (' + orders.length + ')</button>' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'PAID' ? 'is-active' : '') + '" data-filter="PAID">PAID (' + paidCount + ')</button>' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'PENDING' ? 'is-active' : '') + '" data-filter="PENDING">PENDING (' + pendingCount + ')</button>' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'FAILED' ? 'is-active' : '') + '" data-filter="FAILED">FAILED (' + failedCount + ')</button>' +
+            '</div>' +
           '</div>' +
           '<div class="gz-admin-diag ' + (diagText ? 'is-show' : '') + '" id="gz-admin-diag">' + (diagText || '') + '</div>' +
           '<div class="gz-admin-table-wrap">' +
@@ -1786,9 +1950,58 @@
           '</div>' +
         '</div>';
 
-      document.getElementById('gz-adm-close').addEventListener('click', function(){
-        overlay.classList.remove('is-open');
-      });
+      var closeBtn = document.getElementById('gz-adm-close');
+      if(closeBtn && overlay){
+        closeBtn.addEventListener('click', function(){ overlay.classList.remove('is-open'); });
+      }
+      var lockBtn = document.getElementById('gz-adm-lock-btn');
+      if(lockBtn){
+        lockBtn.addEventListener('click', function(){
+          setAdminAuthenticated(false);
+          renderPinGate('\u2713 Đã khóa phiên Quản trị an toàn.');
+        });
+      }
+      var toggleSetBtn = document.getElementById('gz-adm-toggle-settings');
+      if(toggleSetBtn){
+        toggleSetBtn.addEventListener('click', function(){
+          settingsOpen = !settingsOpen;
+          var dr = document.getElementById('gz-admin-settings-drawer');
+          if(dr) dr.classList.toggle('is-open', settingsOpen);
+        });
+      }
+      var toggleCkBtn = document.getElementById('gz-adm-toggle-ck');
+      if(toggleCkBtn){
+        toggleCkBtn.addEventListener('click', function(){
+          var ckInp = document.getElementById('gz-adm-checksum-inp');
+          if(!ckInp) return;
+          var isPwd = ckInp.type === 'password';
+          ckInp.type = isPwd ? 'text' : 'password';
+          toggleCkBtn.textContent = isPwd ? 'Ẩn Key' : 'Hiện Key';
+        });
+      }
+      var savePinBtn = document.getElementById('gz-adm-save-pin');
+      if(savePinBtn){
+        savePinBtn.addEventListener('click', function(){
+          var newPin = (document.getElementById('gz-adm-new-pin-inp').value || '').trim();
+          if(newPin.length < 4){
+            renderAdminModal('\u26A0 Mã PIN mới phải có ít nhất 4 ký tự!');
+            return;
+          }
+          sha256SaltedHex(newPin).then(function(h){
+            if(h){
+              try { localStorage.setItem('gz_adm_pin_hash', h); } catch(e){}
+              renderAdminModal('\u2713 Đã mã hóa SHA-256 và cập nhật Mã PIN Quản trị mới thành công!');
+            }
+          });
+        });
+      }
+      var filterBtns = hostContainer.querySelectorAll('.gz-adm-filter-btn');
+      for(var fb=0;fb<filterBtns.length;fb++){
+        filterBtns[fb].addEventListener('click', function(){
+          currentFilter = this.getAttribute('data-filter') || 'ALL';
+          renderAdminModal(diagText);
+        });
+      }
 
       document.getElementById('gz-adm-save-cfg').addEventListener('click', function(){
         var newCk = (document.getElementById('gz-adm-checksum-inp').value || '').trim();
@@ -1828,7 +2041,7 @@
         });
       });
 
-      var actBtns = overlay.querySelectorAll('.gz-adm-act');
+      var actBtns = hostContainer.querySelectorAll('.gz-adm-act');
       for(var b=0;b<actBtns.length;b++){
         actBtns[b].addEventListener('click', function(){
           var act = this.getAttribute('data-act');
@@ -1867,13 +2080,25 @@
       }
     }
 
-    if(location.search.indexOf('admin=orders') !== -1 || location.hash === '#admin-orders'){
+    if(isDedicatedAdminPage){
+      renderAdminModal();
+    }else if(isQueryAdmin && overlay){
       renderAdminModal();
       overlay.classList.add('is-open');
     }
     window.__gzOpenAdminOrders = function(){
       renderAdminModal();
-      overlay.classList.add('is-open');
+      if(overlay) overlay.classList.add('is-open');
+    };
+    window.__gzUnlockAdminWithPin = function(pinStr){
+      return sha256SaltedHex(pinStr).then(function(h){
+        if(h === getExpectedPinHash()){
+          setAdminAuthenticated(true);
+          renderAdminModal();
+          return true;
+        }
+        return false;
+      });
     };
   }
 

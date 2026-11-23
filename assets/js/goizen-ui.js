@@ -215,6 +215,9 @@
     '.gz-kw-chip .gz-kw-code{color:#fffce1!important;font-weight:700!important;white-space:nowrap!important}'+
     '.gz-kw-chip .gz-kw-copy-tag{background:#0e100f!important;color:#0ae448!important;padding:4px 9px!important;border-radius:6px!important;font-size:11px!important;font-weight:700!important;line-height:1.2!important;flex-shrink:0!important;white-space:nowrap!important}'+
     '.gz-kw-chip.is-copied .gz-kw-copy-tag{background:#0ae448!important;color:#0e100f!important}'+
+    '.gz-cmt-code-bar{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;flex-wrap:wrap!important;border:2px solid #0e100f!important;border-radius:14px!important;background:var(--gz-bg,#fffceb)!important;padding:10px 14px!important;margin:0 0 16px 0!important;box-sizing:border-box!important}'+
+    '.gz-cmt-live-badge{display:inline-flex!important;align-items:center!important;gap:6px!important;font-family:var(--gz-mono)!important;font-size:11.5px!important;font-weight:700!important;color:#008b38!important;white-space:nowrap!important}'+
+    '.gz-cmt-live-badge .gz-pulse{width:7px;height:7px;border-radius:50%;background:#0ae448;display:inline-block}'+
     '.gz-paid-tag{display:inline-flex!important;align-items:center!important;gap:8px!important;font-family:var(--gz-font)!important;font-size:13px!important;font-weight:700!important;color:#0e100f!important;flex:0 0 auto!important}'+
     '.gz-paid-tag .gz-price-pill{background:#42433d!important;color:#0ae448!important;font-family:var(--gz-mono)!important;padding:4px 10px!important;border-radius:6px!important;font-size:12.5px!important;font-weight:700!important}'+
     '.gz-gate-btns{display:flex!important;align-items:center!important;gap:8px!important;flex-shrink:0!important;margin-left:auto!important}'+
@@ -1013,17 +1016,25 @@
     });
   }
 
-  /* 5. Realtime Blogger Comment Verifier */
-  function verifyBloggerCommentRealtime(postId, requiredToken){
+  /* 5. Realtime Blogger Comment Verifier (DOM + Live Feed) */
+  function hasCommentTokenInDom(requiredToken){
     var cleanToken = String(requiredToken || '').trim().toLowerCase();
     var shortNum = (cleanToken.match(/#\d+/) || [cleanToken])[0];
-    /* First check DOM comments already rendered on page */
-    var domComments = document.querySelectorAll('#comments .comment-content, #comment-holder .comment-content');
+    var domComments = document.querySelectorAll('#comments .comment-content, #comment-holder .comment-content, #comment-holder p.comment-content, #comments .comment-body p, #comments .comment-block');
     for(var i=0;i<domComments.length;i++){
       var txt = (domComments[i].textContent || '').toLowerCase();
       if(txt.indexOf(shortNum) !== -1 || txt.indexOf(cleanToken) !== -1){
-        return Promise.resolve({ ok: true, source: 'DOM' });
+        return true;
       }
+    }
+    return false;
+  }
+
+  function verifyBloggerCommentRealtime(postId, requiredToken){
+    var cleanToken = String(requiredToken || '').trim().toLowerCase();
+    var shortNum = (cleanToken.match(/#\d+/) || [cleanToken])[0];
+    if(hasCommentTokenInDom(requiredToken)){
+      return Promise.resolve({ ok: true, source: 'DOM' });
     }
     /* Query Blogger live JSON Comment Feed */
     var feedUrl = '/feeds/' + encodeURIComponent(postId) + '/comments/default?alt=json&max-results=50&_cb=' + Date.now();
@@ -1032,7 +1043,9 @@
       .then(function(data){
         var entries = (data && data.feed && data.feed.entry) || [];
         for(var j=0;j<entries.length;j++){
-          var c = (entries[j].content && entries[j].content.$t) ? entries[j].content.$t.toLowerCase() : '';
+          var c = ((entries[j].content && entries[j].content.$t) ? entries[j].content.$t : '') + ' ' +
+                  ((entries[j].summary && entries[j].summary.$t) ? entries[j].summary.$t : '');
+          c = c.toLowerCase();
           if(c.indexOf(shortNum) !== -1 || c.indexOf(cleanToken) !== -1){
             return { ok: true, source: 'FEED' };
           }
@@ -1250,6 +1263,11 @@
     else postBody.appendChild(gate);
 
     function revealUnlockedContent(badgeText, autoScroll){
+      if(pollTimer) clearInterval(pollTimer);
+      if(cmtPollTimer) clearInterval(cmtPollTimer);
+      var cmtBar = document.getElementById('gz-cmt-code-bar');
+      if(cmtBar && cmtBar.parentNode) cmtBar.parentNode.removeChild(cmtBar);
+
       lockContainer.classList.remove('gz-lock-curtain');
       lockContainer.style.setProperty('max-height','none','important');
       lockContainer.style.setProperty('min-height','0','important');
@@ -1261,22 +1279,28 @@
       lockContainer.style.setProperty('mask-image','none','important');
       lockContainer.style.setProperty('margin-bottom','0','important');
 
-      var pill = document.createElement('div');
-      pill.className = 'gz-unlocked-pill';
-      pill.textContent = badgeText || '\u2713 Đã mở khóa nội dung';
-      gate.parentNode.insertBefore(pill, lockContainer);
+      if(!document.getElementById('gz-unlocked-pill-badge')){
+        var pill = document.createElement('div');
+        pill.id = 'gz-unlocked-pill-badge';
+        pill.className = 'gz-unlocked-pill';
+        pill.textContent = badgeText || '\u2713 Đã mở khóa nội dung';
+        if(lockContainer.parentNode) lockContainer.parentNode.insertBefore(pill, lockContainer);
+        if(autoScroll && pill.scrollIntoView){
+          pill.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
       if(gate.parentNode) gate.parentNode.removeChild(gate);
 
       if(window.gsap){
         window.gsap.fromTo(lockContainer, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'expo.out' });
       }
-      if(autoScroll && pill.scrollIntoView){
-        pill.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
       enhanceCodeBlocks();
     }
 
-    /* Check if already unlocked (Dual Storage: LocalStorage + Cookie) */
+    var pollTimer = null;
+    var cmtPollTimer = null;
+
+    /* Check if already unlocked (Dual Storage + Immediate DOM Comment Auto-Unlock!) */
     if(isPaidPost){
       var savedPaidOrder = getDualStore('gz_paid_post_' + postId);
       if(savedPaidOrder){
@@ -1294,21 +1318,22 @@
         revealUnlockedContent('\u2713 Đã mở khóa bằng bình luận (' + userCommentToken + ')', false);
         return;
       }
+      if(hasCommentTokenInDom(userCommentToken)){
+        setDualStore('gz_free_post_' + postId, userCommentToken, 365);
+        revealUnlockedContent('\u2713 Đã tự động mở khóa bằng bình luận (' + userCommentToken + ')', false);
+        return;
+      }
     }
 
-    /* Render Ultra-Compact 1-Line Gate UI (Code & Copy button right next to each other) */
+    /* Render Ultra-Compact 1-Line Gate UI */
     if(!isPaidPost){
       gate.innerHTML =
         '<div class="gz-gate-bar">' +
           '<div class="gz-gate-left">' +
-            '<span class="gz-gate-prompt">\uD83D\uDD12 Bình luận mã:</span>' +
-            '<div class="gz-kw-chip" id="gz-kw-chip" title="Chạm để Copy mã và cuộn xuống bình luận">' +
-              '<span class="gz-kw-code">' + userCommentToken + '</span>' +
-              '<span class="gz-kw-copy-tag" id="gz-kw-copy-tag">\u2750 Copy</span>' +
-            '</div>' +
+            '<span class="gz-gate-prompt">\uD83D\uDD12 Nội dung khóa · Bình luận mã ở dưới để tự mở</span>' +
           '</div>' +
           '<div class="gz-gate-btns">' +
-            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-check-cmt">\u25CF Mở khóa</button>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-check-cmt">\u2193 Bình luận mở khóa</button>' +
             '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-btn-open-vip">\u26A1 VIP</button>' +
           '</div>' +
         '</div>' +
@@ -1318,6 +1343,32 @@
           '<input type="text" class="gz-recover-input" id="gz-recover-input" placeholder="Nhập mã đơn VIP 9XXXXXXXX..."/>' +
           '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-do-recover">Khôi phục</button>' +
         '</div>';
+
+      /* Place "🔒 Bình luận mã: [ MMO #XXXX  ❐ Copy ]" directly below "X Comments" (.custom-comment-title) */
+      var cmtTitleEl = document.querySelector('#comments .custom-comment-title');
+      var cmtSectionEl = document.getElementById('comments');
+      var oldCmtBar = document.getElementById('gz-cmt-code-bar');
+      if(oldCmtBar && oldCmtBar.parentNode) oldCmtBar.parentNode.removeChild(oldCmtBar);
+      if(cmtTitleEl || cmtSectionEl){
+        var cmtBarEl = document.createElement('div');
+        cmtBarEl.id = 'gz-cmt-code-bar';
+        cmtBarEl.className = 'gz-cmt-code-bar';
+        cmtBarEl.innerHTML =
+          '<div class="gz-gate-left">' +
+            '<span class="gz-gate-prompt">\uD83D\uDD12 Bình luận mã:</span>' +
+            '<div class="gz-kw-chip" id="gz-kw-chip" title="Chạm để Copy mã và dán vào khung bình luận">' +
+              '<span class="gz-kw-code">' + userCommentToken + '</span>' +
+              '<span class="gz-kw-copy-tag" id="gz-kw-copy-tag">\u2750 Copy</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="gz-cmt-live-badge"><span class="gz-pulse"></span><span>Tự mở khi bình luận</span></div>';
+        if(cmtTitleEl && cmtTitleEl.parentNode){
+          if(cmtTitleEl.nextSibling) cmtTitleEl.parentNode.insertBefore(cmtBarEl, cmtTitleEl.nextSibling);
+          else cmtTitleEl.parentNode.appendChild(cmtBarEl);
+        }else if(cmtSectionEl){
+          cmtSectionEl.insertBefore(cmtBarEl, cmtSectionEl.firstChild);
+        }
+      }
     }else{
       gate.innerHTML =
         '<div class="gz-gate-bar">' +
@@ -1343,8 +1394,6 @@
     var statusEl = document.getElementById('gz-gate-status');
     var qrDrawer = document.getElementById('gz-qr-drawer');
     var recoverRow = document.getElementById('gz-recover-row');
-    var pollTimer = null;
-    var cmtPollTimer = null;
 
     function showStatus(msg, type){
       if(!statusEl) return;
@@ -1352,20 +1401,40 @@
       statusEl.className = 'gz-gate-status is-show ' + (type === 'err' ? 'is-err' : (type === 'ok' ? 'is-ok' : ''));
     }
 
-    /* Free Comment Unlock Handlers */
+    /* Free Comment Unlock Handlers + Automatic Realtime Polling & DOM Observer */
     var kwChip = document.getElementById('gz-kw-chip');
     var btnCheckCmt = document.getElementById('gz-btn-check-cmt');
+    function tryAutoUnlockFromComment(autoScroll){
+      return verifyBloggerCommentRealtime(postId, userCommentToken).then(function(res){
+        if(res && res.ok){
+          setDualStore('gz_free_post_' + postId, userCommentToken, 365);
+          revealUnlockedContent('\u2713 Đã tự động mở khóa bằng bình luận (' + userCommentToken + ')', !!autoScroll);
+          return true;
+        }
+        return false;
+      });
+    }
     function startCommentAutoPolling(){
-      if(cmtPollTimer) return;
+      if(cmtPollTimer || isPaidPost) return;
       cmtPollTimer = setInterval(function(){
-        verifyBloggerCommentRealtime(postId, userCommentToken).then(function(res){
-          if(res && res.ok){
-            clearInterval(cmtPollTimer);
+        tryAutoUnlockFromComment(true);
+      }, 2500);
+    }
+    if(!isPaidPost){
+      /* Auto-check immediately via Feed + auto-poll in background + observe #comments DOM */
+      tryAutoUnlockFromComment(false);
+      startCommentAutoPolling();
+      var cmtHolder = document.getElementById('comments');
+      if(cmtHolder && window.MutationObserver){
+        var cmtObs = new MutationObserver(function(){
+          if(hasCommentTokenInDom(userCommentToken)){
+            cmtObs.disconnect();
             setDualStore('gz_free_post_' + postId, userCommentToken, 365);
-            revealUnlockedContent('\u2713 Đã mở khóa bằng bình luận (' + userCommentToken + ')', true);
+            revealUnlockedContent('\u2713 Đã tự động mở khóa bằng bình luận (' + userCommentToken + ')', true);
           }
         });
-      }, 2800);
+        cmtObs.observe(cmtHolder, { childList: true, subtree: true, characterData: true });
+      }
     }
     if(kwChip){
       kwChip.addEventListener('click', function(){
@@ -1373,9 +1442,8 @@
         function afterCopy(){
           kwChip.classList.add('is-copied');
           if(copyTag) copyTag.textContent = '\u2713 Đã Copy';
-          showStatus('Đã copy "' + userCommentToken + '"! Hãy dán vào ô Bình luận bên dưới — hệ thống sẽ tự mở khóa ngay khi bạn đăng.', 'ok');
-          var cmtSec = document.getElementById('comments');
-          if(cmtSec) cmtSec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          var cmtForm = document.getElementById('comment-editor') || document.querySelector('#comments .comment-footer');
+          if(cmtForm) cmtForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
           startCommentAutoPolling();
         }
         if(navigator.clipboard && navigator.clipboard.writeText){
@@ -1385,15 +1453,14 @@
     }
     if(btnCheckCmt){
       btnCheckCmt.addEventListener('click', function(){
-        btnCheckCmt.textContent = '\u25CF Đang kiểm tra...';
-        verifyBloggerCommentRealtime(postId, userCommentToken).then(function(res){
-          if(res && res.ok){
-            if(cmtPollTimer) clearInterval(cmtPollTimer);
-            setDualStore('gz_free_post_' + postId, userCommentToken, 365);
-            revealUnlockedContent('\u2713 Đã mở khóa bằng bình luận (' + userCommentToken + ')', true);
-          }else{
-            btnCheckCmt.textContent = '\u25CF Mở khóa';
-            showStatus('Chưa thấy bình luận chứa mã "' + userCommentToken + '" dưới bài viết. Hãy bình luận mã này xuống dưới trước nhé!', 'err');
+        tryAutoUnlockFromComment(true).then(function(ok){
+          if(!ok){
+            if(navigator.clipboard && navigator.clipboard.writeText){
+              navigator.clipboard.writeText(userCommentToken).catch(function(){});
+            }
+            var cmtBarTarget = document.getElementById('gz-cmt-code-bar') || document.getElementById('comments');
+            if(cmtBarTarget) cmtBarTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            showStatus('Đã copy mã "' + userCommentToken + '" — hãy dán vào ô Bình luận bên dưới, bài viết sẽ tự động mở khóa ngay!', 'ok');
             startCommentAutoPolling();
           }
         });

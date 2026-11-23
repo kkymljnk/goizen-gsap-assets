@@ -1222,6 +1222,34 @@ input#super-my-search-form::placeholder{
   background:#0ae448!important;
   color:#0e100f!important
 }
+.gz-cmt-code-bar{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:10px!important;
+  flex-wrap:wrap!important;
+  border:2px solid var(--gz-heading,#0e100f)!important;
+  border-radius:14px!important;
+  background:var(--gz-bg,#fffceb)!important;
+  padding:10px 14px!important;
+  margin:0 0 16px 0!important;
+  box-sizing:border-box!important
+}
+.gz-cmt-live-badge{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:6px!important;
+  font-family:var(--gz-mono)!important;
+  font-size:11.5px!important;
+  font-weight:700!important;
+  color:#008b38!important;
+  white-space:nowrap!important
+}
+.gz-cmt-live-badge .gz-pulse{
+  width:7px;height:7px;border-radius:50%;background:#0ae448;
+  display:inline-block;
+  animation:gzPulse 1.2s infinite ease-in-out
+}
 .gz-paid-tag{
   display:inline-flex!important;
   align-items:center!important;

@@ -255,8 +255,9 @@
     '.gz-admin-table-wrap{overflow-x:auto}'+
     '.gz-admin-table{width:100%!important;border-collapse:collapse!important;font-size:12.5px!important;margin:0!important;background:transparent!important}'+
     '.gz-admin-panel .gz-admin-table th,.gz-admin-panel .gz-admin-table td{border:0!important;border-bottom:1px solid #c8c5b3!important;padding:10px 8px!important;text-align:left!important;vertical-align:middle!important;background:transparent!important}'+
-    '.gz-admin-panel .gz-admin-table th{font-family:var(--gz-mono)!important;font-size:11px!important;font-weight:700!important;text-transform:uppercase!important;color:#3d3d34!important;border-bottom:2px solid #0e100f!important}'+
-    '.gz-st-badge{font-family:var(--gz-mono);font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:6px;display:inline-block}'+
+    '.gz-admin-panel .gz-admin-table th{font-family:var(--gz-mono)!important;font-size:11px!important;font-weight:700!important;text-transform:uppercase!important;color:#3d3d34!important;border-bottom:2px solid #0e100f!important;white-space:nowrap!important}'+
+    '.gz-admin-panel .gz-admin-table td[data-label="Mã Đơn"],.gz-admin-panel .gz-admin-table td[data-label="Số Tiền"],.gz-admin-panel .gz-admin-table td[data-label="Trạng Thái"],.gz-admin-panel .gz-admin-table td.gz-td-actions{white-space:nowrap!important}'+
+    '.gz-st-badge{font-family:var(--gz-mono);font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px;display:inline-flex!important;align-items:center;justify-content:center;white-space:nowrap!important;line-height:1.25}'+
     '.gz-st-badge--paid{background:#0ae448;color:#0e100f}'+
     '.gz-st-badge--pending{background:#42433d;color:#ffe866}'+
     '.gz-st-badge--failed{background:#ff4d6d;color:#fffce1}'+
@@ -1958,7 +1959,7 @@
               '<td data-label="Trạng Thái"><span class="gz-st-badge ' + stClass + '">' + formatStatusVi(o.status) + '</span></td>' +
               '<td data-label="Chi Tiết" style="font-size:11.5px">' + cleanDiagVi(o.diagnostic, o.amount) + '</td>' +
               '<td class="gz-td-actions">' +
-                '<div class="gz-adm-act-group" style="display:flex;gap:4px;flex-wrap:wrap">' +
+                '<div class="gz-adm-act-group" style="display:inline-flex;gap:4px;align-items:center;flex-wrap:nowrap;white-space:nowrap">' +
                   '<button type="button" class="gz-mini-chip gz-adm-act" data-act="check" data-code="' + o.orderCode + '">\uD83D\uDD04 Kiểm tra</button>' +
                   '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#0ae448;color:#0e100f" data-act="approve" data-code="' + o.orderCode + '">\u2713 Duyệt</button>' +
                   '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#ff4d6d;color:#fffce1" data-act="fail" data-code="' + o.orderCode + '">\u2715 Hủy</button>' +

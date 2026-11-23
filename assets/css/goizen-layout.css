@@ -1626,15 +1626,26 @@ input#super-my-search-form::placeholder{
   font-weight:700!important;
   text-transform:uppercase!important;
   color:#3d3d34!important;
-  border-bottom:2px solid #0e100f!important
+  border-bottom:2px solid #0e100f!important;
+  white-space:nowrap!important
+}
+.gz-admin-panel .gz-admin-table td[data-label="Mã Đơn"],
+.gz-admin-panel .gz-admin-table td[data-label="Số Tiền"],
+.gz-admin-panel .gz-admin-table td[data-label="Trạng Thái"],
+.gz-admin-panel .gz-admin-table td.gz-td-actions{
+  white-space:nowrap!important
 }
 .gz-st-badge{
-  font-family:var(--gz-mono);
-  font-size:10.5px;
-  font-weight:700;
-  padding:2px 7px;
-  border-radius:5px;
-  display:inline-block
+  font-family:var(--gz-mono)!important;
+  font-size:11px!important;
+  font-weight:700!important;
+  padding:3px 9px!important;
+  border-radius:6px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  white-space:nowrap!important;
+  line-height:1.25!important
 }
 .gz-st-badge--paid{background:#0ae448;color:#0e100f}
 .gz-st-badge--pending{background:#42433d;color:#ffe866}

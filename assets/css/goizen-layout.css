@@ -639,17 +639,9 @@ iframe.avatar-hovercard-iframe{border:0;padding:0;width:25em;height:9.4em;margin
   border-color:var(--gz-link)!important;
   color:var(--gz-heading)!important
 }
+.comments .continue,
 .comments .continue a{
-  display:inline-block!important;
-  font-weight:600!important;
-  color:var(--gz-heading)!important;
-  background:var(--gz-bg)!important;
-  border:2px solid var(--gz-heading)!important;
-  border-radius:999px!important;
-  padding:7px 18px!important;
-  font-size:13.5px!important;
-  margin-top:6px!important;
-  text-decoration:none!important
+  display:none!important
 }
 .comments .hidden{display:none}
 @media screen and (max-device-width:480px) {

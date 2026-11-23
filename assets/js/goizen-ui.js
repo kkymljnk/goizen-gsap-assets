@@ -107,11 +107,7 @@
       'border:1.5px solid var(--gz-heading,#0e100f)!important;border-radius:999px!important;'+
       'padding:4px 14px!important;font-size:12.5px!important;font-weight:600!important;margin-right:8px!important;display:inline-block!important;line-height:1.4!important;text-decoration:none!important'+
     '}'+
-    'html body .comments .continue a{'+
-      'display:inline-block!important;font-weight:600!important;color:var(--gz-heading,#0e100f)!important;'+
-      'background:var(--gz-bg,#fffceb)!important;border:2px solid var(--gz-heading,#0e100f)!important;'+
-      'border-radius:999px!important;padding:7px 18px!important;font-size:13.5px!important;margin-top:6px!important;text-decoration:none!important'+
-    '}'+
+    'html body .comments .continue,html body .comments .continue a{display:none!important}'+
     'html body .comment-post-messages{'+
       'background:var(--gz-bg,#fffceb)!important;border:2px solid var(--gz-heading,#0e100f)!important;border-radius:14px!important;padding:16px 20px!important;box-sizing:border-box!important'+
     '}'+

@@ -202,7 +202,60 @@
       'background:var(--gz-bg,#fffceb)!important;background-color:var(--gz-bg,#fffceb)!important;color:var(--gz-heading,#0e100f)!important;border-color:var(--gz-heading,#0e100f)!important'+
     '}'+
     '#top svg{display:inline-block!important;vertical-align:middle!important;width:22px!important;height:22px!important;stroke:var(--gz-heading,#0e100f)!important}'+
-    '#top i,#top .fa,#top .fas{display:none!important}';
+    '#top i,#top .fa,#top .fas{display:none!important}'+
+    '.gz-hidden-label{display:none!important}'+
+    '.gz-card-badge{display:inline-flex!important;align-items:center!important;gap:5px!important;font-family:var(--gz-mono)!important;font-size:11.5px!important;font-weight:700!important;padding:2px 9px!important;border-radius:6px!important;line-height:1.4!important;text-decoration:none!important;white-space:nowrap!important;margin-left:8px!important;vertical-align:middle!important;background:#42433d!important;color:#0ae448!important}'+
+    '.gz-lock-curtain{position:relative;max-height:56px;overflow:hidden;user-select:none;pointer-events:none;filter:blur(3.5px);opacity:.5;-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,0) 100%);mask-image:linear-gradient(180deg,rgba(0,0,0,.8) 0%,rgba(0,0,0,0) 100%);margin-bottom:-10px}'+
+    '.gz-pro-gate{position:relative;z-index:5;border:2px solid #0e100f!important;border-radius:14px!important;background:var(--gz-bg,#fffceb)!important;padding:11px 14px!important;margin:12px 0 20px!important;box-sizing:border-box!important}'+
+    '.gz-gate-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:nowrap}'+
+    '.gz-kw-chip{display:inline-flex;align-items:center;gap:8px;background:#42433d;color:#fffce1;font-family:var(--gz-mono);font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:8px;cursor:pointer;user-select:none;flex:1 1 auto;min-width:0;justify-content:space-between}'+
+    '.gz-kw-chip .gz-kw-code{color:#fffce1;font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}'+
+    '.gz-kw-chip .gz-kw-copy-tag{background:#0e100f;color:#0ae448;padding:2px 8px;border-radius:999px;font-size:10.5px;font-weight:700;flex-shrink:0}'+
+    '.gz-paid-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--gz-mono);font-size:13px;font-weight:700;color:#0e100f;flex:1 1 auto;min-width:0}'+
+    '.gz-paid-tag .gz-price-pill{background:#42433d;color:#0ae448;padding:4px 10px;border-radius:6px;font-size:12.5px;font-weight:700}'+
+    '.gz-gate-btns{display:flex;align-items:center;gap:8px;flex-shrink:0}'+
+    '.gz-gate-btn{height:36px!important;padding:0 14px!important;border-radius:999px!important;border:2px solid #0e100f!important;font-family:var(--gz-font)!important;font-size:12.5px!important;font-weight:700!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;cursor:pointer!important;white-space:nowrap!important;box-sizing:border-box!important}'+
+    '.gz-gate-btn--primary{background:#0ae448!important;color:#0e100f!important}'+
+    '.gz-gate-btn--ghost{background:var(--gz-bg,#fffceb)!important;color:#0e100f!important}'+
+    '.gz-gate-status{margin-top:8px;font-size:12px;font-weight:600;color:#3d3d34;display:none}'+
+    '.gz-gate-status.is-show{display:block}'+
+    '.gz-gate-status.is-err{color:#d90429}'+
+    '.gz-gate-status.is-ok{color:#008b38}'+
+    '.gz-unlocked-pill{display:inline-flex;align-items:center;gap:6px;background:#42433d;color:#0ae448;font-family:var(--gz-mono);font-size:11.5px;font-weight:700;padding:4px 11px;border-radius:6px;margin:8px 0 12px}'+
+    '.gz-qr-drawer{display:none;margin-top:10px;padding-top:10px;border-top:1px dashed #42433d}'+
+    '.gz-qr-drawer.is-open{display:block}'+
+    '.gz-qr-grid-wrap{display:flex;align-items:center;gap:14px}'+
+    '.gz-qr-frame{width:110px;height:110px;border:2px solid #0e100f;border-radius:10px;background:#fff;padding:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;box-sizing:border-box}'+
+    '.gz-qr-frame img{width:100%!important;height:100%!important;object-fit:contain!important;display:block!important}'+
+    '.gz-qr-meta{flex:1 1 auto;min-width:0;text-align:left}'+
+    '.gz-qr-amount-row{font-family:var(--gz-mono);font-size:13px;font-weight:700;color:#0e100f;margin-bottom:5px}'+
+    '.gz-qr-live-pill{display:inline-flex;align-items:center;gap:6px;background:#0e100f;color:#0ae448;font-family:var(--gz-mono);font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;margin-bottom:6px}'+
+    '.gz-qr-live-pill.is-fail{color:#ff4d6d}'+
+    '.gz-qr-live-pill .gz-pulse{width:7px;height:7px;border-radius:50%;background:currentColor}'+
+    '.gz-qr-copy-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}'+
+    '.gz-mini-chip{background:#42433d;color:#fffce1;border:0;border-radius:6px;font-family:var(--gz-mono);font-size:11px;font-weight:700;padding:3px 8px;cursor:pointer}'+
+    '.gz-recover-row{display:none;align-items:center;gap:8px;margin-top:10px;padding-top:10px;border-top:1px dashed #42433d}'+
+    '.gz-recover-row.is-open{display:flex}'+
+    '.gz-recover-input{flex:1 1 auto;height:34px;padding:0 12px;border:1.5px solid #0e100f;border-radius:999px;background:#fff;color:#0e100f;font-family:var(--gz-mono);font-size:12px;outline:0}'+
+    '.gz-admin-overlay{position:fixed;inset:0;z-index:99999;background:rgba(14,16,15,.72);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:24px 12px;box-sizing:border-box}'+
+    '.gz-admin-overlay.is-open{display:flex}'+
+    '.gz-admin-panel{width:100%;max-width:760px;background:var(--gz-bg,#fffceb);border:2px solid #0e100f;border-radius:14px;padding:20px;box-sizing:border-box;color:#0e100f}'+
+    '.gz-admin-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:12px;border-bottom:1px solid #42433d;margin-bottom:14px;flex-wrap:wrap}'+
+    '.gz-admin-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}'+
+    '.gz-kpi-card{border:2px solid #0e100f;border-radius:10px;padding:10px 12px;background:var(--gz-bg,#fffceb)}'+
+    '.gz-kpi-card .k-num{font-family:var(--gz-mono);font-size:18px;font-weight:700;color:#0e100f;display:block}'+
+    '.gz-kpi-card .k-lbl{font-size:11.5px;color:#3d3d34;font-weight:600}'+
+    '.gz-admin-Check-bar{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}'+
+    '.gz-admin-diag{background:#161816;color:#fffce1;font-family:var(--gz-mono);font-size:12px;padding:12px 14px;border-radius:10px;border:2px solid #0e100f;margin-bottom:14px;display:none;white-space:pre-wrap;line-height:1.5}'+
+    '.gz-admin-diag.is-show{display:block}'+
+    '.gz-admin-table-wrap{overflow-x:auto}'+
+    '.gz-admin-table{width:100%;border-collapse:collapse;font-size:12.5px}'+
+    '.gz-admin-table th,.gz-admin-table td{border-bottom:1px solid #42433d;padding:8px 6px;text-align:left;vertical-align:middle}'+
+    '.gz-st-badge{font-family:var(--gz-mono);font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px;display:inline-block}'+
+    '.gz-st-badge--paid{background:#0ae448;color:#0e100f}'+
+    '.gz-st-badge--pending{background:#42433d;color:#ffe866}'+
+    '.gz-st-badge--failed{background:#ff4d6d;color:#fffce1}'+
+    '@media screen and (max-width:580px){.gz-pro-gate{padding:10px 12px!important}.gz-gate-bar{flex-direction:column!important;align-items:stretch!important;gap:8px!important}.gz-kw-chip,.gz-paid-tag{width:100%!important}.gz-gate-btns{width:100%!important;display:grid!important;grid-template-columns:1fr auto!important;gap:8px!important}.gz-qr-grid-wrap{flex-direction:column!important;align-items:center!important;text-align:center!important}.gz-qr-meta{text-align:center!important;width:100%!important}.gz-qr-amount-row,.gz-qr-copy-row{justify-content:center!important}.gz-admin-kpis{grid-template-columns:1fr 1fr!important}}';
   (document.head||document.documentElement).appendChild(st);
 
   function detectLang(raw){
@@ -556,5 +609,944 @@
       }
     }
     break;
+  }
+})();
+
+/* ==========================================================================
+   GSAP SMART CONTENT LOCKER, PAYOS REALTIME (500.000đ/month VIP & Paid Posts)
+   & ADMIN ORDER MANAGEMENT DASHBOARD (?admin=orders)
+   ========================================================================== */
+(function(){
+  var DEFAULT_CFG = {
+    clientId: '0a1cc230-4c1a-4735-b71d-9ac82d34156d',
+    apiKey: 'b7a2a48a-ef0b-4397-a994-b6746f74467f',
+    checksumKey: '6275fa071a1dd3d1070c0f965c8c55fb2aeeaf057091b20',
+    bankId: 'OCB',
+    accountNo: '0356189725',
+    accountName: 'NGUYEN DUY KHANH',
+    vipMonthlyPrice: 500000,
+    vipDurationDays: 30,
+    commentPrefix: 'MMO',
+    demoPaidPosts: {
+      'malesuada-bibendum-arcu-vitae-elementum': 50000
+    }
+  };
+
+  function getCfg(){
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem('gz_locker_cfg') || '{}'); } catch(e){}
+    var ext = window.__GZ_LOCKER_CONFIG || {};
+    var out = {};
+    for(var k in DEFAULT_CFG) out[k] = DEFAULT_CFG[k];
+    for(var k2 in ext) if(ext[k2] !== undefined && ext[k2] !== '') out[k2] = ext[k2];
+    for(var k3 in saved) if(saved[k3] !== undefined && saved[k3] !== '') out[k3] = saved[k3];
+    return out;
+  }
+
+  function formatVnd(n){
+    var num = Number(n) || 0;
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + 'đ';
+  }
+
+  function getClientUid(){
+    var uid = '';
+    try { uid = localStorage.getItem('gz_client_uid') || ''; } catch(e){}
+    if(!/^\d{4}$/.test(uid)){
+      uid = String(Math.floor(1000 + Math.random() * 9000));
+      try { localStorage.setItem('gz_client_uid', uid); } catch(e){}
+    }
+    return uid;
+  }
+
+  function hash4(str){
+    var s = String(str || 'post');
+    var h = 0;
+    for(var i=0;i<s.length;i++) h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+    var pos = Math.abs(h) % 9000 + 1000;
+    return String(pos);
+  }
+
+  function getPostSlug(url){
+    var u = String(url || location.pathname || '');
+    var m = u.match(/\/([^\/]+)\.html/i);
+    return m ? m[1].toLowerCase() : u.toLowerCase();
+  }
+
+  function getCurrentPostId(){
+    var a = document.querySelector('article.post a[name]');
+    if(a && a.getAttribute('name')) return a.getAttribute('name');
+    var snip = document.querySelector('[id^="post-snippet-"]');
+    if(snip) return snip.id.replace('post-snippet-','');
+    return hash4(getPostSlug(location.pathname));
+  }
+
+  /* 1. Multi-user Order Registry (Local + Synced with PayOS) */
+  function getOrders(){
+    try {
+      var arr = JSON.parse(localStorage.getItem('gz_orders_registry') || '[]');
+      return Array.isArray(arr) ? arr : [];
+    } catch(e){ return []; }
+  }
+  function saveOrders(arr){
+    try { localStorage.setItem('gz_orders_registry', JSON.stringify(arr.slice(0, 200))); } catch(e){}
+  }
+  function upsertOrder(ord){
+    var list = getOrders();
+    var found = false;
+    for(var i=0;i<list.length;i++){
+      if(String(list[i].orderCode) === String(ord.orderCode)){
+        for(var k in ord) list[i][k] = ord[k];
+        list[i].updatedAt = new Date().toISOString();
+        found = true;
+        break;
+      }
+    }
+    if(!found){
+      ord.createdAt = ord.createdAt || new Date().toISOString();
+      ord.updatedAt = ord.createdAt;
+      list.unshift(ord);
+    }
+    saveOrders(list);
+    return ord;
+  }
+
+  /* 2. VIP 30-Day Pass Management (Auto-expires after 30 days) */
+  function getActiveVipPass(){
+    try {
+      var raw = JSON.parse(localStorage.getItem('gz_vip_pass') || 'null');
+      if(!raw || !raw.expiresAt) return null;
+      var now = Date.now();
+      if(now >= Number(raw.expiresAt)){
+        localStorage.removeItem('gz_vip_pass');
+        return null;
+      }
+      raw.daysLeft = Math.max(1, Math.ceil((Number(raw.expiresAt) - now) / 86400000));
+      return raw;
+    } catch(e){ return null; }
+  }
+  function activateVipPass(orderCode, paidTimestampMs){
+    var cfg = getCfg();
+    var startMs = paidTimestampMs || Date.now();
+    var expMs = startMs + (Number(cfg.vipDurationDays) || 30) * 86400000;
+    var pass = {
+      orderCode: String(orderCode),
+      paidAt: startMs,
+      expiresAt: expMs,
+      amount: cfg.vipMonthlyPrice
+    };
+    try { localStorage.setItem('gz_vip_pass', JSON.stringify(pass)); } catch(e){}
+    return getActiveVipPass();
+  }
+
+  /* 3. Filter Hidden System Labels (price-XXXX, lock, vip) & Detect Post Price */
+  function parseSystemLabelPrice(txt){
+    var s = String(txt || '').trim().toLowerCase();
+    var m = s.match(/^(?:price|gia)[-_:]?(\d+)(k)?$/i);
+    if(!m) return 0;
+    var val = parseInt(m[1], 10);
+    if(m[2] || val < 1000) val = val * 1000;
+    return val;
+  }
+  function isHiddenSystemLabel(txt){
+    var s = String(txt || '').trim().toLowerCase();
+    return /^(?:price|gia)[-_:]?\d+k?$/i.test(s) || /^(?:lock|locked|vip|premium)$/i.test(s);
+  }
+  function filterLabelsAndDetectPrice(rootEl, postUrl){
+    var price = 0;
+    var links = (rootEl || document).querySelectorAll('.post-tags a, .post-labels a, .widget-content.cloud-label-widget-content a, .widget-content.list-label-widget-content a');
+    for(var i=0;i<links.length;i++){
+      var a = links[i];
+      var t = (a.textContent || '').trim();
+      var p = parseSystemLabelPrice(t);
+      if(p > 0) price = p;
+      if(isHiddenSystemLabel(t)){
+        a.classList.add('gz-hidden-label');
+        a.style.setProperty('display','none','important');
+        if(a.previousSibling && a.previousSibling.nodeType === 3 && /,\s*$/.test(a.previousSibling.nodeValue)){
+          a.previousSibling.nodeValue = a.previousSibling.nodeValue.replace(/,\s*$/,'');
+        }else if(a.nextSibling && a.nextSibling.nodeType === 3 && /^\s*,/.test(a.nextSibling.nodeValue)){
+          a.nextSibling.nodeValue = a.nextSibling.nodeValue.replace(/^\s*,\s*/,'');
+        }
+      }
+    }
+    if(!price && postUrl){
+      var cfg = getCfg();
+      var slug = getPostSlug(postUrl);
+      if(cfg.demoPaidPosts && cfg.demoPaidPosts[slug]){
+        price = Number(cfg.demoPaidPosts[slug]) || 0;
+      }
+    }
+    return price;
+  }
+
+  function decorateHomepageCards(){
+    var cards = document.querySelectorAll('.index .post-outer, .archive .post-outer, .search .post-outer');
+    for(var i=0;i<cards.length;i++){
+      var card = cards[i];
+      var titleA = card.querySelector('h2.post-title a');
+      var url = titleA ? titleA.getAttribute('href') : '';
+      var price = filterLabelsAndDetectPrice(card, url);
+      var tagBox = card.querySelector('.post-tags');
+      if(price > 0 && tagBox && !tagBox.querySelector('.gz-card-badge')){
+        var b = document.createElement('span');
+        b.className = 'gz-card-badge gz-card-badge--paid';
+        b.textContent = '\uD83D\uDD12 ' + formatVnd(price);
+        tagBox.appendChild(b);
+      }
+    }
+  }
+
+  /* 4. WebCrypto HMAC-SHA256 & PayOS API Client */
+  function hmacSha256Hex(keyStr, messageStr){
+    if(!window.crypto || !window.crypto.subtle || !window.TextEncoder){
+      return Promise.resolve('');
+    }
+    var enc = new TextEncoder();
+    return window.crypto.subtle.importKey(
+      'raw', enc.encode(keyStr), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']
+    ).then(function(key){
+      return window.crypto.subtle.sign('HMAC', key, enc.encode(messageStr));
+    }).then(function(buf){
+      var bytes = new Uint8Array(buf);
+      var hex = '';
+      for(var i=0;i<bytes.length;i++){
+        hex += ('0' + bytes[i].toString(16)).slice(-2);
+      }
+      return hex;
+    }).catch(function(){ return ''; });
+  }
+
+  function buildVietQrUrl(amount, description){
+    var cfg = getCfg();
+    return 'https://img.vietqr.io/image/' + encodeURIComponent(cfg.bankId) + '-' + encodeURIComponent(cfg.accountNo) +
+      '-compact2.png?amount=' + encodeURIComponent(amount) +
+      '&addInfo=' + encodeURIComponent(description) +
+      '&accountName=' + encodeURIComponent(cfg.accountName);
+  }
+
+  function createPayOSOrder(opts){
+    var cfg = getCfg();
+    var isVip = opts.type === 'VIP30D';
+    var postId = String(opts.postId || getCurrentPostId());
+    var pHash = hash4(postId);
+    var rand4 = String(Math.floor(1000 + Math.random() * 9000));
+    var rand8 = String(Math.floor(10000000 + Math.random() * 90000000));
+    var orderCode = isVip ? Number('9' + rand8) : Number('1' + pHash + rand4);
+    var amount = Number(opts.amount) || (isVip ? cfg.vipMonthlyPrice : 50000);
+    var desc = isVip ? ('VIP30D ' + orderCode) : ('MMO ' + orderCode);
+    var cancelUrl = location.href.split('#')[0];
+    var returnUrl = location.href.split('#')[0];
+
+    var ordRecord = upsertOrder({
+      orderCode: orderCode,
+      type: isVip ? 'VIP_MONTH' : 'POST_SINGLE',
+      postId: isVip ? 'ALL_FREE_30D' : postId,
+      postTitle: isVip ? 'Gói Tháng VIP (30 Ngày)' : (document.title || postId),
+      amount: amount,
+      description: desc,
+      status: 'PENDING',
+      clientUid: getClientUid(),
+      diagnostic: 'Đang chờ khách quét mã VietQR...'
+    });
+
+    var signData = 'amount=' + amount + '&cancelUrl=' + cancelUrl + '&description=' + desc + '&orderCode=' + orderCode + '&returnUrl=' + returnUrl;
+    return hmacSha256Hex(cfg.checksumKey, signData).then(function(sig){
+      if(!sig) return ordRecord;
+      return fetch('https://api-merchant.payos.vn/v2/payment-requests', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-client-id': cfg.clientId,
+          'x-api-key': cfg.apiKey
+        },
+        body: JSON.stringify({
+          orderCode: orderCode,
+          amount: amount,
+          description: desc,
+          cancelUrl: cancelUrl,
+          returnUrl: returnUrl,
+          signature: sig
+        })
+      }).then(function(r){ return r.json(); }).then(function(res){
+        if(res && res.code === '00' && res.data){
+          return upsertOrder({
+            orderCode: orderCode,
+            payosPaymentLinkId: res.data.paymentLinkId || '',
+            checkoutUrl: res.data.checkoutUrl || '',
+            diagnostic: 'Đã khởi tạo lệnh thanh toán trên PayOS thành công (code: 00).'
+          });
+        }else{
+          var msg = (res && (res.desc || res.message)) ? (res.code + ': ' + (res.desc || res.message)) : 'PayOS trả về lỗi chữ ký';
+          if(String(cfg.checksumKey).length < 64){
+            msg += ' — Gợi ý sửa lỗi: Checksum Key hiện tại mới có ' + String(cfg.checksumKey).length + '/64 ký tự (bị che bởi icon con mắt trong ảnh). Hãy dán đủ 64 ký tự trong trang Admin!';
+          }
+          return upsertOrder({
+            orderCode: orderCode,
+            payosApiNote: msg,
+            diagnostic: msg
+          });
+        }
+      }).catch(function(err){
+        return upsertOrder({
+          orderCode: orderCode,
+          diagnostic: 'Lỗi kết nối mạng tới PayOS: ' + String(err)
+        });
+      });
+    });
+  }
+
+  function checkPayOSOrderRealtime(orderCode){
+    var cfg = getCfg();
+    var codeStr = String(orderCode || '').replace(/\D/g,'');
+    if(!codeStr) return Promise.resolve({ status: 'INVALID', reason: 'Mã đơn không hợp lệ' });
+
+    /* Check local override first (e.g. approved via Admin Dashboard / Webhook test) */
+    var localList = getOrders();
+    for(var i=0;i<localList.length;i++){
+      if(String(localList[i].orderCode) === codeStr && localList[i].status === 'PAID' && localList[i].manualApproved){
+        return Promise.resolve({
+          status: 'PAID',
+          orderCode: Number(codeStr),
+          amount: localList[i].amount,
+          paidAt: localList[i].paidAt || Date.now(),
+          source: 'ADMIN_VERIFIED'
+        });
+      }
+    }
+
+    return fetch('https://api-merchant.payos.vn/v2/payment-requests/' + encodeURIComponent(codeStr), {
+      method: 'GET',
+      headers: {
+        'x-client-id': cfg.clientId,
+        'x-api-key': cfg.apiKey
+      }
+    }).then(function(r){ return r.json(); }).then(function(res){
+      if(res && res.code === '00' && res.data){
+        var d = res.data;
+        var st = String(d.status || 'PENDING').toUpperCase();
+        var paidAtMs = Date.now();
+        if(d.transactions && d.transactions.length && d.transactions[0].transactionDateTime){
+          var parsed = Date.parse(d.transactions[0].transactionDateTime);
+          if(!isNaN(parsed)) paidAtMs = parsed;
+        }else if(d.createdAt){
+          var parsed2 = Date.parse(d.createdAt);
+          if(!isNaN(parsed2)) paidAtMs = parsed2;
+        }
+        var diag = st === 'PAID'
+          ? 'Đã thanh toán thành công (' + formatVnd(d.amountPaid || d.amount) + ')'
+          : (st === 'CANCELLED' || st === 'EXPIRED'
+              ? ('Đơn đã hủy/hết hạn: ' + (d.cancellationReason || st))
+              : ('Đang chờ thanh toán trên PayOS (Đã nhận: ' + formatVnd(d.amountPaid || 0) + '/' + formatVnd(d.amount) + ')'));
+        upsertOrder({
+          orderCode: Number(codeStr),
+          amount: d.amount,
+          status: (st === 'CANCELLED' || st === 'EXPIRED') ? 'FAILED' : st,
+          paidAt: st === 'PAID' ? paidAtMs : undefined,
+          diagnostic: diag
+        });
+        return {
+          status: st,
+          orderCode: Number(codeStr),
+          amount: d.amount,
+          amountPaid: d.amountPaid,
+          paidAt: paidAtMs,
+          raw: d,
+          diagnostic: diag
+        };
+      }
+      var errReason = (res && (res.desc || res.message)) ? (res.code + ' - ' + (res.desc || res.message)) : 'Không tìm thấy mã đơn trên PayOS';
+      upsertOrder({
+        orderCode: Number(codeStr),
+        diagnostic: 'Kiểm tra PayOS báo: ' + errReason
+      });
+      return { status: 'NOT_FOUND', reason: errReason, raw: res };
+    }).catch(function(e){
+      return { status: 'NETWORK_ERROR', reason: String(e) };
+    });
+  }
+
+  /* 5. Realtime Blogger Comment Verifier */
+  function verifyBloggerCommentRealtime(postId, requiredToken){
+    var cleanToken = String(requiredToken || '').trim().toLowerCase();
+    var shortNum = (cleanToken.match(/#\d+/) || [cleanToken])[0];
+    /* First check DOM comments already rendered on page */
+    var domComments = document.querySelectorAll('#comments .comment-content, #comment-holder .comment-content');
+    for(var i=0;i<domComments.length;i++){
+      var txt = (domComments[i].textContent || '').toLowerCase();
+      if(txt.indexOf(shortNum) !== -1 || txt.indexOf(cleanToken) !== -1){
+        return Promise.resolve({ ok: true, source: 'DOM' });
+      }
+    }
+    /* Query Blogger live JSON Comment Feed */
+    var feedUrl = '/feeds/' + encodeURIComponent(postId) + '/comments/default?alt=json&max-results=50&_cb=' + Date.now();
+    return fetch(feedUrl, { cache: 'no-store' })
+      .then(function(r){ return r.ok ? r.json() : fetch('/feeds/comments/default?alt=json&max-results=50&_cb=' + Date.now()).then(function(r2){ return r2.json(); }); })
+      .then(function(data){
+        var entries = (data && data.feed && data.feed.entry) || [];
+        for(var j=0;j<entries.length;j++){
+          var c = (entries[j].content && entries[j].content.$t) ? entries[j].content.$t.toLowerCase() : '';
+          if(c.indexOf(shortNum) !== -1 || c.indexOf(cleanToken) !== -1){
+            return { ok: true, source: 'FEED' };
+          }
+        }
+        return { ok: false };
+      }).catch(function(){ return { ok: false }; });
+  }
+
+  /* 6. Lock Post Content & Render Ultra-Compact 1-Line GSAP Gate */
+  function initSinglePostLocker(){
+    if(!document.body.classList.contains('item')) return;
+    var postBody = document.getElementById('tgtPost');
+    if(!postBody || postBody.getAttribute('data-gz-locked') === '1') return;
+    postBody.setAttribute('data-gz-locked','1');
+
+    var postId = getCurrentPostId();
+    var postPrice = filterLabelsAndDetectPrice(document, location.pathname);
+    var isPaidPost = postPrice > 0;
+    var cfg = getCfg();
+    var uid = getClientUid();
+    var userCommentToken = cfg.commentPrefix + ' #' + uid;
+
+    /* Add price badge to post header if paid post */
+    if(isPaidPost){
+      var hLine = document.querySelector('.item .post-header-line-1');
+      if(hLine && !hLine.querySelector('.gz-card-badge')){
+        var pb = document.createElement('span');
+        pb.className = 'gz-card-badge gz-card-badge--paid';
+        pb.textContent = '\uD83D\uDD12 ' + formatVnd(postPrice);
+        hLine.appendChild(pb);
+      }
+    }
+
+    /* Locate nodes to lock: after a[name="more"] or after 2nd paragraph */
+    var children = [];
+    for(var c=0;c<postBody.childNodes.length;c++){
+      var nd = postBody.childNodes[c];
+      if(nd.nodeType === 1 && nd.classList && nd.classList.contains('clear')) continue;
+      children.push(nd);
+    }
+    var splitIdx = -1;
+    for(var idx=0;idx<children.length;idx++){
+      var el = children[idx];
+      if(el.nodeType === 1 && ((el.tagName === 'A' && el.getAttribute('name') === 'more') || el.id === 'more')){
+        splitIdx = idx;
+        break;
+      }
+    }
+    if(splitIdx === -1){
+      /* Lock after first 2 visible blocks so short intro remains visible */
+      var blockCount = 0;
+      for(var k=0;k<children.length;k++){
+        if(children[k].nodeType === 1 && children[k].offsetHeight > 0){
+          blockCount++;
+          if(blockCount >= 2){ splitIdx = k + 1; break; }
+        }
+      }
+      if(splitIdx === -1 && children.length > 1) splitIdx = 1;
+    }
+    if(splitIdx === -1 || splitIdx >= children.length) return;
+
+    var lockedNodes = children.slice(splitIdx);
+    var lockContainer = document.createElement('div');
+    lockContainer.id = 'gz-locked-content-box';
+    lockContainer.className = 'gz-lock-curtain';
+    var firstLocked = lockedNodes[0];
+    postBody.insertBefore(lockContainer, firstLocked);
+    for(var m=0;m<lockedNodes.length;m++){
+      lockContainer.appendChild(lockedNodes[m]);
+    }
+
+    var gate = document.createElement('div');
+    gate.className = 'gz-pro-gate';
+    gate.id = 'gz-pro-gate';
+    if(lockContainer.nextSibling) postBody.insertBefore(gate, lockContainer.nextSibling);
+    else postBody.appendChild(gate);
+
+    function revealUnlockedContent(badgeText){
+      lockContainer.classList.remove('gz-lock-curtain');
+      lockContainer.style.maxHeight = 'none';
+      lockContainer.style.filter = 'none';
+      lockContainer.style.opacity = '1';
+      lockContainer.style.pointerEvents = 'auto';
+      lockContainer.style.userSelect = 'auto';
+      lockContainer.style.webkitMaskImage = 'none';
+      lockContainer.style.maskImage = 'none';
+      lockContainer.style.marginBottom = '0';
+
+      var pill = document.createElement('div');
+      pill.className = 'gz-unlocked-pill';
+      pill.textContent = badgeText || '\u2713 Đã mở khóa nội dung';
+      gate.parentNode.insertBefore(pill, lockContainer);
+      if(gate.parentNode) gate.parentNode.removeChild(gate);
+
+      if(window.gsap){
+        window.gsap.fromTo(lockContainer, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: 'expo.out' });
+      }
+      enhanceCodeBlocks();
+    }
+
+    /* Check if already unlocked */
+    if(isPaidPost){
+      var savedPaidOrder = '';
+      try { savedPaidOrder = localStorage.getItem('gz_paid_post_' + postId) || ''; } catch(e){}
+      if(savedPaidOrder){
+        revealUnlockedContent('\u2713 Đã mở khóa · #' + savedPaidOrder);
+        return;
+      }
+    }else{
+      var vip = getActiveVipPass();
+      if(vip){
+        revealUnlockedContent('\u26A1 VIP Active · Còn ' + vip.daysLeft + ' ngày (#' + vip.orderCode + ')');
+        return;
+      }
+      var savedFree = '';
+      try { savedFree = localStorage.getItem('gz_free_post_' + postId) || ''; } catch(e){}
+      if(savedFree === userCommentToken){
+        revealUnlockedContent('\u2713 Đã mở khóa bằng bình luận (' + userCommentToken + ')');
+        return;
+      }
+    }
+
+    /* Render Ultra-Compact 1-Line Gate UI */
+    if(!isPaidPost){
+      gate.innerHTML =
+        '<div class="gz-gate-bar">' +
+          '<div class="gz-kw-chip" id="gz-kw-chip" title="Chạm để Copy mã và cuộn xuống bình luận">' +
+            '<span class="gz-kw-code">' + userCommentToken + '</span>' +
+            '<span class="gz-kw-copy-tag" id="gz-kw-copy-tag">COPY \u2750</span>' +
+          '</div>' +
+          '<div class="gz-gate-btns">' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-check-cmt">\u25CF Mở khóa</button>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-btn-open-vip">\u26A1 VIP</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="gz-gate-status" id="gz-gate-status"></div>' +
+        '<div class="gz-qr-drawer" id="gz-qr-drawer"></div>' +
+        '<div class="gz-recover-row" id="gz-recover-row">' +
+          '<input type="text" class="gz-recover-input" id="gz-recover-input" placeholder="Nhập mã đơn VIP 9XXXXXXXX..."/>' +
+          '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-do-recover">Khôi phục</button>' +
+        '</div>';
+    }else{
+      gate.innerHTML =
+        '<div class="gz-gate-bar">' +
+          '<div class="gz-paid-tag">' +
+            '<span class="gz-price-pill">\uD83D\uDD12 ' + formatVnd(postPrice) + '</span>' +
+          '</div>' +
+          '<div class="gz-gate-btns">' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-pay-post">Mở khóa \u2197</button>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-btn-toggle-recover">Mã đơn</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="gz-gate-status" id="gz-gate-status"></div>' +
+        '<div class="gz-qr-drawer" id="gz-qr-drawer"></div>' +
+        '<div class="gz-recover-row" id="gz-recover-row">' +
+          '<input type="text" class="gz-recover-input" id="gz-recover-input" placeholder="Nhập mã đơn đã mua (1XXXXXXXX)..."/>' +
+          '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-btn-do-recover">Mở</button>' +
+        '</div>';
+    }
+
+    var statusEl = document.getElementById('gz-gate-status');
+    var qrDrawer = document.getElementById('gz-qr-drawer');
+    var recoverRow = document.getElementById('gz-recover-row');
+    var pollTimer = null;
+    var cmtPollTimer = null;
+
+    function showStatus(msg, type){
+      if(!statusEl) return;
+      statusEl.textContent = msg;
+      statusEl.className = 'gz-gate-status is-show ' + (type === 'err' ? 'is-err' : (type === 'ok' ? 'is-ok' : ''));
+    }
+
+    /* Free Comment Unlock Handlers */
+    var kwChip = document.getElementById('gz-kw-chip');
+    var btnCheckCmt = document.getElementById('gz-btn-check-cmt');
+    function startCommentAutoPolling(){
+      if(cmtPollTimer) return;
+      cmtPollTimer = setInterval(function(){
+        verifyBloggerCommentRealtime(postId, userCommentToken).then(function(res){
+          if(res && res.ok){
+            clearInterval(cmtPollTimer);
+            try { localStorage.setItem('gz_free_post_' + postId, userCommentToken); } catch(e){}
+            revealUnlockedContent('\u2713 Đã mở khóa bằng bình luận (' + userCommentToken + ')');
+          }
+        });
+      }, 2800);
+    }
+    if(kwChip){
+      kwChip.addEventListener('click', function(){
+        var copyTag = document.getElementById('gz-kw-copy-tag');
+        function afterCopy(){
+          if(copyTag) copyTag.textContent = 'ĐÃ COPY \u2713';
+          showStatus('Đã copy "' + userCommentToken + '"! Hãy dán vào ô Bình luận bên dưới — hệ thống sẽ tự mở khóa ngay khi bạn đăng.', 'ok');
+          var cmtSec = document.getElementById('comments');
+          if(cmtSec) cmtSec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          startCommentAutoPolling();
+        }
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(userCommentToken).then(afterCopy).catch(afterCopy);
+        }else{ afterCopy(); }
+      });
+    }
+    if(btnCheckCmt){
+      btnCheckCmt.addEventListener('click', function(){
+        btnCheckCmt.textContent = '\u25CF Đang kiểm tra...';
+        verifyBloggerCommentRealtime(postId, userCommentToken).then(function(res){
+          if(res && res.ok){
+            if(cmtPollTimer) clearInterval(cmtPollTimer);
+            try { localStorage.setItem('gz_free_post_' + postId, userCommentToken); } catch(e){}
+            revealUnlockedContent('\u2713 Đã mở khóa bằng bình luận (' + userCommentToken + ')');
+          }else{
+            btnCheckCmt.textContent = '\u25CF Mở khóa';
+            showStatus('Chưa thấy bình luận chứa mã "' + userCommentToken + '" dưới bài viết. Hãy bình luận mã này xuống dưới trước nhé!', 'err');
+            startCommentAutoPolling();
+          }
+        });
+      });
+    }
+
+    /* Payment Drawer Handler (Both Single Paid Post & 500.000đ/month VIP Pass) */
+    function openPaymentDrawer(type, amount){
+      if(pollTimer) clearInterval(pollTimer);
+      qrDrawer.classList.add('is-open');
+      qrDrawer.innerHTML = '<div class="gz-qr-live-pill"><span class="gz-pulse"></span>Đang tạo mã QR PayOS...</div>';
+
+      createPayOSOrder({ type: type, postId: postId, amount: amount }).then(function(ord){
+        var qrImgUrl = buildVietQrUrl(ord.amount, ord.description);
+        var labelTitle = type === 'VIP30D' ? ('VIP Tháng (30 Ngày) · ' + formatVnd(ord.amount)) : (formatVnd(ord.amount) + ' · #' + ord.orderCode);
+        qrDrawer.innerHTML =
+          '<div class="gz-qr-grid-wrap">' +
+            '<div class="gz-qr-frame">' +
+              '<img src="' + qrImgUrl + '" alt="VietQR PayOS"/>' +
+            '</div>' +
+            '<div class="gz-qr-meta">' +
+              '<div class="gz-qr-amount-row">' +
+                '<span>' + labelTitle + '</span>' +
+              '</div>' +
+              '<div class="gz-qr-live-pill" id="gz-qr-live-pill">' +
+                '<span class="gz-pulse"></span><span id="gz-qr-live-txt">Đang chờ quét QR... (Check 2s/lần)</span>' +
+              '</div>' +
+              '<div class="gz-qr-copy-row">' +
+                '<button type="button" class="gz-mini-chip" id="gz-copy-stk">STK: ' + cfg.accountNo + ' \u2750</button>' +
+                '<button type="button" class="gz-mini-chip" id="gz-copy-nd">ND: ' + ord.description + ' \u2750</button>' +
+                (type === 'VIP30D' ? '<button type="button" class="gz-mini-chip" id="gz-open-recover-vip">Đã mua VIP?</button>' : '') +
+              '</div>' +
+            '</div>' +
+          '</div>';
+
+        var bStk = document.getElementById('gz-copy-stk');
+        if(bStk) bStk.addEventListener('click', function(){
+          if(navigator.clipboard) navigator.clipboard.writeText(cfg.accountNo);
+          bStk.textContent = 'Đã copy STK \u2713';
+        });
+        var bNd = document.getElementById('gz-copy-nd');
+        if(bNd) bNd.addEventListener('click', function(){
+          if(navigator.clipboard) navigator.clipboard.writeText(ord.description);
+          bNd.textContent = 'Đã copy ND \u2713';
+        });
+        var bRecVip = document.getElementById('gz-open-recover-vip');
+        if(bRecVip && recoverRow){
+          bRecVip.addEventListener('click', function(){ recoverRow.classList.toggle('is-open'); });
+        }
+
+        pollTimer = setInterval(function(){
+          checkPayOSOrderRealtime(ord.orderCode).then(function(st){
+            var pillEl = document.getElementById('gz-qr-live-pill');
+            var txtEl = document.getElementById('gz-qr-live-txt');
+            if(st.status === 'PAID'){
+              clearInterval(pollTimer);
+              if(txtEl) txtEl.textContent = '\u2713 Thanh toán thành công! Đang mở khóa...';
+              if(type === 'VIP30D'){
+                var vPass = activateVipPass(ord.orderCode, st.paidAt);
+                revealUnlockedContent('\u26A1 VIP Active · Còn ' + (vPass ? vPass.daysLeft : 30) + ' ngày (#' + ord.orderCode + ')');
+              }else{
+                try { localStorage.setItem('gz_paid_post_' + postId, String(ord.orderCode)); } catch(e){}
+                revealUnlockedContent('\u2713 Đã mở khóa · #' + ord.orderCode);
+              }
+            }else if(st.status === 'CANCELLED' || st.status === 'EXPIRED'){
+              clearInterval(pollTimer);
+              if(pillEl) pillEl.classList.add('is-fail');
+              if(txtEl) txtEl.textContent = '\u2715 Đơn đã hủy hoặc hết hạn trên PayOS';
+            }
+          });
+        }, 2500);
+      });
+    }
+
+    var btnOpenVip = document.getElementById('gz-btn-open-vip');
+    if(btnOpenVip){
+      btnOpenVip.addEventListener('click', function(){
+        if(qrDrawer.classList.contains('is-open')){
+          qrDrawer.classList.remove('is-open');
+          if(pollTimer) clearInterval(pollTimer);
+        }else{
+          openPaymentDrawer('VIP30D', getCfg().vipMonthlyPrice);
+        }
+      });
+    }
+
+    var btnPayPost = document.getElementById('gz-btn-pay-post');
+    if(btnPayPost){
+      btnPayPost.addEventListener('click', function(){
+        if(qrDrawer.classList.contains('is-open')){
+          qrDrawer.classList.remove('is-open');
+          if(pollTimer) clearInterval(pollTimer);
+        }else{
+          openPaymentDrawer('POST', postPrice);
+        }
+      });
+    }
+
+    var btnToggleRecover = document.getElementById('gz-btn-toggle-recover');
+    if(btnToggleRecover && recoverRow){
+      btnToggleRecover.addEventListener('click', function(){
+        recoverRow.classList.toggle('is-open');
+      });
+    }
+
+    var btnDoRecover = document.getElementById('gz-btn-do-recover');
+    var recoverInp = document.getElementById('gz-recover-input');
+    if(btnDoRecover && recoverInp){
+      btnDoRecover.addEventListener('click', function(){
+        var code = (recoverInp.value || '').replace(/\D/g,'');
+        if(!code || code.length < 6){
+          showStatus('Vui lòng nhập đúng mã đơn hàng (9 chữ số).', 'err');
+          return;
+        }
+        if(isPaidPost && code.charAt(0) === '9'){
+          showStatus('Bài viết có giá riêng không mở bằng mã Gói Tháng VIP. Vui lòng nhập mã đơn của bài viết này (1XXXXXXXX).', 'err');
+          return;
+        }
+        if(isPaidPost && code.slice(1, 5) !== hash4(postId)){
+          showStatus('Mã đơn #' + code + ' thuộc về bài viết khác, không áp dụng cho bài viết này!', 'err');
+          return;
+        }
+        btnDoRecover.textContent = '...';
+        checkPayOSOrderRealtime(code).then(function(st){
+          btnDoRecover.textContent = 'Mở';
+          if(st.status === 'PAID'){
+            if(code.charAt(0) === '9'){
+              var vp = activateVipPass(code, st.paidAt);
+              if(!vp){
+                showStatus('Mã đơn VIP #' + code + ' đã hết hạn 30 ngày! Vui lòng bình luận hoặc gia hạn gói mới.', 'err');
+                return;
+              }
+              revealUnlockedContent('\u26A1 VIP Active · Còn ' + vp.daysLeft + ' ngày (#' + code + ')');
+            }else{
+              try { localStorage.setItem('gz_paid_post_' + postId, code); } catch(e){}
+              revealUnlockedContent('\u2713 Đã mở khóa · #' + code);
+            }
+          }else{
+            showStatus('Chưa xác nhận thanh toán PAID cho mã #' + code + ' (' + (st.reason || st.status) + ').', 'err');
+          }
+        });
+      });
+    }
+  }
+
+  /* 7. GSAP Pro Admin Order Management & Diagnostic Dashboard (?admin=orders) */
+  function initAdminDashboard(){
+    var overlay = document.getElementById('gz-admin-overlay');
+    if(!overlay){
+      overlay = document.createElement('div');
+      overlay.id = 'gz-admin-overlay';
+      overlay.className = 'gz-admin-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    /* Add discreet Admin button in footer credit */
+    var creditRight = document.querySelector('.credit-right');
+    if(creditRight && !document.getElementById('gz-open-admin-btn')){
+      var admLink = document.createElement('a');
+      admLink.id = 'gz-open-admin-btn';
+      admLink.href = 'javascript:;';
+      admLink.style.cssText = 'margin-left:12px;font-family:var(--gz-mono);font-size:11.5px;font-weight:700;background:#42433d;color:#0ae448;padding:3px 9px;border-radius:6px;text-decoration:none;display:inline-block';
+      admLink.textContent = '[ \u2699 Admin Orders ]';
+      admLink.addEventListener('click', function(e){
+        e.preventDefault();
+        renderAdminModal();
+        overlay.classList.add('is-open');
+      });
+      creditRight.appendChild(admLink);
+    }
+
+    function renderAdminModal(diagText){
+      var cfg = getCfg();
+      var orders = getOrders();
+      var paidCount = 0, pendingCount = 0, failedCount = 0, totalRev = 0;
+      for(var i=0;i<orders.length;i++){
+        if(orders[i].status === 'PAID'){
+          paidCount++;
+          totalRev += (Number(orders[i].amount) || 0);
+        }else if(orders[i].status === 'FAILED' || orders[i].status === 'CANCELLED' || orders[i].status === 'EXPIRED'){
+          failedCount++;
+        }else{
+          pendingCount++;
+        }
+      }
+      var vipPass = getActiveVipPass();
+
+      var rowsHtml = '';
+      if(!orders.length){
+        rowsHtml = '<tr><td colspan="6" style="text-align:center;padding:16px;color:#6e6e62">Chưa có đơn hàng nào. Hãy bấm "Tạo Đơn Test" bên dưới để kiểm tra!</td></tr>';
+      }else{
+        for(var j=0;j<orders.length;j++){
+          var o = orders[j];
+          var stClass = o.status === 'PAID' ? 'gz-st-badge--paid' : (o.status === 'FAILED' ? 'gz-st-badge--failed' : 'gz-st-badge--pending');
+          rowsHtml +=
+            '<tr>' +
+              '<td><strong style="font-family:var(--gz-mono)">#' + o.orderCode + '</strong><br/><span style="font-size:10.5px;color:#6e6e62">' + (o.type === 'VIP_MONTH' ? 'VIP Tháng' : 'Bài lẻ: ' + o.postId) + '</span></td>' +
+              '<td style="font-family:var(--gz-mono);font-weight:700">' + formatVnd(o.amount) + '</td>' +
+              '<td><span class="gz-st-badge ' + stClass + '">' + o.status + '</span></td>' +
+              '<td style="font-size:11.5px;max-width:210px">' + (o.diagnostic || '-') + '</td>' +
+              '<td>' +
+                '<div style="display:flex;gap:4px;flex-wrap:wrap">' +
+                  '<button type="button" class="gz-mini-chip gz-adm-act" data-act="check" data-code="' + o.orderCode + '">\uD83D\uDD04 Check PayOS</button>' +
+                  '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#0ae448;color:#0e100f" data-act="approve" data-code="' + o.orderCode + '">\u2713 Duyệt PAID</button>' +
+                  '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#ff4d6d;color:#fffce1" data-act="fail" data-code="' + o.orderCode + '">\u2715 Báo Lỗi</button>' +
+                '</div>' +
+              '</td>' +
+            '</tr>';
+        }
+      }
+
+      overlay.innerHTML =
+        '<div class="gz-admin-panel">' +
+          '<div class="gz-admin-head">' +
+            '<div class="gz-gate-title"><span class="gz-b">{</span> Quản Lý Đơn Hàng PayOS &amp; Chẩn Đoán Lỗi <span class="gz-b">}</span></div>' +
+            '<div style="display:flex;gap:8px;align-items:center">' +
+              '<span style="font-family:var(--gz-mono);font-size:11.5px;background:#42433d;color:#0ae448;padding:3px 9px;border-radius:6px">' +
+                (vipPass ? ('VIP: Còn ' + vipPass.daysLeft + ' ngày') : 'VIP: Chưa kích hoạt') +
+              '</span>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-close" style="height:30px!important;padding:0 12px!important">Đóng \u2715</button>' +
+            '</div>' +
+          '</div>' +
+          '<div class="gz-admin-kpis">' +
+            '<div class="gz-kpi-card"><span class="k-num" style="color:#008b38">' + formatVnd(totalRev) + '</span><span class="k-lbl">Doanh Thu Thành Công</span></div>' +
+            '<div class="gz-kpi-card"><span class="k-num">' + paidCount + '</span><span class="k-lbl">Đơn Thành Công (PAID)</span></div>' +
+            '<div class="gz-kpi-card"><span class="k-num">' + pendingCount + '</span><span class="k-lbl">Đang Chờ (PENDING)</span></div>' +
+            '<div class="gz-kpi-card"><span class="k-num" style="color:#d90429">' + failedCount + '</span><span class="k-lbl">Thất Bại / Hủy (FAILED)</span></div>' +
+          '</div>' +
+          '<div class="gz-admin-Check-bar">' +
+            '<input type="text" class="gz-recover-input" id="gz-adm-check-inp" placeholder="Nhập mã orderCode cần kiểm tra trên PayOS..."/>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-btn-check">Kiểm Tra PayOS Realtime</button>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-vip">+ Tạo Đơn VIP 500.000đ</button>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-post">+ Tạo Đơn Bài Lẻ 50.000đ</button>' +
+          '</div>' +
+          '<div class="gz-admin-Check-bar" style="padding:10px;border:1px dashed #42433d;border-radius:10px;margin-bottom:12px">' +
+            '<span style="font-size:12px;font-weight:700;width:100%">Cấu hình PayOS Checksum Key (64 ký tự) &amp; Giá Gói Tháng VIP:</span>' +
+            '<input type="text" class="gz-recover-input" id="gz-adm-checksum-inp" value="' + cfg.checksumKey + '" placeholder="Checksum Key (64 hex chars)..."/>' +
+            '<input type="number" class="gz-recover-input" id="gz-adm-vipprice-inp" style="max-width:130px" value="' + cfg.vipMonthlyPrice + '"/>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-cfg">Lưu Cấu Hình</button>' +
+          '</div>' +
+          '<div class="gz-admin-diag ' + (diagText ? 'is-show' : '') + '" id="gz-admin-diag">' + (diagText || '') + '</div>' +
+          '<div class="gz-admin-table-wrap">' +
+            '<table class="gz-admin-table">' +
+              '<thead><tr><th>Mã Đơn / Loại</th><th>Số Tiền</th><th>Trạng Thái</th><th>Chẩn Đoán / Lỗi</th><th>Thao Tác Sửa Lỗi</th></tr></thead>' +
+              '<tbody>' + rowsHtml + '</tbody>' +
+            '</table>' +
+          '</div>' +
+        '</div>';
+
+      document.getElementById('gz-adm-close').addEventListener('click', function(){
+        overlay.classList.remove('is-open');
+      });
+
+      document.getElementById('gz-adm-save-cfg').addEventListener('click', function(){
+        var newCk = (document.getElementById('gz-adm-checksum-inp').value || '').trim();
+        var newVp = Number(document.getElementById('gz-adm-vipprice-inp').value) || 500000;
+        try {
+          localStorage.setItem('gz_locker_cfg', JSON.stringify({ checksumKey: newCk, vipMonthlyPrice: newVp }));
+        } catch(e){}
+        renderAdminModal('\u2713 Đã lưu cấu hình! Giá VIP Tháng: ' + formatVnd(newVp) + ' | Độ dài Checksum Key: ' + newCk.length + '/64 ký tự.');
+      });
+
+      document.getElementById('gz-adm-btn-check').addEventListener('click', function(){
+        var code = (document.getElementById('gz-adm-check-inp').value || '').trim();
+        if(!code){
+          renderAdminModal('\u26A0 Vui lòng nhập mã orderCode cần kiểm tra!');
+          return;
+        }
+        renderAdminModal('Đang gọi GET https://api-merchant.payos.vn/v2/payment-requests/' + code + ' ...');
+        checkPayOSOrderRealtime(code).then(function(res){
+          renderAdminModal(
+            '[KẾT QUẢ KIỂM TRA REALTIME PAYOS CHO ĐƠN #' + code + ']\n' +
+            '• Trạng thái: ' + res.status + '\n' +
+            '• Chẩn đoán: ' + (res.diagnostic || res.reason || 'OK') + '\n' +
+            '• Phản hồi gốc từ PayOS: ' + JSON.stringify(res.raw || res, null, 2)
+          );
+        });
+      });
+
+      document.getElementById('gz-adm-btn-test-vip').addEventListener('click', function(){
+        createPayOSOrder({ type: 'VIP30D', amount: getCfg().vipMonthlyPrice }).then(function(o){
+          renderAdminModal('\u2713 Đã tạo đơn Gói Tháng VIP (500.000đ) #' + o.orderCode + '\nChẩn đoán: ' + (o.diagnostic || 'OK'));
+        });
+      });
+
+      document.getElementById('gz-adm-btn-test-post').addEventListener('click', function(){
+        createPayOSOrder({ type: 'POST', postId: getCurrentPostId(), amount: 50000 }).then(function(o){
+          renderAdminModal('\u2713 Đã tạo đơn Bài Lẻ (50.000đ) #' + o.orderCode + '\nChẩn đoán: ' + (o.diagnostic || 'OK'));
+        });
+      });
+
+      var actBtns = overlay.querySelectorAll('.gz-adm-act');
+      for(var b=0;b<actBtns.length;b++){
+        actBtns[b].addEventListener('click', function(){
+          var act = this.getAttribute('data-act');
+          var code = this.getAttribute('data-code');
+          if(act === 'check'){
+            checkPayOSOrderRealtime(code).then(function(r){
+              renderAdminModal('Đã kiểm tra lại đơn #' + code + ' trên PayOS -> Trạng thái: ' + r.status + ' (' + (r.diagnostic || r.reason || '') + ')');
+            });
+          }else if(act === 'approve'){
+            var list = getOrders();
+            for(var k=0;k<list.length;k++){
+              if(String(list[k].orderCode) === String(code)){
+                list[k].status = 'PAID';
+                list[k].manualApproved = true;
+                list[k].paidAt = Date.now();
+                list[k].diagnostic = 'Đã duyệt PAID & kích hoạt mở khóa thành công!';
+                if(list[k].type === 'VIP_MONTH'){
+                  activateVipPass(code, Date.now());
+                }else if(list[k].postId){
+                  try { localStorage.setItem('gz_paid_post_' + list[k].postId, String(code)); } catch(e){}
+                }
+              }
+            }
+            saveOrders(list);
+            renderAdminModal('\u2713 Đã duyệt đơn #' + code + ' sang trạng thái PAID và mở khóa nội dung tương ứng!');
+          }else if(act === 'fail'){
+            upsertOrder({
+              orderCode: Number(code),
+              status: 'FAILED',
+              manualApproved: false,
+              diagnostic: 'Đơn bị đánh dấu Thất bại / Đã hủy bởi Admin.'
+            });
+            renderAdminModal('\u2715 Đã đánh dấu đơn #' + code + ' là FAILED (Thất bại).');
+          }
+        });
+      }
+    }
+
+    if(location.search.indexOf('admin=orders') !== -1 || location.hash === '#admin-orders'){
+      renderAdminModal();
+      overlay.classList.add('is-open');
+    }
+    window.__gzOpenAdminOrders = function(){
+      renderAdminModal();
+      overlay.classList.add('is-open');
+    };
+  }
+
+  function bootSmartLocker(){
+    decorateHomepageCards();
+    initSinglePostLocker();
+    initAdminDashboard();
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', bootSmartLocker);
+  }else{
+    bootSmartLocker();
   }
 })();

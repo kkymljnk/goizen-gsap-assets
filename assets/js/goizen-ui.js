@@ -253,9 +253,10 @@
     '.gz-admin-diag{background:#161816;color:#fffce1;font-family:var(--gz-mono);font-size:12px;padding:12px 14px;border-radius:10px;border:2px solid #0e100f;margin-bottom:14px;display:none;white-space:pre-wrap;line-height:1.5}'+
     '.gz-admin-diag.is-show{display:block}'+
     '.gz-admin-table-wrap{overflow-x:auto}'+
-    '.gz-admin-table{width:100%;border-collapse:collapse;font-size:12.5px}'+
-    '.gz-admin-table th,.gz-admin-table td{border-bottom:1px solid #42433d;padding:8px 6px;text-align:left;vertical-align:middle}'+
-    '.gz-st-badge{font-family:var(--gz-mono);font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px;display:inline-block}'+
+    '.gz-admin-table{width:100%!important;border-collapse:collapse!important;font-size:12.5px!important;margin:0!important;background:transparent!important}'+
+    '.gz-admin-panel .gz-admin-table th,.gz-admin-panel .gz-admin-table td{border:0!important;border-bottom:1px solid #c8c5b3!important;padding:10px 8px!important;text-align:left!important;vertical-align:middle!important;background:transparent!important}'+
+    '.gz-admin-panel .gz-admin-table th{font-family:var(--gz-mono)!important;font-size:11px!important;font-weight:700!important;text-transform:uppercase!important;color:#3d3d34!important;border-bottom:2px solid #0e100f!important}'+
+    '.gz-st-badge{font-family:var(--gz-mono);font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:6px;display:inline-block}'+
     '.gz-st-badge--paid{background:#0ae448;color:#0e100f}'+
     '.gz-st-badge--pending{background:#42433d;color:#ffe866}'+
     '.gz-st-badge--failed{background:#ff4d6d;color:#fffce1}'+
@@ -275,7 +276,7 @@
     '.gz-adm-filter-btn.is-active{background:#0e100f;color:#0ae448}'+
     '.gz-admin-settings-drawer{display:none;padding:12px;border:1.5px dashed #42433d;border-radius:12px;margin-bottom:14px;background:rgba(14,16,15,.03)}'+
     '.gz-admin-settings-drawer.is-open{display:block}'+
-    '@media screen and (max-width:580px){.gz-pro-gate{padding:10px 12px!important}.gz-gate-bar{flex-direction:column!important;align-items:stretch!important;gap:8px!important}.gz-gate-left{width:100%!important;justify-content:space-between!important}.gz-gate-btns{width:100%!important;display:grid!important;grid-template-columns:1fr auto!important;gap:8px!important;margin-left:0!important}.gz-qr-grid-wrap{flex-direction:column!important;align-items:center!important;text-align:center!important}.gz-qr-meta{text-align:center!important;width:100%!important}.gz-qr-amount-row,.gz-qr-copy-row{justify-content:center!important}.gz-admin-panel{padding:14px 12px!important}.gz-admin-head{flex-direction:column!important;align-items:flex-start!important}.gz-admin-kpis{grid-template-columns:1fr 1fr!important;gap:8px!important}.gz-kpi-card{padding:8px 10px!important}.gz-kpi-card .k-num{font-size:15px!important}.gz-admin-Check-bar{flex-direction:column!important;align-items:stretch!important}.gz-admin-Check-bar .gz-recover-input,.gz-admin-Check-bar .gz-gate-btn{width:100%!important;max-width:none!important;margin:0!important}.gz-admin-pin-row{flex-direction:column!important}.gz-admin-pin-inp{max-width:100%!important;width:100%!important}.gz-admin-table thead{display:none!important}.gz-admin-table,.gz-admin-table tbody,.gz-admin-table tr,.gz-admin-table td{display:block!important;width:100%!important;box-sizing:border-box!important}.gz-admin-table tr{border:1.5px solid #0e100f!important;border-radius:12px!important;padding:10px 12px!important;margin-bottom:10px!important;background:var(--gz-bg,#fffceb)!important}.gz-admin-table td{border:0!important;padding:4px 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;text-align:right!important}.gz-admin-table td::before{content:attr(data-label);font-family:var(--gz-mono);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#6e6e62;text-align:left;flex:0 0 auto}.gz-admin-table td.gz-td-actions{display:block!important;padding-top:8px!important;margin-top:6px!important;border-top:1px dashed #c8c5b3!important}.gz-admin-table td.gz-td-actions::before{display:none!important}.gz-adm-act-group{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:6px!important;width:100%!important}.gz-adm-act-group .gz-mini-chip{justify-content:center!important;padding:7px 4px!important;font-size:11px!important;width:100%!important}}';
+    '@media screen and (max-width:580px){.gz-pro-gate{padding:10px 12px!important}.gz-gate-bar{flex-direction:column!important;align-items:stretch!important;gap:8px!important}.gz-gate-left{width:100%!important;justify-content:space-between!important}.gz-gate-btns{width:100%!important;display:grid!important;grid-template-columns:1fr auto!important;gap:8px!important;margin-left:0!important}.gz-qr-grid-wrap{flex-direction:column!important;align-items:center!important;text-align:center!important}.gz-qr-meta{text-align:center!important;width:100%!important}.gz-qr-amount-row,.gz-qr-copy-row{justify-content:center!important}.gz-admin-panel{padding:14px 12px!important}.gz-admin-head{flex-direction:column!important;align-items:flex-start!important}.gz-admin-kpis{grid-template-columns:1fr 1fr!important;gap:8px!important}.gz-kpi-card{padding:8px 10px!important}.gz-kpi-card .k-num{font-size:15px!important}.gz-admin-Check-bar{flex-direction:column!important;align-items:stretch!important}.gz-admin-Check-bar .gz-recover-input,.gz-admin-Check-bar .gz-gate-btn{width:100%!important;max-width:none!important;margin:0!important}.gz-admin-pin-row{flex-direction:column!important}.gz-admin-pin-inp{max-width:100%!important;width:100%!important}.gz-admin-table thead{display:none!important}.gz-admin-table,.gz-admin-table tbody,.gz-admin-table tr,.gz-admin-panel .gz-admin-table td{display:block!important;width:100%!important;box-sizing:border-box!important}.gz-admin-table tr{border:1.5px solid #0e100f!important;border-radius:12px!important;padding:10px 12px!important;margin-bottom:10px!important;background:var(--gz-bg,#fffceb)!important}.gz-admin-panel .gz-admin-table td{border:0!important;border-bottom:1px dashed rgba(14,16,15,.12)!important;padding:6px 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;text-align:right!important;max-width:none!important;background:transparent!important}.gz-admin-panel .gz-admin-table td>div{border:0!important;background:transparent!important;padding:0!important;margin:0!important}.gz-admin-panel .gz-admin-table td::before{content:attr(data-label);font-family:var(--gz-mono);font-size:10.5px;font-weight:700;text-transform:uppercase;color:#6e6e62;text-align:left;flex:0 0 auto}.gz-admin-panel .gz-admin-table td.gz-td-actions{display:block!important;padding:10px 0 2px!important;margin-top:4px!important;border:0!important}.gz-admin-panel .gz-admin-table td.gz-td-actions::before{display:none!important}.gz-adm-act-group{display:grid!important;grid-template-columns:repeat(4,auto)!important;gap:6px!important;width:100%!important}.gz-adm-act-group .gz-mini-chip{justify-content:center!important;padding:7px 4px!important;font-size:11px!important;width:100%!important}}';
   if(!document.getElementById('gz-layout-inlined')){(document.head||document.documentElement).appendChild(st);}
 
   function detectLang(raw){
@@ -1055,10 +1056,10 @@
           if(!isNaN(parsed2)) paidAtMs = parsed2;
         }
         var diag = st === 'PAID'
-          ? 'Đã thanh toán thành công (' + formatVnd(d.amountPaid || d.amount) + ')'
+          ? 'Đã thanh toán đủ ' + formatVnd(d.amountPaid || d.amount)
           : (st === 'CANCELLED' || st === 'EXPIRED'
-              ? ('Đơn đã hủy/hết hạn: ' + (d.cancellationReason || st))
-              : ('Đang chờ thanh toán trên PayOS (Đã nhận: ' + formatVnd(d.amountPaid || 0) + '/' + formatVnd(d.amount) + ')'));
+              ? 'Đơn đã hủy hoặc hết hạn'
+              : ('Chờ thanh toán · Đã nhận ' + formatVnd(d.amountPaid || 0) + ' / ' + formatVnd(d.amount)));
         upsertOrder({
           orderCode: Number(codeStr),
           amount: d.amount,
@@ -1829,6 +1830,26 @@
       } catch(e){}
     }
 
+    function formatStatusVi(st){
+      var s = String(st || 'PENDING').toUpperCase();
+      if(s === 'PAID') return 'Thành công';
+      if(s === 'FAILED' || s === 'CANCELLED' || s === 'EXPIRED') return 'Thất bại';
+      return 'Đang chờ';
+    }
+
+    function cleanDiagVi(txt, amt){
+      var s = String(txt || '').trim();
+      if(!s) return 'Chờ thanh toán · Đã nhận 0đ / ' + formatVnd(amt || 50000);
+      s = s.replace(/\s*\(code:\s*00\)\.?/gi, '')
+           .replace(/Đang chờ thanh toán trên PayOS\s*\(Đã nhận:\s*([^/]+)\/([^)]+)\)/gi, 'Chờ thanh toán · Đã nhận $1 / $2')
+           .replace(/Đã thanh toán thành công\s*\(([^)]+)\)/gi, 'Đã thanh toán đủ $1')
+           .replace(/[()]/g, '')
+           .replace(/\bPAID\b/g, 'Thành công')
+           .replace(/\bPENDING\b/g, 'Đang chờ')
+           .replace(/\bFAILED\b/g, 'Thất bại');
+      return s;
+    }
+
     function renderPinGate(errMsg){
       var lockUntil = 0;
       try { lockUntil = Number(localStorage.getItem('gz_adm_lock_until') || 0); } catch(e){}
@@ -1839,9 +1860,9 @@
 
       hostContainer.innerHTML =
         '<div class="gz-admin-auth-card" id="gz-admin-auth-card">' +
-          '<div class="gz-admin-auth-badge">' + getGsapLockSvg('gz-lk-svg') + '<span>BẢO MẬT QUẢN TRỊ VIÊN · SHA-256</span></div>' +
-          '<h2 class="gz-admin-auth-title">{ Admin Orders Gate }</h2>' +
-          '<p class="gz-admin-auth-sub">Trang quản trị đơn hàng PayOS được bảo vệ bằng mã PIN mã hóa SHA-256. Vui lòng nhập mã PIN để mở khóa dữ liệu.</p>' +
+          '<div class="gz-admin-auth-badge">' + getGsapLockSvg('gz-lk-svg') + '<span>BẢO MẬT QUẢN TRỊ · SHA-256</span></div>' +
+          '<h2 class="gz-admin-auth-title">{ Xác Thực Quản Trị }</h2>' +
+          '<p class="gz-admin-auth-sub">Nhập mã PIN quản trị để mở khóa trung tâm đơn hàng.</p>' +
           '<form class="gz-admin-pin-row" id="gz-adm-pin-form" onsubmit="return false">' +
             '<input type="password" inputmode="numeric" autocomplete="current-password" class="gz-admin-pin-inp" id="gz-adm-pin-inp" placeholder="\u2022\u2022\u2022\u2022" maxlength="16" ' + (remainLockSec > 0 ? 'disabled' : '') + '/>' +
             '<button type="submit" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-pin-btn" style="height:42px!important;padding:0 18px!important" ' + (remainLockSec > 0 ? 'disabled' : '') + '>Mở Khóa \u2197</button>' +
@@ -1865,7 +1886,7 @@
           if(remainLockSec > 0) return;
           var entered = (document.getElementById('gz-adm-pin-inp').value || '').trim();
           if(!entered){
-            renderPinGate('\u26A0 Vui lòng nhập mã PIN Quản trị!');
+            renderPinGate('\u26A0 Vui lòng nhập mã PIN quản trị!');
             return;
           }
           sha256SaltedHex(entered).then(function(hash){
@@ -1880,10 +1901,10 @@
                   localStorage.setItem('gz_adm_fail_count', '0');
                   localStorage.setItem('gz_adm_lock_until', String(Date.now() + 300000));
                 } catch(err2){}
-                renderPinGate('\u26D4 Nhập sai 5 lần! Hệ thống tự khóa bảo vệ trong 5 phút.');
+                renderPinGate('\u26D4 Nhập sai 5 lần · Tự khóa bảo vệ trong 5 phút');
               }else{
                 try { localStorage.setItem('gz_adm_fail_count', String(fails)); } catch(err3){}
-                renderPinGate('\u2715 Mã PIN không chính xác (Còn ' + (5 - fails) + ' lần thử)');
+                renderPinGate('\u2715 Mã PIN không đúng · Còn ' + (5 - fails) + ' lần thử');
               }
             }
           });
@@ -1924,79 +1945,90 @@
 
       var rowsHtml = '';
       if(!filtered.length){
-        rowsHtml = '<tr><td colspan="5" style="text-align:center;padding:16px;color:#6e6e62">Không có đơn hàng nào trong mục này.</td></tr>';
+        rowsHtml = '<tr><td colspan="5" style="text-align:center!important;padding:16px!important;color:#6e6e62;justify-content:center!important">Chưa có đơn hàng nào trong mục này.</td></tr>';
       }else{
         for(var j=0;j<filtered.length;j++){
           var o = filtered[j];
           var stClass = o.status === 'PAID' ? 'gz-st-badge--paid' : (o.status === 'FAILED' ? 'gz-st-badge--failed' : 'gz-st-badge--pending');
+          var typeLabel = o.type === 'VIP_MONTH' ? 'Gói VIP 30 ngày' : ('Bài lẻ · #' + String(o.postId || '').slice(-6));
           rowsHtml +=
             '<tr>' +
-              '<td data-label="Mã Đơn / Loại"><div><strong style="font-family:var(--gz-mono)">#' + o.orderCode + '</strong><div style="font-size:10.5px;color:#6e6e62">' + (o.type === 'VIP_MONTH' ? 'VIP Tháng (30 Ngày)' : 'Bài lẻ: ' + o.postId) + '</div></div></td>' +
+              '<td data-label="Mã Đơn"><div><strong style="font-family:var(--gz-mono)">#' + o.orderCode + '</strong><div style="font-size:10.5px;color:#6e6e62">' + typeLabel + '</div></div></td>' +
               '<td data-label="Số Tiền" style="font-family:var(--gz-mono);font-weight:700">' + formatVnd(o.amount) + '</td>' +
-              '<td data-label="Trạng Thái"><span class="gz-st-badge ' + stClass + '">' + o.status + '</span></td>' +
-              '<td data-label="Chẩn Đoán" style="font-size:11.5px;max-width:230px">' + (o.diagnostic || '-') + '</td>' +
+              '<td data-label="Trạng Thái"><span class="gz-st-badge ' + stClass + '">' + formatStatusVi(o.status) + '</span></td>' +
+              '<td data-label="Chi Tiết" style="font-size:11.5px">' + cleanDiagVi(o.diagnostic, o.amount) + '</td>' +
               '<td class="gz-td-actions">' +
                 '<div class="gz-adm-act-group" style="display:flex;gap:4px;flex-wrap:wrap">' +
-                  '<button type="button" class="gz-mini-chip gz-adm-act" data-act="check" data-code="' + o.orderCode + '">\uD83D\uDD04 Check PayOS</button>' +
-                  '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#0ae448;color:#0e100f" data-act="approve" data-code="' + o.orderCode + '">\u2713 Duyệt PAID</button>' +
-                  '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#ff4d6d;color:#fffce1" data-act="fail" data-code="' + o.orderCode + '">\u2715 Báo Lỗi</button>' +
+                  '<button type="button" class="gz-mini-chip gz-adm-act" data-act="check" data-code="' + o.orderCode + '">\uD83D\uDD04 Kiểm tra</button>' +
+                  '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#0ae448;color:#0e100f" data-act="approve" data-code="' + o.orderCode + '">\u2713 Duyệt</button>' +
+                  '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#ff4d6d;color:#fffce1" data-act="fail" data-code="' + o.orderCode + '">\u2715 Hủy</button>' +
+                  '<button type="button" class="gz-mini-chip gz-adm-act" style="background:#2a2c29;color:#fffce1" title="Xóa đơn" data-act="delete" data-code="' + o.orderCode + '">\uD83D\uDDD1</button>' +
                 '</div>' +
               '</td>' +
             '</tr>';
         }
       }
 
+      var cleanBannerDiag = diagText ? cleanDiagVi(diagText) : '';
+
       hostContainer.innerHTML =
         '<div class="gz-admin-panel">' +
           '<div class="gz-admin-head">' +
-            '<div class="gz-gate-title"><span class="gz-b">{</span> Quản Lý Đơn Hàng PayOS &amp; Bảo Mật <span class="gz-b">}</span></div>' +
+            '<div class="gz-gate-title"><span class="gz-b">{</span> Quản Lý Đơn Hàng <span class="gz-b">}</span></div>' +
             '<div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">' +
               '<span style="font-family:var(--gz-mono);font-size:11px;background:#42433d;color:#0ae448;padding:4px 9px;border-radius:6px">' +
-                (vipPass ? ('VIP: Còn ' + vipPass.daysLeft + ' ngày') : 'VIP: Chưa kích hoạt') +
+                (vipPass ? ('VIP · Còn ' + vipPass.daysLeft + ' ngày') : 'VIP · Chưa bật') +
               '</span>' +
-              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-toggle-settings" style="height:30px!important;padding:0 11px!important;font-size:11.5px!important">\u2699 Cấu hình &amp; PIN</button>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-toggle-settings" style="height:30px!important;padding:0 11px!important;font-size:11.5px!important">\u2699 Cấu hình</button>' +
               '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-lock-btn" style="height:30px!important;padding:0 11px!important;font-size:11.5px!important">\uD83D\uDD12 Khóa</button>' +
               (!isDedicatedAdminPage ? '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-close" style="height:30px!important;padding:0 11px!important;font-size:11.5px!important">Đóng \u2715</button>' : '') +
             '</div>' +
           '</div>' +
           '<div class="gz-admin-kpis">' +
-            '<div class="gz-kpi-card"><span class="k-num" style="color:#008b38">' + formatVnd(totalRev) + '</span><span class="k-lbl">Doanh Thu Thành Công</span></div>' +
-            '<div class="gz-kpi-card"><span class="k-num">' + paidCount + '</span><span class="k-lbl">Đơn Thành Công (PAID)</span></div>' +
-            '<div class="gz-kpi-card"><span class="k-num">' + pendingCount + '</span><span class="k-lbl">Đang Chờ (PENDING)</span></div>' +
-            '<div class="gz-kpi-card"><span class="k-num" style="color:#d90429">' + failedCount + '</span><span class="k-lbl">Thất Bại / Hủy (FAILED)</span></div>' +
+            '<div class="gz-kpi-card"><span class="k-num" style="color:#008b38">' + formatVnd(totalRev) + '</span><span class="k-lbl">Doanh Thu</span></div>' +
+            '<div class="gz-kpi-card"><span class="k-num">' + paidCount + '</span><span class="k-lbl">Thành Công</span></div>' +
+            '<div class="gz-kpi-card"><span class="k-num">' + pendingCount + '</span><span class="k-lbl">Đang Chờ</span></div>' +
+            '<div class="gz-kpi-card"><span class="k-num" style="color:#d90429">' + failedCount + '</span><span class="k-lbl">Thất Bại</span></div>' +
           '</div>' +
           '<div class="gz-admin-Check-bar">' +
-            '<input type="text" class="gz-recover-input" id="gz-adm-check-inp" placeholder="Nhập mã orderCode cần kiểm tra trên PayOS..."/>' +
-            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-btn-check">Kiểm Tra PayOS Realtime</button>' +
+            '<input type="text" class="gz-recover-input" id="gz-adm-check-inp" placeholder="Nhập mã đơn cần kiểm tra..."/>' +
+            '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-btn-check">Kiểm Tra Đơn</button>' +
             '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-vip">+ Đơn VIP 500k</button>' +
             '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-btn-test-post">+ Đơn Bài Lẻ 50k</button>' +
           '</div>' +
           '<div class="gz-admin-settings-drawer ' + (settingsOpen ? 'is-open' : '') + '" id="gz-admin-settings-drawer">' +
-            '<div style="font-size:12px;font-weight:700;margin-bottom:8px">\uD83D\uDD10 Bảo mật PayOS Checksum Key (64 ký tự) &amp; Giá Gói Tháng VIP:</div>' +
+            '<div style="font-size:12px;font-weight:700;margin-bottom:8px">\uD83D\uDD10 Cấu hình Ngân hàng, Giá VIP &amp; Khóa PayOS:</div>' +
             '<div class="gz-admin-Check-bar" style="margin-bottom:10px">' +
-              '<input type="password" class="gz-recover-input" id="gz-adm-checksum-inp" value="' + cfg.checksumKey + '" placeholder="Checksum Key (64 hex chars)..."/>' +
-              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-toggle-ck" style="height:34px!important;padding:0 12px!important">Hiện Key</button>' +
-              '<input type="number" class="gz-recover-input" id="gz-adm-vipprice-inp" style="max-width:130px" value="' + cfg.vipMonthlyPrice + '"/>' +
-              '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-cfg">Lưu Cấu Hình</button>' +
+              '<input type="text" class="gz-recover-input" id="gz-adm-bank-inp" style="max-width:95px" value="' + cfg.bankId + '" placeholder="Ngân hàng"/>' +
+              '<input type="text" class="gz-recover-input" id="gz-adm-accno-inp" style="max-width:140px" value="' + cfg.accountNo + '" placeholder="Số tài khoản"/>' +
+              '<input type="number" class="gz-recover-input" id="gz-adm-vipprice-inp" style="max-width:125px" value="' + cfg.vipMonthlyPrice + '" placeholder="Giá VIP"/>' +
+              '<input type="password" class="gz-recover-input" id="gz-adm-checksum-inp" value="' + cfg.checksumKey + '" placeholder="Khóa Checksum PayOS..."/>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--ghost" id="gz-adm-toggle-ck" style="height:34px!important;padding:0 12px!important">Hiện</button>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-cfg">Lưu cấu hình</button>' +
             '</div>' +
-            '<div style="font-size:12px;font-weight:700;margin-bottom:6px">\uD83D\uDD11 Đổi Mã PIN Quản Trị Viên (mã hóa SHA-256):</div>' +
+            '<div style="font-size:12px;font-weight:700;margin-bottom:6px">\uD83D\uDD11 Đổi mã PIN quản trị:</div>' +
             '<div class="gz-admin-Check-bar" style="margin-bottom:0">' +
-              '<input type="password" inputmode="numeric" class="gz-recover-input" id="gz-adm-new-pin-inp" placeholder="Nhập mã PIN mới (tối thiểu 4 ký tự)..."/>' +
-              '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-pin">Cập Nhật Mã PIN</button>' +
+              '<input type="password" inputmode="numeric" class="gz-recover-input" id="gz-adm-new-pin-inp" placeholder="Nhập mã PIN mới từ 4 ký tự..."/>' +
+              '<button type="button" class="gz-gate-btn gz-gate-btn--primary" id="gz-adm-save-pin">Đổi mã PIN</button>' +
             '</div>' +
           '</div>' +
           '<div class="gz-admin-filter-row">' +
             '<div class="gz-admin-filter-pills">' +
-              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'ALL' ? 'is-active' : '') + '" data-filter="ALL">Tất cả (' + orders.length + ')</button>' +
-              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'PAID' ? 'is-active' : '') + '" data-filter="PAID">PAID (' + paidCount + ')</button>' +
-              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'PENDING' ? 'is-active' : '') + '" data-filter="PENDING">PENDING (' + pendingCount + ')</button>' +
-              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'FAILED' ? 'is-active' : '') + '" data-filter="FAILED">FAILED (' + failedCount + ')</button>' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'ALL' ? 'is-active' : '') + '" data-filter="ALL">Tất cả · ' + orders.length + '</button>' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'PAID' ? 'is-active' : '') + '" data-filter="PAID">Thành công · ' + paidCount + '</button>' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'PENDING' ? 'is-active' : '') + '" data-filter="PENDING">Đang chờ · ' + pendingCount + '</button>' +
+              '<button type="button" class="gz-adm-filter-btn ' + (currentFilter === 'FAILED' ? 'is-active' : '') + '" data-filter="FAILED">Thất bại · ' + failedCount + '</button>' +
+            '</div>' +
+            '<div class="gz-admin-filter-pills">' +
+              '<button type="button" class="gz-mini-chip" id="gz-adm-sync-all">\uD83D\uDD04 Đồng bộ tất cả</button>' +
+              '<button type="button" class="gz-mini-chip" id="gz-adm-export-csv">\uD83D\uDCE5 Xuất CSV</button>' +
+              '<button type="button" class="gz-mini-chip" id="gz-adm-clear-failed">\uD83D\uDDD1 Dọn đơn lỗi</button>' +
             '</div>' +
           '</div>' +
-          '<div class="gz-admin-diag ' + (diagText ? 'is-show' : '') + '" id="gz-admin-diag">' + (diagText || '') + '</div>' +
+          '<div class="gz-admin-diag ' + (cleanBannerDiag ? 'is-show' : '') + '" id="gz-admin-diag">' + cleanBannerDiag + '</div>' +
           '<div class="gz-admin-table-wrap">' +
             '<table class="gz-admin-table">' +
-              '<thead><tr><th>Mã Đơn / Loại</th><th>Số Tiền</th><th>Trạng Thái</th><th>Chẩn Đoán / Lỗi</th><th>Thao Tác Sửa Lỗi</th></tr></thead>' +
+              '<thead><tr><th>Mã Đơn</th><th>Số Tiền</th><th>Trạng Thái</th><th>Chi Tiết</th><th>Thao Tác</th></tr></thead>' +
               '<tbody>' + rowsHtml + '</tbody>' +
             '</table>' +
           '</div>' +
@@ -2010,7 +2042,7 @@
       if(lockBtn){
         lockBtn.addEventListener('click', function(){
           setAdminAuthenticated(false);
-          renderPinGate('\u2713 Đã khóa phiên Quản trị an toàn.');
+          renderPinGate('\u2713 Đã khóa phiên quản trị an toàn');
         });
       }
       var toggleSetBtn = document.getElementById('gz-adm-toggle-settings');
@@ -2028,7 +2060,7 @@
           if(!ckInp) return;
           var isPwd = ckInp.type === 'password';
           ckInp.type = isPwd ? 'text' : 'password';
-          toggleCkBtn.textContent = isPwd ? 'Ẩn Key' : 'Hiện Key';
+          toggleCkBtn.textContent = isPwd ? 'Ẩn' : 'Hiện';
         });
       }
       var savePinBtn = document.getElementById('gz-adm-save-pin');
@@ -2036,13 +2068,13 @@
         savePinBtn.addEventListener('click', function(){
           var newPin = (document.getElementById('gz-adm-new-pin-inp').value || '').trim();
           if(newPin.length < 4){
-            renderAdminModal('\u26A0 Mã PIN mới phải có ít nhất 4 ký tự!');
+            renderAdminModal('\u26A0 Mã PIN mới phải từ 4 ký tự trở lên');
             return;
           }
           sha256SaltedHex(newPin).then(function(h){
             if(h){
               try { localStorage.setItem('gz_adm_pin_hash', h); } catch(e){}
-              renderAdminModal('\u2713 Đã mã hóa SHA-256 và cập nhật Mã PIN Quản trị mới thành công!');
+              renderAdminModal('\u2713 Đã cập nhật mã PIN quản trị mới');
             }
           });
         });
@@ -2055,41 +2087,96 @@
         });
       }
 
+      var syncAllBtn = document.getElementById('gz-adm-sync-all');
+      if(syncAllBtn){
+        syncAllBtn.addEventListener('click', function(){
+          var list = getOrders();
+          var pendings = [];
+          for(var p=0;p<list.length;p++){
+            if(!list[p].status || list[p].status === 'PENDING') pendings.push(list[p].orderCode);
+          }
+          if(!pendings.length){
+            renderAdminModal('\u2713 Không có đơn đang chờ nào cần đồng bộ');
+            return;
+          }
+          renderAdminModal('Đang đồng bộ ' + pendings.length + ' đơn hàng với PayOS...');
+          Promise.all(pendings.map(function(c){ return checkPayOSOrderRealtime(c); })).then(function(){
+            renderAdminModal('\u2713 Đã đồng bộ xong ' + pendings.length + ' đơn hàng với PayOS');
+          });
+        });
+      }
+
+      var exportCsvBtn = document.getElementById('gz-adm-export-csv');
+      if(exportCsvBtn){
+        exportCsvBtn.addEventListener('click', function(){
+          var list = getOrders();
+          var csv = 'MaDon,Loai,SoTien,TrangThai,ChiTiet\n';
+          for(var c=0;c<list.length;c++){
+            var it = list[c];
+            csv += it.orderCode + ',' + (it.type === 'VIP_MONTH' ? 'VIP 30 ngay' : 'Bai le') + ',' + it.amount + ',' + formatStatusVi(it.status) + ',"' + cleanDiagVi(it.diagnostic, it.amount).replace(/"/g, '""') + '"\n';
+          }
+          var blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' });
+          var a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'don-hang-mmo-team.csv';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          renderAdminModal('\u2713 Đã xuất tệp báo cáo CSV thành công');
+        });
+      }
+
+      var clearFailedBtn = document.getElementById('gz-adm-clear-failed');
+      if(clearFailedBtn){
+        clearFailedBtn.addEventListener('click', function(){
+          var list = getOrders();
+          var kept = [];
+          var removed = 0;
+          for(var c=0;c<list.length;c++){
+            var st = list[c].status || 'PENDING';
+            if(st === 'FAILED' || st === 'CANCELLED' || st === 'EXPIRED'){
+              removed++;
+            }else{
+              kept.push(list[c]);
+            }
+          }
+          saveOrders(kept);
+          renderAdminModal('\u2713 Đã dọn sạch ' + removed + ' đơn lỗi và hết hạn');
+        });
+      }
+
       document.getElementById('gz-adm-save-cfg').addEventListener('click', function(){
+        var newBank = (document.getElementById('gz-adm-bank-inp').value || 'OCB').trim();
+        var newAcc = (document.getElementById('gz-adm-accno-inp').value || '').trim();
         var newCk = (document.getElementById('gz-adm-checksum-inp').value || '').trim();
         var newVp = Number(document.getElementById('gz-adm-vipprice-inp').value) || 500000;
         try {
-          localStorage.setItem('gz_locker_cfg', JSON.stringify({ checksumKey: newCk, vipMonthlyPrice: newVp }));
+          localStorage.setItem('gz_locker_cfg', JSON.stringify({ bankId: newBank, accountNo: newAcc, checksumKey: newCk, vipMonthlyPrice: newVp }));
         } catch(e){}
-        renderAdminModal('\u2713 Đã lưu cấu hình! Giá VIP Tháng: ' + formatVnd(newVp) + ' | Độ dài Checksum Key: ' + newCk.length + '/64 ký tự.');
+        renderAdminModal('\u2713 Đã lưu cấu hình · Ngân hàng ' + newBank + ' · Giá VIP ' + formatVnd(newVp));
       });
 
       document.getElementById('gz-adm-btn-check').addEventListener('click', function(){
         var code = (document.getElementById('gz-adm-check-inp').value || '').trim();
         if(!code){
-          renderAdminModal('\u26A0 Vui lòng nhập mã orderCode cần kiểm tra!');
+          renderAdminModal('\u26A0 Vui lòng nhập mã đơn cần kiểm tra');
           return;
         }
-        renderAdminModal('Đang gọi GET https://api-merchant.payos.vn/v2/payment-requests/' + code + ' ...');
+        renderAdminModal('Đang kiểm tra đơn #' + code + ' trên PayOS...');
         checkPayOSOrderRealtime(code).then(function(res){
-          renderAdminModal(
-            '[KẾT QUẢ KIỂM TRA REALTIME PAYOS CHO ĐƠN #' + code + ']\n' +
-            '• Trạng thái: ' + res.status + '\n' +
-            '• Chẩn đoán: ' + (res.diagnostic || res.reason || 'OK') + '\n' +
-            '• Phản hồi gốc từ PayOS: ' + JSON.stringify(res.raw || res, null, 2)
-          );
+          renderAdminModal('Đơn #' + code + ' · Trạng thái: ' + formatStatusVi(res.status) + ' · ' + cleanDiagVi(res.diagnostic || res.reason || 'Hoàn tất'));
         });
       });
 
       document.getElementById('gz-adm-btn-test-vip').addEventListener('click', function(){
         createPayOSOrder({ type: 'VIP30D', amount: getCfg().vipMonthlyPrice }).then(function(o){
-          renderAdminModal('\u2713 Đã tạo đơn Gói Tháng VIP (500.000đ) #' + o.orderCode + '\nChẩn đoán: ' + (o.diagnostic || 'OK'));
+          renderAdminModal('\u2713 Đã tạo đơn Gói VIP 30 ngày #' + o.orderCode + ' · ' + formatVnd(o.amount));
         });
       });
 
       document.getElementById('gz-adm-btn-test-post').addEventListener('click', function(){
         createPayOSOrder({ type: 'POST', postId: getCurrentPostId(), amount: 50000 }).then(function(o){
-          renderAdminModal('\u2713 Đã tạo đơn Bài Lẻ (50.000đ) #' + o.orderCode + '\nChẩn đoán: ' + (o.diagnostic || 'OK'));
+          renderAdminModal('\u2713 Đã tạo đơn Bài lẻ #' + o.orderCode + ' · ' + formatVnd(o.amount));
         });
       });
 
@@ -2100,7 +2187,7 @@
           var code = this.getAttribute('data-code');
           if(act === 'check'){
             checkPayOSOrderRealtime(code).then(function(r){
-              renderAdminModal('Đã kiểm tra lại đơn #' + code + ' trên PayOS -> Trạng thái: ' + r.status + ' (' + (r.diagnostic || r.reason || '') + ')');
+              renderAdminModal('Đã kiểm tra đơn #' + code + ' · Trạng thái: ' + formatStatusVi(r.status) + ' · ' + cleanDiagVi(r.diagnostic || r.reason || ''));
             });
           }else if(act === 'approve'){
             var list = getOrders();
@@ -2109,7 +2196,7 @@
                 list[k].status = 'PAID';
                 list[k].manualApproved = true;
                 list[k].paidAt = Date.now();
-                list[k].diagnostic = 'Đã duyệt PAID & kích hoạt mở khóa thành công!';
+                list[k].diagnostic = 'Đã duyệt thanh toán và mở khóa thành công';
                 if(list[k].type === 'VIP_MONTH'){
                   activateVipPass(code, Date.now());
                 }else if(list[k].postId){
@@ -2118,15 +2205,23 @@
               }
             }
             saveOrders(list);
-            renderAdminModal('\u2713 Đã duyệt đơn #' + code + ' sang trạng thái PAID và mở khóa nội dung tương ứng!');
+            renderAdminModal('\u2713 Đã duyệt thành công đơn #' + code + ' và mở khóa nội dung');
           }else if(act === 'fail'){
             upsertOrder({
               orderCode: Number(code),
               status: 'FAILED',
               manualApproved: false,
-              diagnostic: 'Đơn bị đánh dấu Thất bại / Đã hủy bởi Admin.'
+              diagnostic: 'Đơn đã hủy bởi quản trị viên'
             });
-            renderAdminModal('\u2715 Đã đánh dấu đơn #' + code + ' là FAILED (Thất bại).');
+            renderAdminModal('\u2715 Đã chuyển đơn #' + code + ' sang trạng thái Thất bại');
+          }else if(act === 'delete'){
+            var listDel = getOrders();
+            var nextList = [];
+            for(var d=0;d<listDel.length;d++){
+              if(String(listDel[d].orderCode) !== String(code)) nextList.push(listDel[d]);
+            }
+            saveOrders(nextList);
+            renderAdminModal('\u2713 Đã xóa đơn #' + code);
           }
         });
       }

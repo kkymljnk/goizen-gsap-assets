@@ -1603,21 +1603,28 @@ input#super-my-search-form::placeholder{
 .gz-admin-diag.is-show{display:block}
 .gz-admin-table-wrap{overflow-x:auto}
 .gz-admin-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:12.5px
+  width:100%!important;
+  border-collapse:collapse!important;
+  font-size:12.5px!important;
+  margin:0!important;
+  background:transparent!important
 }
-.gz-admin-table th,.gz-admin-table td{
-  border-bottom:1px solid #42433d;
-  padding:8px 6px;
-  text-align:left;
-  vertical-align:middle
+.gz-admin-panel .gz-admin-table th,
+.gz-admin-panel .gz-admin-table td{
+  border:0!important;
+  border-bottom:1px solid #c8c5b3!important;
+  padding:10px 8px!important;
+  text-align:left!important;
+  vertical-align:middle!important;
+  background:transparent!important
 }
-.gz-admin-table th{
-  font-family:var(--gz-mono);
-  font-size:11px;
-  text-transform:uppercase;
-  color:#3d3d34
+.gz-admin-panel .gz-admin-table th{
+  font-family:var(--gz-mono)!important;
+  font-size:11px!important;
+  font-weight:700!important;
+  text-transform:uppercase!important;
+  color:#3d3d34!important;
+  border-bottom:2px solid #0e100f!important
 }
 .gz-st-badge{
   font-family:var(--gz-mono);
@@ -1801,16 +1808,25 @@ body.gz-is-admin-page hr.gsap-hr{
     margin-bottom:10px!important;
     background:var(--gz-bg,#fffceb)!important
   }
-  .gz-admin-table td{
+  .gz-admin-panel .gz-admin-table td{
     border:0!important;
-    padding:4px 0!important;
+    border-bottom:1px dashed rgba(14,16,15,.12)!important;
+    padding:6px 0!important;
     display:flex!important;
     align-items:center!important;
     justify-content:space-between!important;
-    gap:8px!important;
-    text-align:right!important
+    gap:10px!important;
+    text-align:right!important;
+    max-width:none!important;
+    background:transparent!important
   }
-  .gz-admin-table td::before{
+  .gz-admin-panel .gz-admin-table td > div{
+    border:0!important;
+    background:transparent!important;
+    padding:0!important;
+    margin:0!important
+  }
+  .gz-admin-panel .gz-admin-table td::before{
     content:attr(data-label);
     font-family:var(--gz-mono);
     font-size:10.5px;
@@ -1820,16 +1836,16 @@ body.gz-is-admin-page hr.gsap-hr{
     text-align:left;
     flex:0 0 auto
   }
-  .gz-admin-table td.gz-td-actions{
+  .gz-admin-panel .gz-admin-table td.gz-td-actions{
     display:block!important;
-    padding-top:8px!important;
-    margin-top:6px!important;
-    border-top:1px dashed #c8c5b3!important
+    padding:10px 0 2px!important;
+    margin-top:4px!important;
+    border:0!important
   }
   .gz-admin-table td.gz-td-actions::before{display:none!important}
   .gz-adm-act-group{
     display:grid!important;
-    grid-template-columns:repeat(3,1fr)!important;
+    grid-template-columns:1fr 1fr 1fr auto!important;
     gap:6px!important;
     width:100%!important
   }

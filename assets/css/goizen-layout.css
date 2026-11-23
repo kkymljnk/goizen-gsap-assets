@@ -985,11 +985,11 @@ input#super-my-search-form::placeholder{
 }
 .my-search-button i,.my-search-button .fas{color:var(--gz-heading)!important;font-size:15px}
 @media screen and (max-width:600px){
-  #superheaderwrapper{gap:8px 10px!important;padding:12px 15px 6px!important}
-  #superheaderwrapper > header{flex:0 0 auto!important}
-  .header-widget h1,.header-widget h2{font-size:18px!important}
-  .header-brace-logo{gap:5px!important}
-  #search-wrapper,.search-wrapper{flex:1 1 120px!important;min-width:110px!important;max-width:195px!important;margin-left:auto!important}
+  #superheaderwrapper{gap:8px 8px!important;padding:12px 15px 6px!important;flex-wrap:nowrap!important}
+  #superheaderwrapper > header{flex:0 1 auto!important;min-width:0!important}
+  .header-widget h1,.header-widget h2{font-size:13.5px!important}
+  .header-brace-logo{gap:4px!important}
+  #search-wrapper,.search-wrapper{flex:1 1 110px!important;min-width:105px!important;max-width:150px!important;margin-left:auto!important}
   #super-my-search-form{height:36px!important;line-height:36px!important;padding:0 36px 0 13px!important;font-size:13px!important}
   .my-search-button,.my-search-button:hover{width:36px!important;height:36px!important;line-height:36px!important}
   .my-search-button i,.my-search-button .fas{font-size:13px!important}

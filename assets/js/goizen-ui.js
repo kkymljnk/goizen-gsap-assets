@@ -628,7 +628,8 @@
     vipDurationDays: 30,
     commentPrefix: 'MMO',
     demoPaidPosts: {
-      'malesuada-bibendum-arcu-vitae-elementum': 50000
+      'malesuada-bibendum-arcu-vitae-elementum': 50000,
+      'sed-ullamcorper-morbi-tincidunt-ornare': 50000
     }
   };
 
@@ -780,14 +781,14 @@
   }
 
   function decorateHomepageCards(){
-    var cards = document.querySelectorAll('.index .post-outer, .archive .post-outer, .search .post-outer');
+    var cards = document.querySelectorAll('.index .post-outer, .archive .post-outer, .search .post-outer, #FeaturedPost1 article.post');
     for(var i=0;i<cards.length;i++){
       var card = cards[i];
-      var titleA = card.querySelector('h2.post-title a');
+      var titleA = card.querySelector('h2.post-title a, h3.post-title a');
       var url = titleA ? titleA.getAttribute('href') : '';
       var price = filterLabelsAndDetectPrice(card, url);
-      var tagBox = card.querySelector('.post-tags');
-      if(price > 0 && tagBox && !tagBox.querySelector('.gz-card-badge')){
+      var tagBox = card.querySelector('.post-tags, .featured-content h2.post-title');
+      if(price > 0 && tagBox && !card.querySelector('.gz-card-badge')){
         var b = document.createElement('span');
         b.className = 'gz-card-badge gz-card-badge--paid';
         b.textContent = '\uD83D\uDD12 ' + formatVnd(price);

@@ -253,12 +253,14 @@ button.super-subscribe-email-button{width:20%;float:left;background:var(--gz-sur
   display:flex!important;
   flex-wrap:wrap!important;
   align-items:center!important;
-  gap:10px!important;
+  justify-content:space-between!important;
+  gap:8px!important;
   width:100%!important
 }
 .entry-share-list.clearfix::after{content:none!important;display:none!important}
 .share-post li{
   display:inline-flex!important;
+  flex:1 1 auto!important;
   list-style:none!important;
   margin:0!important;
   padding:0!important;
@@ -267,13 +269,12 @@ button.super-subscribe-email-button{width:20%;float:left;background:var(--gz-sur
   border:0!important;
   text-transform:none!important
 }
-.share-post li:before{display:none!important}
+.share-post li:before,.share-post li a.line{display:none!important}
 .share-post li a,
 .share-post li .facebook,
 .share-post li .twitter,
 .share-post li .pinterest,
 .share-post li .whatsapp,
-.share-post li .line,
 .share-post li .linkedin,
 .share-post li .telegram,
 .share-post li .gplus,
@@ -281,16 +282,18 @@ button.super-subscribe-email-button{width:20%;float:left;background:var(--gz-sur
   display:inline-flex!important;
   align-items:center!important;
   justify-content:center!important;
-  gap:8px!important;
-  height:40px!important;
-  padding:0 16px!important;
+  gap:7px!important;
+  width:100%!important;
+  height:38px!important;
+  padding:0 14px!important;
   border:2px solid var(--gz-heading)!important;
   border-radius:999px!important;
   background:var(--gz-bg)!important;
   color:var(--gz-heading)!important;
   font-family:var(--gz-font)!important;
-  font-size:13.5px!important;
+  font-size:13px!important;
   font-weight:600!important;
+  white-space:nowrap!important;
   text-decoration:none!important;
   transition:border-color .18s ease,transform .18s ease!important;
   box-sizing:border-box!important
@@ -955,10 +958,11 @@ html body .FeaturedPost .featured-snippet-thumbnail,
 .header-img-hidden,#Header1_headerimg{display:none!important;width:0!important;height:0!important}
 #search-wrapper,.search-wrapper{
   float:none!important;
-  width:min(420px,100%)!important;
-  flex:1 1 280px;
-  margin:0!important;
-  max-width:480px
+  width:auto!important;
+  flex:1 1 130px!important;
+  min-width:110px!important;
+  margin:0 0 0 auto!important;
+  max-width:420px
 }
 #search-wrap,#search,#my-search-form{width:100%;margin:0;position:relative}
 #super-my-search-form{
@@ -988,6 +992,19 @@ input#super-my-search-form::placeholder{
   box-shadow:none!important
 }
 .my-search-button i,.my-search-button .fas{color:var(--gz-heading)!important;font-size:15px}
+@media screen and (max-width:600px){
+  #superheaderwrapper{gap:8px 10px!important;padding:12px 15px 6px!important}
+  #superheaderwrapper > header{flex:0 0 auto!important}
+  .header-widget h1,.header-widget h2{font-size:18px!important}
+  .header-brace-logo{gap:5px!important}
+  #search-wrapper,.search-wrapper{flex:1 1 120px!important;min-width:110px!important;max-width:195px!important;margin-left:auto!important}
+  #super-my-search-form{height:36px!important;line-height:36px!important;padding:0 36px 0 13px!important;font-size:13px!important}
+  .my-search-button,.my-search-button:hover{width:36px!important;height:36px!important;line-height:36px!important}
+  .my-search-button i,.my-search-button .fas{font-size:13px!important}
+  .share-post ul,.entry-share-list{gap:6px!important}
+  .share-post li a{height:35px!important;padding:0 11px!important;font-size:12px!important;gap:5px!important}
+  .share-post li span{font-size:12px!important}
+}
 #nav-top{width:100%;flex:1 0 100%;margin-top:4px}
 .scrollmenu{display:flex;align-items:center;justify-content:space-between;gap:14px;overflow-x:auto;padding-bottom:4px;margin-bottom:4px}
 .scrollmenu a{flex:0 0 auto;margin-left:0!important;padding-bottom:4px;font-size:13px;letter-spacing:.02em}

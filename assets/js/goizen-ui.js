@@ -132,13 +132,14 @@
       'background:var(--gz-heading,#0e100f)!important;color:var(--gz-link,#0ae448)!important'+
     '}'+
     'html body .share-post ul,html body .entry-share-list{'+
-      'margin:0!important;padding:0!important;display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:10px!important;width:100%!important'+
+      'margin:0!important;padding:0!important;display:flex!important;flex-wrap:wrap!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;width:100%!important'+
     '}'+
-    'html body .share-post li{display:inline-flex!important;width:auto!important;float:none!important;margin:0!important;padding:0!important;border:0!important}'+
+    'html body .share-post li{display:inline-flex!important;flex:1 1 auto!important;width:auto!important;float:none!important;margin:0!important;padding:0!important;border:0!important}'+
+    'html body .share-post li a.line{display:none!important}'+
     'html body .share-post li a{'+
-      'display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;'+
-      'height:40px!important;padding:0 16px!important;border:2px solid var(--gz-heading,#0e100f)!important;border-radius:999px!important;'+
-      'background:var(--gz-bg,#fffceb)!important;color:var(--gz-heading,#0e100f)!important;font-size:13.5px!important;font-weight:600!important;text-decoration:none!important;box-sizing:border-box!important'+
+      'display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;width:100%!important;'+
+      'height:38px!important;padding:0 14px!important;border:2px solid var(--gz-heading,#0e100f)!important;border-radius:999px!important;white-space:nowrap!important;'+
+      'background:var(--gz-bg,#fffceb)!important;color:var(--gz-heading,#0e100f)!important;font-size:13px!important;font-weight:600!important;text-decoration:none!important;box-sizing:border-box!important'+
     '}'+
     'html body .share-post li a:hover{border-color:var(--gz-link,#0ae448)!important;transform:translateY(-1px)}'+
     'html body .share-post li a i,html body .share-post li a .fab,html body .share-post li a .fas{'+
@@ -533,6 +534,10 @@
   }
 
   function enhanceShareAndAuthor(){
+    var lineA=document.querySelector('.share-post a.line');
+    if(lineA&&lineA.parentElement&&lineA.parentElement.parentNode){
+      lineA.parentElement.parentNode.removeChild(lineA.parentElement);
+    }
     var wa=document.querySelector('.share-post a.whatsapp');
     if(wa&&!wa.querySelector('span')){
       var sp=document.createElement('span');

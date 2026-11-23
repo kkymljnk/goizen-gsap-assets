@@ -1352,6 +1352,7 @@
     }
 
     var pollTimer = null;
+    var tickTimer = null;
     var cmtPollTimer = null;
 
     /* Check if already unlocked (Dual Storage + Immediate DOM Comment Auto-Unlock!) */
@@ -1520,14 +1521,22 @@
     }
 
     /* Payment Drawer Handler (Both Single Paid Post & 500.000đ/month VIP Pass) */
+    function fmtCountdown(sec){
+      var s = Math.max(0, Math.floor(sec));
+      var m = Math.floor(s / 60);
+      var r = s % 60;
+      return (m < 10 ? '0' + m : String(m)) + ':' + (r < 10 ? '0' + r : String(r));
+    }
     function openPaymentDrawer(type, amount){
       if(pollTimer) clearInterval(pollTimer);
+      if(tickTimer) clearInterval(tickTimer);
       qrDrawer.classList.add('is-open');
-      qrDrawer.innerHTML = '<div class="gz-qr-live-pill"><span class="gz-pulse"></span>Đang tạo mã QR PayOS...</div>';
+      qrDrawer.innerHTML = '<div class="gz-qr-live-pill"><span class="gz-pulse"></span>Tạo QR...</div>';
 
       createPayOSOrder({ type: type, postId: postId, amount: amount }).then(function(ord){
         var qrImgUrl = buildVietQrUrl(ord.amount, ord.description);
-        var labelTitle = type === 'VIP30D' ? ('VIP Tháng (30 Ngày) · ' + formatVnd(ord.amount)) : (formatVnd(ord.amount) + ' · #' + ord.orderCode);
+        var labelTitle = type === 'VIP30D' ? ('VIP 30 Ngày · ' + formatVnd(ord.amount)) : (formatVnd(ord.amount) + ' · #' + ord.orderCode);
+        var remainSec = 600;
         qrDrawer.innerHTML =
           '<div class="gz-qr-grid-wrap">' +
             '<div class="gz-qr-frame">' +
@@ -1538,7 +1547,7 @@
                 '<span>' + labelTitle + '</span>' +
               '</div>' +
               '<div class="gz-qr-live-pill" id="gz-qr-live-pill">' +
-                '<span class="gz-pulse"></span><span id="gz-qr-live-txt">Đang chờ quét QR... (Check 2s/lần)</span>' +
+                '<span class="gz-pulse"></span><span id="gz-qr-live-txt">Chờ quét QR · ' + fmtCountdown(remainSec) + '</span>' +
               '</div>' +
               '<div class="gz-qr-copy-row">' +
                 '<button type="button" class="gz-mini-chip" id="gz-copy-stk">STK: ' + cfg.accountNo + ' \u2750</button>' +
@@ -1563,13 +1572,29 @@
           bRecVip.addEventListener('click', function(){ recoverRow.classList.toggle('is-open'); });
         }
 
+        tickTimer = setInterval(function(){
+          remainSec--;
+          var txtEl = document.getElementById('gz-qr-live-txt');
+          var pillEl = document.getElementById('gz-qr-live-pill');
+          if(!txtEl){ clearInterval(tickTimer); return; }
+          if(remainSec <= 0){
+            clearInterval(tickTimer);
+            if(pollTimer) clearInterval(pollTimer);
+            if(pillEl) pillEl.classList.add('is-fail');
+            txtEl.textContent = '\u2715 Hết hạn QR · Bấm tạo lại';
+            return;
+          }
+          txtEl.textContent = 'Chờ quét QR · ' + fmtCountdown(remainSec);
+        }, 1000);
+
         pollTimer = setInterval(function(){
           checkPayOSOrderRealtime(ord.orderCode).then(function(st){
             var pillEl = document.getElementById('gz-qr-live-pill');
             var txtEl = document.getElementById('gz-qr-live-txt');
             if(st.status === 'PAID'){
               clearInterval(pollTimer);
-              if(txtEl) txtEl.textContent = '\u2713 Thanh toán thành công! Đang mở khóa...';
+              if(tickTimer) clearInterval(tickTimer);
+              if(txtEl) txtEl.textContent = '\u2713 Đã thanh toán!';
               if(type === 'VIP30D'){
                 var vPass = activateVipPass(ord.orderCode, st.paidAt);
                 revealUnlockedContent('\u26A1 VIP Active · Còn ' + (vPass ? vPass.daysLeft : 30) + ' ngày (#' + ord.orderCode + ')');
@@ -1579,11 +1604,12 @@
               }
             }else if(st.status === 'CANCELLED' || st.status === 'EXPIRED'){
               clearInterval(pollTimer);
+              if(tickTimer) clearInterval(tickTimer);
               if(pillEl) pillEl.classList.add('is-fail');
-              if(txtEl) txtEl.textContent = '\u2715 Đơn đã hủy hoặc hết hạn trên PayOS';
+              if(txtEl) txtEl.textContent = '\u2715 Đơn đã hủy / hết hạn';
             }
           });
-        }, 2500);
+        }, 2000);
       });
     }
 
@@ -1593,6 +1619,7 @@
         if(qrDrawer.classList.contains('is-open')){
           qrDrawer.classList.remove('is-open');
           if(pollTimer) clearInterval(pollTimer);
+          if(tickTimer) clearInterval(tickTimer);
         }else{
           openPaymentDrawer('VIP30D', getCfg().vipMonthlyPrice);
         }
@@ -1605,6 +1632,7 @@
         if(qrDrawer.classList.contains('is-open')){
           qrDrawer.classList.remove('is-open');
           if(pollTimer) clearInterval(pollTimer);
+          if(tickTimer) clearInterval(tickTimer);
         }else{
           openPaymentDrawer('POST', postPrice);
         }
